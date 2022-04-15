@@ -18,3 +18,10 @@
 .body {
   font-family: "League Spartan", sans-serif;
 }
+
+/**************************************
+    Images
+**************************************/
+.image {
+  max-width: 100%;
+}
