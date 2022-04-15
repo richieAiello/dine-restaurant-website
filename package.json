@@ -1,0 +1,23 @@
+{
+  "name": "dine-restaurant-website",
+  "version": "1.0.0",
+  "description": "Frontend Mentor intermediate level challenge.",
+  "source": "index.html",
+  "scripts": {
+    "compile": "sass --watch --no-source-map src/main.scss src/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richieAiello/dine-restaurant-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richieAiello/dine-restaurant-website/issues"
+  },
+  "homepage": "https://github.com/richieAiello/dine-restaurant-website#readme",
+  "devDependencies": {
+    "sass": "^1.50.0"
+  }
+}
