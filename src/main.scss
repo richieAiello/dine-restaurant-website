@@ -236,6 +236,45 @@ $tan: #9E7F66;
 }
 
 /**************************************
+    Footer
+**************************************/
+.footer {
+    font-weight: 200;
+    font-size: .875rem;
+    line-height: 1.675rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-color: $black;
+    color: $white;
+    padding: 5rem 0;
+    transition: all 250ms;
+
+    .logo {
+        margin-bottom: 2.5rem;
+    }
+
+    .address {
+        font-style: initial;
+        margin-bottom: 2rem;
+    }
+
+    @media(min-width: 335px) {
+        
+        & {
+            font-size: 1rem;
+            letter-spacing: 2.5px;
+        }
+    }
+
+    @media(min-width: 375px) {
+        
+        & {
+            font-size: 1.125rem;
+            letter-spacing: 3px;
+        }
+    }
+}
+/**************************************
     Images
 **************************************/
 .image {
