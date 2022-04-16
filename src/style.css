@@ -116,6 +116,35 @@
 .main .location .wrapper:nth-of-type(2) .divider {
   margin-top: 3rem;
 }
+.main .highlights {
+  background-color: #0E0E0E;
+  color: #FFFFFF;
+  padding: 4.5rem 0;
+}
+.main .highlights .main__text {
+  margin-bottom: 4rem;
+}
+.main .highlights .menu .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.main .highlights .menu__item {
+  order: 2;
+}
+.main .highlights .menu__heading {
+  font-weight: 600;
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+}
+.main .highlights .menu__text {
+  font-weight: 100;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  max-width: 25ch;
+  margin-inline: auto;
+}
 
 /**************************************
     Images
@@ -124,13 +153,7 @@
   max-width: 100%;
   object-fit: cover;
 }
-.image--tablet {
-  display: none;
-}
-.image--desktop {
-  display: none;
-}
-.image--menu {
+.image--tablet, .image--desktop, .image--menu {
   display: none;
 }
 .image--enjoyable-place, .image--locally-sourced {
@@ -148,6 +171,18 @@
 }
 .image--locally-sourced {
   object-position: bottom;
+}
+.image--menu-mobile {
+  max-height: 320px;
+  margin-bottom: 2rem;
+}
+.image--beef, .image--chocolate {
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  border-top: 1.5px solid rgba(151, 151, 151, 0.15);
+}
+.image--beef {
+  object-position: 50% 40%;
 }
 
 /**************************************
