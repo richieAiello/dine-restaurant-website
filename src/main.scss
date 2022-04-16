@@ -2,11 +2,12 @@
     Colors
 **************************************/
 $white: #FFFFFF;
-$black: #000000;
+$black: #0E0E0E;
 $black-grey: #111111;
 $grey: #5C6779;
 $dark-grey: #242B37;
-$tan: #9E7F66;  
+$tan: #9E7F66;
+  
 
 /**************************************
     Reset
@@ -23,7 +24,73 @@ $tan: #9E7F66;
     Base Styles
 **************************************/
 .body {
-    font-family: 'League Spartan', sans-serif;  
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 100;
+    font-size: 1.25rem;
+    line-height: 1.5625rem;
+    letter-spacing: 0.19px;
+    text-align: center;
+}
+
+.container {
+    width: min(100% - 1.5rem, 1110px);
+    margin-inline: auto;  
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+  
+.hidden {
+    display: none;
+}   
+
+/**************************************
+    Header
+**************************************/
+.hero {
+    min-height: 748px;
+    background-image: url(../images/homepage/hero-bg-mobile@2x.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    background-color: $black-grey;
+    position: relative;
+
+    .context { 
+        min-height: 528px;
+        min-width: 100%;
+        background-color: $black;
+        color: $white;
+        position: absolute;
+        bottom: 0;
+
+        .logo {
+            max-width: 82.4px;
+            max-height: 32px;
+            margin-top: 0.75rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__heading {
+        font-weight: 200;
+        font-size: 2.35rem;
+        line-height: 2.25rem;
+        letter-spacing: 0.8px;
+        margin-bottom: 1.5rem;
+    }
+
+    &__text {
+        max-width: 30ch;
+        margin-inline: auto;
+        margin-bottom: 2rem;
+    }
+
+    .btn--dark {
+        border: 1px solid $white ;
+    }
 }
 
 /**************************************
@@ -31,7 +98,71 @@ $tan: #9E7F66;
 **************************************/
 .image {
     max-width: 100%;
+
+    // &--events-mobile {
+    //   
+    // }
+
+    &--events-tablet {
+        display: none;
+    }
+
+    &--events-desktop {
+        display: none;
+    }
 }
+
+/**************************************
+    Buttons
+**************************************/
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1rem;
+    letter-spacing: 3px; 
+    background-color: initial;
+    border: initial;
+    text-transform: uppercase;
+    padding: 1.5rem 3.4375rem;
+    transition: all 400ms;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+    }
+
+    &--dark {
+        color: $white;
+        background-color: $black;
+        border: 1px solid $black;
+
+        &:hover,
+        &:focus {
+            color: $black;
+            background-color: $white;
+            border: 1px solid $black;
+        }
+    }
+
+    &--light {
+        color: $white;
+        background-color: transparent;
+        border: 1px solid $white;
+
+        &:hover,
+        &:focus {
+            color: $black;
+            background-color: $white;
+        }
+    }
+
+    // &--events {
+
+    // }
+}
+
+
 
 
 

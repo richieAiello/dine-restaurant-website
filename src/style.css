@@ -17,6 +17,67 @@
 **************************************/
 .body {
   font-family: "League Spartan", sans-serif;
+  font-weight: 100;
+  font-size: 1.25rem;
+  line-height: 1.5625rem;
+  letter-spacing: 0.19px;
+  text-align: center;
+}
+
+.container {
+  width: min(100% - 1.5rem, 1110px);
+  margin-inline: auto;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hidden {
+  display: none;
+}
+
+/**************************************
+    Header
+**************************************/
+.hero {
+  min-height: 748px;
+  background-image: url(../images/homepage/hero-bg-mobile@2x.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  background-color: #111111;
+  position: relative;
+}
+.hero .context {
+  min-height: 528px;
+  min-width: 100%;
+  background-color: #0E0E0E;
+  color: #FFFFFF;
+  position: absolute;
+  bottom: 0;
+}
+.hero .context .logo {
+  max-width: 82.4px;
+  max-height: 32px;
+  margin-top: 0.75rem;
+  margin-bottom: 2rem;
+}
+.hero__heading {
+  font-weight: 200;
+  font-size: 2.35rem;
+  line-height: 2.25rem;
+  letter-spacing: 0.8px;
+  margin-bottom: 1.5rem;
+}
+.hero__text {
+  max-width: 30ch;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+}
+.hero .btn--dark {
+  border: 1px solid #FFFFFF;
 }
 
 /**************************************
@@ -24,4 +85,48 @@
 **************************************/
 .image {
   max-width: 100%;
+}
+.image--events-tablet {
+  display: none;
+}
+.image--events-desktop {
+  display: none;
+}
+
+/**************************************
+    Buttons
+**************************************/
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1rem;
+  letter-spacing: 3px;
+  background-color: initial;
+  border: initial;
+  text-transform: uppercase;
+  padding: 1.5rem 3.4375rem;
+  transition: all 400ms;
+}
+.btn:hover, .btn:focus {
+  cursor: pointer;
+}
+.btn--dark {
+  color: #FFFFFF;
+  background-color: #0E0E0E;
+  border: 1px solid #0E0E0E;
+}
+.btn--dark:hover, .btn--dark:focus {
+  color: #0E0E0E;
+  background-color: #FFFFFF;
+  border: 1px solid #0E0E0E;
+}
+.btn--light {
+  color: #FFFFFF;
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
+}
+.btn--light:hover, .btn--light:focus {
+  color: #0E0E0E;
+  background-color: #FFFFFF;
 }
