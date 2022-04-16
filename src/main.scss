@@ -5,6 +5,7 @@ $white: #FFFFFF;
 $black: #0E0E0E;
 $black-grey: #111111;
 $grey: #5C6779;
+$light-grey: #4C4C4C;
 $dark-grey: #242B37;
 $tan: #9E7F66;
   
@@ -180,12 +181,49 @@ $tan: #9E7F66;
         }
     }
 
-    // .events {
+    .events {
+        padding-top: 5rem;
+        padding-bottom: 7.75rem;
 
-    // }
+        &__text {
+            margin-bottom: 2rem;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+
+            .context {
+                order: 2;
+                color: $dark-grey;
+                margin-top: 1.5rem;
+            }
+
+            &--events {
+
+                .image {
+                    margin-bottom: -0.7ch;
+                }
+            }
+
+            &--btn {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 3rem;
+
+                .accent {
+                    height: 1px;
+                    width: 48px;
+                    background-color: $tan;
+                    margin-inline: auto;
+                }
+            }
+        } 
+    }
 
     // .reservation {
-
+        
     // }
 }
 
@@ -203,7 +241,10 @@ $tan: #9E7F66;
     }
 
     &--enjoyable-place,
-    &--locally-sourced {
+    &--locally-sourced,
+    &--family-gathering,
+    &--special-events,
+    &--social-events {
         box-shadow: 0 75px 100px -50px rgba(#384255, 50.32%);
         height: 400px;
     }
@@ -244,6 +285,7 @@ $tan: #9E7F66;
 **************************************/
 .btn {
     display: inline-block;
+    font-family: inherit;
     font-weight: 400;
     font-size: 1.125rem;
     line-height: 1rem;
@@ -284,9 +326,22 @@ $tan: #9E7F66;
         }
     }
 
-    // &--events {
+    &--events {
+        font-weight: 600;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        letter-spacing: 2.5px;
+        padding: 0;
+        color: rgba($light-grey, 50%);
+    }
 
-    // }
+    &--special {
+        margin: 1rem 0;
+    }
+
+    &--active {
+        color: rgba($light-grey, 100%);
+    }
 }
 
 
