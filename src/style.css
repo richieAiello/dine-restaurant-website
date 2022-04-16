@@ -176,6 +176,16 @@
   background-color: #9E7F66;
   margin-inline: auto;
 }
+.main .reservation {
+  background-image: url("../images/homepage/ready-bg-mobile@2x.jpg");
+  background-size: cover;
+  background-position: bottom;
+  padding: 5rem 0;
+  color: #FFFFFF;
+}
+.main .reservation .main__heading {
+  margin-bottom: 1.5rem;
+}
 
 /**************************************
     Images
