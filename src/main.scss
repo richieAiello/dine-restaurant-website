@@ -205,7 +205,7 @@ $tan: #9E7F66;
     &--enjoyable-place,
     &--locally-sourced {
         box-shadow: 0 75px 100px -50px rgba(#384255, 50.32%);
-        max-height: 400px;
+        height: 400px;
     }
 
     &--enjoyable-place {
@@ -215,7 +215,7 @@ $tan: #9E7F66;
         left: 0;
         right: 0;
         margin-inline: auto;
-        object-position: top;
+        object-position: left top;
     }
 
     &--locally-sourced {
