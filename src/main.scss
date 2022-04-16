@@ -33,7 +33,7 @@ $tan: #9E7F66;
 }
 
 .container {
-    width: min(100% - 1.5rem, 1110px);
+    width: min(100% - 3rem, 1110px);
     margin-inline: auto;  
 }
 
@@ -89,8 +89,49 @@ $tan: #9E7F66;
     }
 
     .btn--dark {
-        border: 1px solid $white ;
+        border: 1px solid $white;
     }
+}
+
+/**************************************
+    Main
+**************************************/
+.main {
+
+    &__heading  {
+        font-weight: 700;
+        font-size: 2.35rem;
+        line-height: 2.5rem;
+        letter-spacing: 1 px;
+        color: $dark-grey;
+    }
+
+    // &__text {
+
+    // }
+
+    .divider {
+        margin-bottom: 2rem;
+    }
+
+    .location {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-top: 23.5rem;
+    }
+
+    // .hightlights {
+
+    // }
+
+    // .events {
+
+    // }
+
+    // .reservation {
+
+    // }
 }
 
 /**************************************
@@ -99,15 +140,19 @@ $tan: #9E7F66;
 .image {
     max-width: 100%;
 
-    // &--events-mobile {
+    // &--mobile {
     //   
     // }
 
-    &--events-tablet {
+    &--tablet {
         display: none;
     }
 
-    &--events-desktop {
+    &--desktop {
+        display: none;
+    }
+
+    &--menu {
         display: none;
     }
 }
