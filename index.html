@@ -7,25 +7,27 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./src/style.css">
     <script type="module" src="./src/index.js"></script>
 
     <title>Frontend Mentor | Dine Website Challenge</title>
 </head>
-<body>
+<body class="body">
     <header class="hero">
         <div class="context">
-            <img src="./images/logo.svg" alt="Dine logo" class="logo">
-            <h1 class="hero__heading">Exquisite dining since 1989</h1>
-            <p class="hero__text">
-                Experience our seasonal menu in beautiful country surroundings. 
-                Eat the freshest produce from the comfort of our farmhouse.
-            </p>
-            <a href="./src/booking.html" class="btn btn--hero link">
-                book a table
-            </a>
+            <div class="container">
+                <img src="./images/logo.svg" alt="Dine logo" class="logo">
+                <h1 class="hero__heading">Exquisite dining<br> since 1989</h1>
+                <p class="hero__text">
+                    Experience our seasonal menu in beautiful country surroundings.
+                    Eat the freshest produce from the comfort of our farmhouse.
+                </p>
+                <a href="./src/booking.html" class="btn btn--dark link">
+                    book a table
+                </a>
+            </div>
         </div>
     </header>
     <main class="main">
@@ -35,7 +37,7 @@
           
                 <div class="context">
                     <img src="./images/patterns/pattern-divide.svg" alt="" class="divider"> 
-                    <h2 class="main__heading">Enjoyable place for all the family</h2>
+                    <h2 class="main__heading">Enjoyable place<br> for all the family</h2>
                     <p class="main__text">
                         Our relaxed surroundings make dining with us a great experience for 
                         everyone. We can even arrange a tour of the farm before your meal.
@@ -45,26 +47,26 @@
                 <img 
                     src="./images/homepage/enjoyable-place-mobile@2x.jpg" 
                     alt="View of the farm near the restaurant with grazing animals."
-                    class="image image--enjoyable-place-mobile" 
+                    class="image image--enjoyable-place image--mobile" 
                 >
                 <!-- Displayed on tablet -->
                 <img 
                     src="./images/homepage/enjoyable-place-tablet@2x.jpg" 
                     alt="View of the farm near the restaurant with grazing animals."
-                    class="image image--enjoyable-place-tablet" 
+                    class="image image--enjoyable-place image--tablet" 
                 >
                 <!-- Displayed on desktop -->
                 <img 
                     src="./images/homepage/enjoyable-place-desktop@2x.jpg" 
                     alt="View of the farm near the restaurant with grazing animals."
-                    class="image image--enjoyable-place-desktop" 
+                    class="image image--enjoyable-place image--desktop" 
                 >
             </div>
             <div class="wrapper container">
           
                 <div class="context">
                     <img src="./images/patterns/pattern-divide.svg" alt="" class="divider">
-                    <h2 class="main__heading">The most locally sourced food</h2>
+                    <h2 class="main__heading">The most locally<br> sourced food</h2>
                     <p class="main__text">
                         All our ingredients come directly from our farm or local fishery. So you 
                         can be sure that you’re eating the freshest, most sustainable food.
@@ -74,19 +76,19 @@
                 <img 
                     src="./images/homepage/locally-sourced-mobile@2x.jpg" 
                     alt="Close up of a delicious locally sourced meal."
-                    class="image image--locally-sourced-mobile"
+                    class="image image--locally-sourced image--mobile"
                 >
                 <!-- Displayed on tablet -->
                 <img 
                     src="./images/homepage/locally-sourced-tablet@2x.jpg" 
                     alt="Close up of a delicious locally sourced meal."
-                    class="image image--locally-sourced-tablet"
+                    class="image image--locally-sourced image--tablet"
                 >
                 <!-- Displayed on desktop -->
                 <img 
                     src="./images/homepage/locally-sourced-desktop@2x.jpg" 
                     alt="Close up of a delicious locally sourced meal."
-                    class="image image--locally-sourced-desktop"
+                    class="image image--locally-sourced image--desktop"
                 >
             </div>
         </section>
@@ -118,13 +120,13 @@
                         <img 
                             src="./images/homepage/salmon-mobile@2x.jpg" 
                             alt="An eloquently presented dish of seared salmon fillet." 
-                            class="image image--salmon-mobile"
+                            class="image image--salmon image--menu-mobile"
                         >
                         <!-- Displayed on desktop and tablet -->
                         <img 
                             src="./images/homepage/salmon-desktop-tablet@2x.jpg" 
                             alt="An eloquently presented dish of seared salmon fillet." 
-                            class="image image--salmon-desktop-tablet"
+                            class="image image--salmon image--menu"
                         >
                         <!-- Hidden on mobile -->
                         <div class="accent-line"></div> 
@@ -141,13 +143,13 @@
                         <img 
                             src="./images/homepage/beef-mobile@2x.jpg" 
                             alt="A juicy dish of prime beef." 
-                            class="image image--beef-mobile"
+                            class="image image--beef image--menu-mobile"
                         >
                         <!-- Displayed on desktop and tablet -->
                         <img 
                             src="./images/homepage/beef-desktop-tablet@2x.jpg" 
                             alt="A juicy dish of prime beef." 
-                            class="image image--beef-desktop-tablet" 
+                            class="image image--beef image--menu" 
                         >
                         <!-- Hidden on mobile -->
                         <div class="accent-line"></div>
@@ -164,13 +166,13 @@
                         <img 
                             src="./images/homepage/chocolate-mobile@2x.jpg" 
                             alt="Cup of chocolate mousse topped with fruit." 
-                            class="image image--chocolate-mobile"
+                            class="image image--chocolate image--menu-mobile"
                         >
                         <!-- Displayed on desktop and tablet -->
                         <img 
                             src="./images/homepage/chocolate-desktop-tablet@2x.jpg" 
                             alt="Cup of chocolate mousse topped with fruit." 
-                            class="image image--chocolate-desktop-tablet" 
+                            class="image image--chocolate image--menu" 
                         >
                         <!-- Hidden on mobile -->
                         <div class="accent-line"></div>
@@ -188,7 +190,7 @@
                         everyone along for a special meal with your loved ones. 
                         We’ll provide a memorable experience for all.
                     </p>
-                    <a href="./src/booking.html" class="btn btn--events link">
+                    <a href="./src/booking.html" class="btn btn--dark link">
                         book a table
                     </a>
                 </div>
@@ -201,59 +203,59 @@
                     <img 
                         src="./images/homepage/family-gathering-mobile@2x.jpg" 
                         alt="A family feasting at the dining table."
-                        class="image image--events-mobile image--family-gathering"
+                        class="image image--family-gathering image--mobile "
                     >
                     <!-- Displayed on mobile, on click -->
                     <img 
                         src="./images/homepage/special-events-mobile@2x.jpg" 
                         alt="A family celebrating a special event at the restaurant."
-                        class="image image--events-mobile image--special-events hidden"
+                        class="image image--special-events image--mobile hidden"
                     >
                     <!-- Displayed on mobile, on click -->
                     <img 
                         src="./images/homepage/social-events-mobile@2x.jpg" 
                         alt="Customers enjoying a social dinner gathering."
-                        class="image image--events-mobile image--social-events hidden"
+                        class="image image--social-events image--mobile hidden"
                     >
                     <!-- Displayed on tablet, by default -->
                     <img 
                         src="./images/homepage/family-gathering-tablet@2x.jpg" 
                         alt="A family feasting at the dining table."
-                        class="image image--events-tablet image--family-gathering"
+                        class="image image--family-gathering image--tablet"
                     >
                     <!-- Displayed on tablet, on click -->
                     <img 
                         src="./images/homepage/special-events-tablet@2x.jpg" 
                         alt="A family celebrating a special event at the restaurant."
-                        class="image image--events-tablet image--special-events hidden"
+                        class="image image--special-events image--tablet hidden"
                     >
                     <!-- Displayed on tablet, on click -->
                     <img 
                         src="./images/homepage/social-events-tablet@2x.jpg" 
                         alt="Customers enjoying a social dinner gathering."
-                        class="image image--events-tablet image--social-events hidden"
+                        class="image image--social-events image--tablet hidden"
                     >
                     <!-- Displayed on desktop, by default -->
                     <img 
                         src="./images/homepage/family-gathering-desktop@2x.jpg" 
                         alt="A family feasting at the dining table."
-                        class="image image--events-desktop image--family-gathering"
+                        class="image image--family-gathering image--desktop"
                     >
                     <!-- Displayed on desktop, on click -->
                     <img 
                         src="./images/homepage/special-events-desktop@2x.jpg" 
                         alt="A family celebrating a special event at the restaurant."
-                        class="image image--events-desktop image--special-events hidden"
+                        class="image image--special-events image--desktop hidden"
                     >
                     <!-- Displayed on desktop, on click -->
                     <img 
                         src="./images/homepage/social-events-desktop@2x.jpg" 
                         alt="Customers enjoying a social dinner gathering."
-                        class="image image--events-desktop image--social-events hidden"
+                        class="image image--social-events image--desktop hidden"
                     >
                     <div class="wrapper--btn">
                         <!-- Start with default btn disabled? -->
-                        <button class="btn btn--events btn--family" disabled>
+                        <button class="btn btn--events btn--family btn--active">
                             family gathering
                             <div class="accent"></div>
                         </button>
@@ -272,28 +274,32 @@
         <section class="reservation">
             <div class="container">
                  <h2 class="main__heading">Ready to make a reservation?</h2>
-                 <a href="./src/booking.html" class="btn btn--reservation link">
+                 <a href="./src/booking.html" class="btn btn--light link">
                      book a table
                  </a>
             </div>
         </section>
     </main>
     <footer class="footer">
-
-        <img src="./images/logo.svg" alt="dine logo" class="logo">
-
-        <div class="wrapper">
-            <address class="address">
-                Marthwaite, Sedbergh<br>
-                Cumbria<br>
-                +00 44 123 4567
-            </address>
-            
-            <p class="store-hours">
-                Open Times<br>
-                Mon - Fri: <time datetime="9:00">09:00 AM</time> - <time datetime="22:00">10:00 PM</time><br>
-                Sat - Sun: <time datetime="9:00">09:00 AM</time> - <time datetime="23:30">11:30 PM</time>
-            </p>
+        <div class="container">
+        
+            <img src="./images/logo.svg" alt="dine logo" class="logo">
+    
+            <div class="wrapper">
+                <address class="address">
+                    Marthwaite, Sedbergh<br>
+                    Cumbria<br>
+                    +00 44 123 4567
+                </address>
+    
+                <p class="store-hours">
+                    Open Times<br>
+                    Mon - Fri: 
+                    <time datetime="9:00">09:00 AM</time> - <time datetime="22:00">10:00 PM</time><br>
+                    Sat - Sun:
+                    <time datetime="9:00">09:00 AM</time> - <time datetime="23:30">11:30 PM</time>
+                </p>
+            </div>
         </div>
     </footer>
 </body>
