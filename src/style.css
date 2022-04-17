@@ -34,10 +34,6 @@
   color: inherit;
 }
 
-.hidden {
-  display: none;
-}
-
 /**************************************
     Header
 **************************************/
@@ -191,7 +187,7 @@
     Footer
 **************************************/
 .footer {
-  font-weight: 200;
+  font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.675rem;
   letter-spacing: 2px;
@@ -228,7 +224,7 @@
   max-width: 100%;
   object-fit: cover;
 }
-.image--tablet, .image--desktop, .image--menu {
+.image--tablet, .image--desktop {
   display: none;
 }
 .image--enjoyable-place, .image--locally-sourced, .image--family-gathering, .image--special-events, .image--social-events {
@@ -247,7 +243,7 @@
 .image--locally-sourced {
   object-position: bottom;
 }
-.image--menu-mobile {
+.image--menu {
   max-height: 320px;
   margin-bottom: 2rem;
 }
@@ -258,6 +254,10 @@
 }
 .image--beef {
   object-position: 50% 40%;
+}
+
+.hidden {
+  display: none;
 }
 
 /**************************************

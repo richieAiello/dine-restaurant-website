@@ -9,7 +9,6 @@ $light-grey: #4C4C4C;
 $dark-grey: #242B37;
 $tan: #9E7F66;
   
-
 /**************************************
     Reset
 **************************************/
@@ -43,10 +42,6 @@ $tan: #9E7F66;
     color: inherit;
 }
   
-.hidden {
-    display: none;
-}   
-
 /**************************************
     Header
 **************************************/
@@ -239,7 +234,7 @@ $tan: #9E7F66;
     Footer
 **************************************/
 .footer {
-    font-weight: 200;
+    font-weight: 300;
     font-size: .875rem;
     line-height: 1.675rem;
     letter-spacing: 2px;
@@ -282,8 +277,7 @@ $tan: #9E7F66;
     object-fit: cover;
 
     &--tablet,
-    &--desktop,
-    &--menu {
+    &--desktop {
         display: none;
     }
 
@@ -310,7 +304,7 @@ $tan: #9E7F66;
         object-position: bottom;
     }
     
-    &--menu-mobile {
+    &--menu {
         max-height: 320px;
         margin-bottom: 2rem;
     }
@@ -326,6 +320,11 @@ $tan: #9E7F66;
         object-position: 50% 40%;
     }
 }
+
+// Placed at bottom for a higher specificity
+.hidden {
+    display: none;
+}   
 
 /**************************************
     Buttons
