@@ -26,13 +26,13 @@
 @media (min-width: 650px) {
   .body {
     font-size: 1.375rem;
-    line-height: 1.875rem;
+    line-height: 1.75rem;
     letter-spacing: 0.85px;
   }
 }
 
 .container {
-  width: min(100% - 3rem, 1110px);
+  width: min(100% - 3rem, 573px, 1110px);
   margin-inline: auto;
 }
 
@@ -125,6 +125,18 @@
 .main .divider {
   margin-bottom: 2rem;
 }
+@media (min-width: 650px) {
+  .main__heading {
+    font-weight: 600;
+    font-size: 3.125rem;
+    line-height: 3.25rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+  }
+  .main__text {
+    max-width: 37ch;
+  }
+}
 .main .location {
   color: #242B37;
   position: relative;
@@ -142,6 +154,11 @@
 }
 .main .location .wrapper:nth-of-type(2) .divider {
   margin-top: 3rem;
+}
+@media (min-width: 650px) {
+  .main .location {
+    padding-top: 20rem;
+  }
 }
 .main .highlights {
   background-color: #0E0E0E;
@@ -292,6 +309,13 @@
   }
   .image--tablet {
     display: block;
+  }
+  .image--enjoyable-place, .image--locally-sourced, .image--family-gathering, .image--special-events, .image--social-events {
+    height: 360px;
+  }
+  .image--enjoyable-place {
+    width: 573px;
+    top: -96px;
   }
 }
 

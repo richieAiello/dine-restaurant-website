@@ -34,14 +34,14 @@ $tan: #9E7F66;
     @media(min-width: 650px) {
         & {
             font-size: 1.375rem;
-            line-height: 1.875rem;
+            line-height: 1.75rem;
             letter-spacing: 0.85px;
         }
     }
 }
 
 .container {
-    width: min(100% - 3rem, 1110px);
+    width: min(100% - 3rem, 573px, 1110px);
     margin-inline: auto;  
 }
 
@@ -150,6 +150,21 @@ $tan: #9E7F66;
         margin-bottom: 2rem;
     }
 
+    @media(min-width: 650px) {
+
+        &__heading {
+            font-weight: 600;
+            font-size: 3.125rem;
+            line-height: 3.25rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;   
+        }
+
+        &__text {
+            max-width: 37ch;
+        }
+    }
+
     .location {
         color: $dark-grey;
         position: relative;
@@ -172,6 +187,13 @@ $tan: #9E7F66;
 
             .divider {
                 margin-top: 3rem;
+            }
+        }
+
+        @media(min-width: 650px) {
+
+            & {
+                padding-top: 20rem;
             }
         }
     }
@@ -366,6 +388,19 @@ $tan: #9E7F66;
 
         &--tablet {
             display: block;
+        }
+
+        &--enjoyable-place,
+        &--locally-sourced,
+        &--family-gathering,
+        &--special-events,
+        &--social-events {
+            height: 360px;
+        }
+
+        &--enjoyable-place {
+            width: min(573px);
+            top: -96px;
         }
     }
 }
