@@ -36,6 +36,10 @@
   width: min(100% - 3rem, 573px, 1110px);
   margin-inline: auto;
 }
+.container--events {
+  width: min(100% - 3rem, 689px, 1110px);
+  margin-inline: auto;
+}
 
 .link {
   text-decoration: none;
@@ -358,6 +362,9 @@
   }
   .image--enjoyable-place, .image--locally-sourced, .image--family-gathering, .image--special-events, .image--social-events {
     height: 360px;
+  }
+  .image--family-gathering, .image--special-events, .image--social-events {
+    margin-inline: auto;
   }
   .image--enjoyable-place {
     width: 573px;

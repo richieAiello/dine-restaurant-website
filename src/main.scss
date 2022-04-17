@@ -43,7 +43,12 @@ $tan: #9E7F66;
 
 .container {
     width: min(100% - 3rem, 573px, 1110px);
-    margin-inline: auto;  
+    margin-inline: auto;
+    
+    &--events {
+        width: min(100% - 3rem, 689px, 1110px);
+        margin-inline: auto;
+    }
 }
 
 .link {
@@ -479,6 +484,12 @@ $tan: #9E7F66;
         &--special-events,
         &--social-events {
             height: 360px;
+        }
+
+        &--family-gathering,
+        &--special-events,
+        &--social-events {
+            margin-inline: auto;
         }
 
         &--enjoyable-place {
