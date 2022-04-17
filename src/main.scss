@@ -265,6 +265,29 @@ $tan: #9E7F66;
                 margin-inline: auto;
             }
         }
+
+        @media(min-width: 650px) {
+            
+            & {
+
+                .menu {
+
+                    .wrapper {
+                        flex-direction: row;
+                        position: relative;
+
+                        .accent {
+                            position: absolute;
+                            top: 18px;
+                            left: 128px;
+                            height: 1px;
+                            width: 32px;
+                            background-color: $tan;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     .events {
@@ -370,7 +393,8 @@ $tan: #9E7F66;
 
     &--tablet,
     &--desktop,
-    &--pattern {
+    &--pattern,
+    &--menu {
         display: none;
     }
 
@@ -397,7 +421,7 @@ $tan: #9E7F66;
         object-position: bottom;
     }
     
-    &--menu {
+    &--menu-mobile {
         max-height: 320px;
         margin-bottom: 2rem;
     }
@@ -408,11 +432,13 @@ $tan: #9E7F66;
 
     @media(min-width: 650px) {
 
-        &--mobile {
+        &--mobile,
+        &--menu-mobile {
             display: none;
         }
 
         &--tablet,
+        &--menu,
         &--pattern {
             display: block;
         }

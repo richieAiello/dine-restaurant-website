@@ -204,6 +204,20 @@
   max-width: 25ch;
   margin-inline: auto;
 }
+@media (min-width: 650px) {
+  .main .highlights .menu .wrapper {
+    flex-direction: row;
+    position: relative;
+  }
+  .main .highlights .menu .wrapper .accent {
+    position: absolute;
+    top: 18px;
+    left: 128px;
+    height: 1px;
+    width: 32px;
+    background-color: #9E7F66;
+  }
+}
 .main .events {
   padding-top: 5rem;
   padding-bottom: 7.75rem;
@@ -288,7 +302,7 @@
   object-fit: cover;
   border-radius: 3px;
 }
-.image--tablet, .image--desktop, .image--pattern {
+.image--tablet, .image--desktop, .image--pattern, .image--menu {
   display: none;
 }
 .image--enjoyable-place, .image--locally-sourced, .image--family-gathering, .image--special-events, .image--social-events {
@@ -307,7 +321,7 @@
 .image--locally-sourced {
   object-position: bottom;
 }
-.image--menu {
+.image--menu-mobile {
   max-height: 320px;
   margin-bottom: 2rem;
 }
@@ -315,10 +329,10 @@
   object-position: 50% 40%;
 }
 @media (min-width: 650px) {
-  .image--mobile {
+  .image--mobile, .image--menu-mobile {
     display: none;
   }
-  .image--tablet, .image--pattern {
+  .image--tablet, .image--menu, .image--pattern {
     display: block;
   }
   .image--enjoyable-place, .image--locally-sourced, .image--family-gathering, .image--special-events, .image--social-events {
