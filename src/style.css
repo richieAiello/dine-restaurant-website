@@ -24,7 +24,7 @@
   text-align: center;
   overflow-x: hidden;
 }
-@media (min-width: 650px) {
+@media (min-width: 635px) {
   .body {
     font-size: 1.375rem;
     line-height: 1.75rem;
@@ -84,7 +84,7 @@
 .hero .btn--dark {
   border: 1px solid #FFFFFF;
 }
-@media (min-width: 650px) {
+@media (min-width: 635px) {
   .hero {
     min-height: 992px;
     background-image: url(../images/homepage/hero-bg-tablet@2x.jpg);
@@ -126,7 +126,7 @@
 .main .divider {
   margin-bottom: 2rem;
 }
-@media (min-width: 650px) {
+@media (min-width: 635px) {
   .main__heading {
     font-weight: 600;
     font-size: 3.125rem;
@@ -158,7 +158,7 @@
 .main .location .wrapper:nth-of-type(2) .divider {
   margin-top: 3rem;
 }
-@media (min-width: 650px) {
+@media (min-width: 635px) {
   .main .location .wrapper .context .main__text {
     margin-bottom: 7.5rem;
   }
@@ -198,24 +198,45 @@
   margin-bottom: 0.25rem;
 }
 .main .highlights .menu__text {
-  font-weight: 100;
-  font-size: 1.25rem;
+  font-weight: 200;
+  font-size: 1.125rem;
   line-height: 1.75rem;
-  max-width: 25ch;
+  letter-spacing: 0.5px;
+  max-width: 28ch;
   margin-inline: auto;
 }
-@media (min-width: 650px) {
+@media (min-width: 635px) {
+  .main .highlights {
+    padding: 6rem 0;
+  }
+  .main .highlights .main__text {
+    margin-bottom: 3.5rem;
+  }
   .main .highlights .menu .wrapper {
     flex-direction: row;
     position: relative;
   }
   .main .highlights .menu .wrapper .accent {
     position: absolute;
-    top: 18px;
     left: 128px;
     height: 1px;
     width: 32px;
     background-color: #9E7F66;
+  }
+  .main .highlights .menu__item {
+    text-align: left;
+    margin-left: 3.875rem;
+  }
+  .main .highlights .menu__text {
+    margin-inline: unset;
+    max-width: unset;
+  }
+  .main .highlights .menu .wrapper:first-of-type .accent {
+    top: 18px;
+  }
+  .main .highlights .menu .wrapper:nth-of-type(2) .accent,
+.main .highlights .menu .wrapper:nth-of-type(3) .accent {
+    top: 42px;
   }
 }
 .main .events {
@@ -328,7 +349,7 @@
 .image--beef {
   object-position: 50% 40%;
 }
-@media (min-width: 650px) {
+@media (min-width: 635px) {
   .image--mobile, .image--menu-mobile {
     display: none;
   }
@@ -358,6 +379,10 @@
     z-index: -1;
     bottom: 0;
     left: 287px;
+  }
+  .image--menu {
+    height: 96px;
+    width: 128px;
   }
 }
 
