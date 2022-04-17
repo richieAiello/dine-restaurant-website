@@ -22,6 +22,7 @@
   line-height: 1.5625rem;
   letter-spacing: -0.19px;
   text-align: center;
+  overflow-x: hidden;
 }
 @media (min-width: 650px) {
   .body {
@@ -139,12 +140,11 @@
 }
 .main .location {
   color: #242B37;
-  position: relative;
-  padding-top: 23.5rem;
 }
 .main .location .wrapper {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .main .location .wrapper .context {
   order: 2;
@@ -152,12 +152,21 @@
 .main .location .wrapper .context .main__text {
   margin-bottom: 5rem;
 }
+.main .location .wrapper:first-child {
+  padding-top: 23.5rem;
+}
 .main .location .wrapper:nth-of-type(2) .divider {
   margin-top: 3rem;
 }
 @media (min-width: 650px) {
-  .main .location {
+  .main .location .wrapper .context .main__text {
+    margin-bottom: 7.5rem;
+  }
+  .main .location .wrapper:first-child {
     padding-top: 20rem;
+  }
+  .main .location .wrapper:nth-of-type(2) .divider {
+    margin-top: 3.5rem;
   }
 }
 .main .highlights {
@@ -171,6 +180,12 @@
 .main .highlights .menu .wrapper {
   display: flex;
   flex-direction: column;
+}
+.main .highlights .menu .wrapper:nth-of-type(2),
+.main .highlights .menu .wrapper:nth-of-type(3) {
+  margin-top: 1.5rem;
+  border-top: 1.5px solid rgba(151, 151, 151, 0.15);
+  padding-top: 1.5rem;
 }
 .main .highlights .menu__item {
   order: 2;
@@ -271,8 +286,9 @@
 .image {
   max-width: 100%;
   object-fit: cover;
+  border-radius: 3px;
 }
-.image--tablet, .image--desktop {
+.image--tablet, .image--desktop, .image--pattern {
   display: none;
 }
 .image--enjoyable-place, .image--locally-sourced, .image--family-gathering, .image--special-events, .image--social-events {
@@ -295,11 +311,6 @@
   max-height: 320px;
   margin-bottom: 2rem;
 }
-.image--beef, .image--chocolate {
-  padding-top: 1.5rem;
-  margin-top: 1.5rem;
-  border-top: 1.5px solid rgba(151, 151, 151, 0.15);
-}
 .image--beef {
   object-position: 50% 40%;
 }
@@ -307,7 +318,7 @@
   .image--mobile {
     display: none;
   }
-  .image--tablet {
+  .image--tablet, .image--pattern {
     display: block;
   }
   .image--enjoyable-place, .image--locally-sourced, .image--family-gathering, .image--special-events, .image--social-events {
@@ -316,6 +327,23 @@
   .image--enjoyable-place {
     width: 573px;
     top: -96px;
+  }
+  .image--pattern {
+    position: absolute;
+  }
+  .image--top-right {
+    z-index: -1;
+    top: 100px;
+    right: 292px;
+  }
+  .image--lines {
+    bottom: 489px;
+    left: 471px;
+  }
+  .image--top-left {
+    z-index: -1;
+    bottom: 0;
+    left: 287px;
   }
 }
 
@@ -335,6 +363,7 @@
   letter-spacing: 3px;
   background-color: initial;
   border: initial;
+  border-radius: 3px;
   text-transform: uppercase;
   padding: 1.5rem 3.4375rem;
   transition: all 400ms;

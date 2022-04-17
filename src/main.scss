@@ -30,6 +30,7 @@ $tan: #9E7F66;
     line-height: 1.5625rem;
     letter-spacing: -0.19px;
     text-align: center;
+    overflow-x: hidden;
 
     @media(min-width: 650px) {
         & {
@@ -167,12 +168,11 @@ $tan: #9E7F66;
 
     .location {
         color: $dark-grey;
-        position: relative;
-        padding-top: 23.5rem;
-
+        
         .wrapper {
             display: flex;
             flex-direction: column;
+            position: relative;
 
             .context {
                 order: 2;
@@ -181,6 +181,10 @@ $tan: #9E7F66;
                     margin-bottom: 5rem;
                 }
             }
+        }
+
+        .wrapper:first-child {
+            padding-top: 23.5rem;
         }
 
         .wrapper:nth-of-type(2) {
@@ -193,7 +197,27 @@ $tan: #9E7F66;
         @media(min-width: 650px) {
 
             & {
-                padding-top: 20rem;
+
+                .wrapper {
+
+                    .context {
+
+                        .main__text {
+                            margin-bottom: 7.5rem;
+                        }
+                    }    
+                }
+
+                .wrapper:first-child {
+                    padding-top: 20rem;
+                }
+                
+                .wrapper:nth-of-type(2) {
+
+                    .divider {
+                        margin-top: 3.5rem;
+                    }
+                }
             }
         }
     }
@@ -212,6 +236,13 @@ $tan: #9E7F66;
             .wrapper {
                 display: flex;
                 flex-direction: column;  
+            }
+
+            .wrapper:nth-of-type(2),
+            .wrapper:nth-of-type(3) {
+                margin-top: 1.5rem;
+                border-top: 1.5px solid rgba(#979797, 15%);
+                padding-top: 1.5rem;
             }
 
             &__item {
@@ -335,9 +366,11 @@ $tan: #9E7F66;
 .image {
     max-width: 100%;
     object-fit: cover;
+    border-radius: 3px;
 
     &--tablet,
-    &--desktop {
+    &--desktop,
+    &--pattern {
         display: none;
     }
 
@@ -369,13 +402,6 @@ $tan: #9E7F66;
         margin-bottom: 2rem;
     }
 
-    &--beef,
-    &--chocolate {
-        padding-top: 1.5rem;
-        margin-top: 1.5rem;
-        border-top: 1.5px solid rgba(#979797, 15%);
-    }
-
     &--beef {
         object-position: 50% 40%;
     }
@@ -386,7 +412,8 @@ $tan: #9E7F66;
             display: none;
         }
 
-        &--tablet {
+        &--tablet,
+        &--pattern {
             display: block;
         }
 
@@ -401,6 +428,27 @@ $tan: #9E7F66;
         &--enjoyable-place {
             width: min(573px);
             top: -96px;
+        }
+
+        &--pattern {
+            position: absolute;
+        }
+
+        &--top-right {
+            z-index: -1;
+            top: 100px;
+            right: 292px;
+        }
+
+        &--lines {
+            bottom: 489px;
+            left: 471px;
+        }
+
+        &--top-left {
+            z-index: -1;
+            bottom: 0;
+            left: 287px;
         }
     }
 }
@@ -422,6 +470,7 @@ $tan: #9E7F66;
     letter-spacing: 3px; 
     background-color: initial;
     border: initial;
+    border-radius: 3px;
     text-transform: uppercase;
     padding: 1.5rem 3.4375rem;
     transition: all 400ms;
