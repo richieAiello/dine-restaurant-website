@@ -36,7 +36,7 @@
   width: min(100% - 3rem, 573px, 1110px);
   margin-inline: auto;
 }
-.container--events {
+.container--secondary {
   width: min(100% - 3rem, 689px, 1110px);
   margin-inline: auto;
 }
@@ -283,6 +283,12 @@
 }
 .main .reservation .main__heading {
   margin-bottom: 1.5rem;
+}
+@media (min-width: 635px) {
+  .main .reservation {
+    background-image: url("../images/homepage/ready-bg-tablet@2x.jpg");
+    padding: 4rem 0;
+  }
 }
 
 /**************************************
