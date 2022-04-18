@@ -250,29 +250,37 @@
 .main .events__text {
   margin-bottom: 2rem;
 }
-.main .events .wrapper {
+.main .events .container--secondary {
   display: flex;
   flex-direction: column;
 }
-.main .events .wrapper .context {
+.main .events .container--secondary .wrapper {
+  display: flex;
+  flex-direction: column;
+  order: 2;
+}
+.main .events .container--secondary .wrapper .context {
   order: 2;
   color: #242B37;
   margin-top: 1.5rem;
 }
-.main .events .wrapper--events .image {
-  margin-bottom: -0.7ch;
-}
-.main .events .wrapper--btn {
+.main .events .container--secondary .wrapper--secondary {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 3rem;
 }
-.main .events .wrapper--btn .accent {
+.main .events .container--secondary .wrapper--secondary .accent {
   height: 1px;
   width: 48px;
   background-color: #9E7F66;
   margin-inline: auto;
+}
+@media (min-width: 635px) {
+  .main .events {
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+  }
 }
 .main .reservation {
   background-image: url("../images/homepage/ready-bg-mobile@2x.jpg");
@@ -392,16 +400,16 @@
   .image--pattern {
     position: absolute;
   }
-  .image--top-right {
+  .image--top-right-location {
     z-index: -1;
     top: 100px;
     right: 292px;
   }
-  .image--lines {
+  .image--lines-location {
     bottom: 489px;
     left: 471px;
   }
-  .image--top-left {
+  .image--top-left-location {
     z-index: -1;
     bottom: 0;
     left: 287px;

@@ -333,37 +333,44 @@ $tan: #9E7F66;
             margin-bottom: 2rem;
         }
 
-        .wrapper {
+        .container--secondary {
             display: flex;
             flex-direction: column;
 
-            .context {
-                order: 2;
-                color: $dark-grey;
-                margin-top: 1.5rem;
-            }
-
-            &--events {
-
-                .image {
-                    margin-bottom: -0.7ch;
-                }
-            }
-
-            &--btn {
+            .wrapper {
                 display: flex;
                 flex-direction: column;
-                align-items: center;
-                margin-top: 3rem;
-
-                .accent {
-                    height: 1px;
-                    width: 48px;
-                    background-color: $tan;
-                    margin-inline: auto;
+                order: 2;
+    
+                .context {
+                    order: 2;
+                    color: $dark-grey;
+                    margin-top: 1.5rem;
                 }
+    
+                &--secondary {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 3rem;
+    
+                    .accent {
+                        height: 1px;
+                        width: 48px;
+                        background-color: $tan;
+                        margin-inline: auto;
+                    }
+                }
+            } 
+        }
+
+        @media(min-width: 635px) {
+
+            & {
+                padding-top: 7.5rem;
+                padding-bottom: 7.5rem;
             }
-        } 
+        }
     }
 
     .reservation {
@@ -526,18 +533,18 @@ $tan: #9E7F66;
             position: absolute;
         }
 
-        &--top-right {
+        &--top-right-location {
             z-index: -1;
             top: 100px;
             right: 292px;
         }
 
-        &--lines {
+        &--lines-location {
             bottom: 489px;
             left: 471px;
         }
 
-        &--top-left {
+        &--top-left-location {
             z-index: -1;
             bottom: 0;
             left: 287px;
