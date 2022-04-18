@@ -61,6 +61,12 @@
                     alt="View of the farm near the restaurant with grazing animals."
                     class="image image--enjoyable-place image--desktop" 
                 >
+                <!-- Hidden on mobile -->
+                <img 
+                    src="./images/patterns/pattern-curve-top-right.svg" 
+                    alt=""
+                    class="image--top-right-location image--pattern"    
+                >
             </div>
             <div class="wrapper container">
           
@@ -90,6 +96,18 @@
                     alt="Close up of a delicious locally sourced meal."
                     class="image image--locally-sourced image--desktop"
                 >
+                <!-- Hidden on mobile -->
+                <img 
+                    src="./images/patterns/pattern-lines.svg" 
+                    alt=""
+                    class="image--lines-location image--pattern"    
+                >
+                <!-- Hidden on mobile -->
+                <img 
+                    src="./images/patterns/pattern-curve-top-left.svg" 
+                    alt=""
+                    class="image--top-left-location image--pattern"    
+                >
             </div>
         </section>
         <section class="highlights">
@@ -116,13 +134,20 @@
                                 buckwheat summer salad.
                             </p>
                         </div>
+                        <!-- Displayed on mobile -->
                         <img 
-                            src="./images/homepage/salmon.jpg" 
+                            src="./images/homepage/salmon-mobile@2x.jpg" 
                             alt="An eloquently presented dish of seared salmon fillet." 
-                            class="image image--salmon image--menu"
+                            class="image image--salmon image--menu-mobile"
+                        >
+                        <!-- Displayed on tablet and desktop -->
+                        <img 
+                            src="./images/homepage/salmon-desktop-tablet@2x.jpg" 
+                            alt="An eloquently presented dish of seared salmon fillet." 
+                            class="image image--salmon image--menu" 
                         >
                         <!-- Hidden on mobile -->
-                        <div class="accent-line"></div> 
+                        <div class="accent"></div> 
                     </div>
                     <div class="wrapper">
                         <div class="menu__item">
@@ -132,13 +157,20 @@
                                 choice of seasonal sides.
                             </p>
                         </div>
+                        <!-- Displayed on mobile -->
                         <img 
-                            src="./images/homepage/beef.jpg" 
+                            src="./images/homepage/beef-mobile@2x.jpg" 
+                            alt="A juicy dish of prime beef." 
+                            class="image image--beef image--menu-mobile" 
+                        >
+                        <!-- Displayed on tablet and desktop -->
+                        <img 
+                            src="./images/homepage/beef-desktop-tablet@2x.jpg" 
                             alt="A juicy dish of prime beef." 
                             class="image image--beef image--menu" 
                         >
                         <!-- Hidden on mobile -->
-                        <div class="accent-line"></div>
+                        <div class="accent"></div>
                     </div>
                     <div class="wrapper">
                         <div class="menu__item">
@@ -148,91 +180,40 @@
                                 dark chocolate shavings.
                             </p>
                         </div>
+                        <!-- Displayed on mobile -->
                         <img 
-                            src="./images/homepage/chocolate.jpg" 
+                            src="./images/homepage/chocolate-mobile@2x.jpg" 
+                            alt="Cup of chocolate mousse topped with fruit." 
+                            class="image image--chocolate image--menu-mobile" 
+                        >
+                        <!-- Displayed on tablet and desktop -->
+                        <img 
+                            src="./images/homepage/chocolate-desktop-tablet@2x.jpg" 
                             alt="Cup of chocolate mousse topped with fruit." 
                             class="image image--chocolate image--menu" 
                         >
                         <!-- Hidden on mobile -->
-                        <div class="accent-line"></div>
+                        <div class="accent"></div>
                     </div>
                 </section>
             </div>   
         </section>
         <!-- Default event is Family Gathering, changed on click with JavaScript. -->
         <section class="events">
-            <div class="container wrapper">
-                <div class="context">
-                    <h2 class="events__heading main__heading">Family Gathering</h2>
-                    <p class="events__text main__text">
-                        We love catering for entire families. So please bring 
-                        everyone along for a special meal with your loved ones. 
-                        We’ll provide a memorable experience for all.
-                    </p>
-                    <a href="./src/booking.html" class="btn btn--dark link">
-                        book a table
-                    </a>
-                </div>
-                
-                <!-- In index.js toggle hidden class for pictures on click. -->
-                <!-- mobile, tablet, and desktop sizes need to be maintained -->
-                <!-- by media queries. -->
-                <div class="wrapper--events">
-                    <!-- Displayed on mobile, by default -->
-                    <img 
-                        src="./images/homepage/family-gathering-mobile@2x.jpg" 
-                        alt="A family feasting at the dining table."
-                        class="image image--family-gathering image--mobile "
-                    >
-                    <!-- Displayed on mobile, on click -->
-                    <img 
-                        src="./images/homepage/special-events-mobile@2x.jpg" 
-                        alt="A family celebrating a special event at the restaurant."
-                        class="image image--special-events image--mobile hidden"
-                    >
-                    <!-- Displayed on mobile, on click -->
-                    <img 
-                        src="./images/homepage/social-events-mobile@2x.jpg" 
-                        alt="Customers enjoying a social dinner gathering."
-                        class="image image--social-events image--mobile hidden"
-                    >
-                    <!-- Displayed on tablet, by default -->
-                    <img 
-                        src="./images/homepage/family-gathering-tablet@2x.jpg" 
-                        alt="A family feasting at the dining table."
-                        class="image image--family-gathering image--tablet"
-                    >
-                    <!-- Displayed on tablet, on click -->
-                    <img 
-                        src="./images/homepage/special-events-tablet@2x.jpg" 
-                        alt="A family celebrating a special event at the restaurant."
-                        class="image image--special-events image--tablet hidden"
-                    >
-                    <!-- Displayed on tablet, on click -->
-                    <img 
-                        src="./images/homepage/social-events-tablet@2x.jpg" 
-                        alt="Customers enjoying a social dinner gathering."
-                        class="image image--social-events image--tablet hidden"
-                    >
-                    <!-- Displayed on desktop, by default -->
-                    <img 
-                        src="./images/homepage/family-gathering-desktop@2x.jpg" 
-                        alt="A family feasting at the dining table."
-                        class="image image--family-gathering image--desktop"
-                    >
-                    <!-- Displayed on desktop, on click -->
-                    <img 
-                        src="./images/homepage/special-events-desktop@2x.jpg" 
-                        alt="A family celebrating a special event at the restaurant."
-                        class="image image--special-events image--desktop hidden"
-                    >
-                    <!-- Displayed on desktop, on click -->
-                    <img 
-                        src="./images/homepage/social-events-desktop@2x.jpg" 
-                        alt="Customers enjoying a social dinner gathering."
-                        class="image image--social-events image--desktop hidden"
-                    >
-                    <div class="wrapper--btn">
+            <div class="container--secondary">
+                <div class="wrapper">
+                    <div class="context">
+                        <h2 class="events__heading main__heading">Family Gathering</h2>
+                        <p class="events__text main__text">
+                            We love catering for entire families. So please bring
+                            everyone along for a special meal with your loved ones.
+                            We’ll provide a memorable experience for all.
+                        </p>
+                        <a href="./src/booking.html" class="btn btn--dark link">
+                            book a table
+                        </a>
+                    </div>
+                    <div class="wrapper--secondary">
                         <!-- Start with default btn disabled? -->
                         <button class="btn btn--events btn--family btn--active">
                             family gathering
@@ -248,10 +229,81 @@
                         </button>
                     </div>
                 </div>
+            
+                <!-- In index.js toggle hidden class for pictures on click. -->
+                <!-- mobile, tablet, and desktop sizes need to be maintained -->
+                <!-- by media queries. -->
+               
+                <!-- Displayed on mobile, by default -->
+                <img 
+                    src="./images/homepage/family-gathering-mobile@2x.jpg" 
+                    alt="A family feasting at the dining table."
+                    class="image image--family-gathering image--mobile "
+                >
+                <!-- Displayed on mobile, on click -->
+                <img 
+                    src="./images/homepage/special-events-mobile@2x.jpg" 
+                    alt="A family celebrating a special event at the restaurant."
+                    class="image image--special-events image--mobile hidden"
+                >
+                <!-- Displayed on mobile, on click -->
+                <img 
+                    src="./images/homepage/social-events-mobile@2x.jpg" 
+                    alt="Customers enjoying a social dinner gathering."
+                    class="image image--social-events image--mobile hidden"
+                >
+                <!-- Displayed on tablet, by default -->
+                <img 
+                    src="./images/homepage/family-gathering-tablet@2x.jpg" 
+                    alt="A family feasting at the dining table."
+                    class="image image--family-gathering image--tablet"
+                >
+                <!-- Displayed on tablet, on click -->
+                <img 
+                    src="./images/homepage/special-events-tablet@2x.jpg" 
+                    alt="A family celebrating a special event at the restaurant."
+                    class="image image--special-events image--tablet hidden"
+                >
+                <!-- Displayed on tablet, on click -->
+                <img 
+                    src="./images/homepage/social-events-tablet@2x.jpg" 
+                    alt="Customers enjoying a social dinner gathering."
+                    class="image image--social-events image--tablet hidden"
+                >
+                <!-- Displayed on desktop, by default -->
+                <img 
+                    src="./images/homepage/family-gathering-desktop@2x.jpg" 
+                    alt="A family feasting at the dining table."
+                    class="image image--family-gathering image--desktop"
+                >
+                <!-- Displayed on desktop, on click -->
+                <img 
+                    src="./images/homepage/special-events-desktop@2x.jpg" 
+                    alt="A family celebrating a special event at the restaurant."
+                    class="image image--special-events image--desktop hidden"
+                >
+                <!-- Displayed on desktop, on click -->
+                <img 
+                    src="./images/homepage/social-events-desktop@2x.jpg" 
+                    alt="Customers enjoying a social dinner gathering."
+                    class="image image--social-events image--desktop hidden"
+                >
+                <!-- Hidden on mobile -->
+                <img 
+                    src="./images/patterns/pattern-curve-top-right.svg"
+                    alt=""
+                    class="image--top-right-events image--pattern"    
+                >
+                <!-- Hidden on mobile -->
+                <img 
+                    src="./images/patterns/pattern-lines.svg" 
+                    alt=""
+                    class="image--lines-events image--pattern"    
+                >
             </div>
         </section>
         <section class="reservation">
-            <div class="container">
+            <div class="container--secondary">
                  <h2 class="main__heading">Ready to make a reservation?</h2>
                  <a href="./src/booking.html" class="btn btn--light link">
                      book a table
@@ -260,7 +312,7 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="container">
+        <div class="container--secondary">
         
             <img src="./images/logo.svg" alt="dine logo" class="logo">
     
