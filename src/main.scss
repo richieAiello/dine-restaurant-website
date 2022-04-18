@@ -425,6 +425,23 @@ $tan: #9E7F66;
             letter-spacing: 3px;
         }
     }
+
+    @media(min-width: 635px) {
+
+        & {
+           padding: 4rem 0;
+            
+            .container--secondary {
+                display: flex;
+                align-items: flex-start;
+
+                .wrapper {
+                    text-align: left;
+                    margin-left: 8.125rem;
+                }
+            }
+        }
+    }
 }
 /**************************************
     Images

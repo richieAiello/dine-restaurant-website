@@ -324,6 +324,19 @@
     letter-spacing: 3px;
   }
 }
+@media (min-width: 635px) {
+  .footer {
+    padding: 4rem 0;
+  }
+  .footer .container--secondary {
+    display: flex;
+    align-items: flex-start;
+  }
+  .footer .container--secondary .wrapper {
+    text-align: left;
+    margin-left: 8.125rem;
+  }
+}
 
 /**************************************
     Images
