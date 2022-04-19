@@ -39,15 +39,29 @@ $tan: #9E7F66;
             letter-spacing: 0.85px;
         }
     }
+
+    @media(min-width: 1440px) {
+        text-align: left;
+    }
 }
 
 .container {
-    width: min(100% - 3rem, 573px, 1110px);
+    width: min(100% - 3rem, 1110px);
     margin-inline: auto;
     
     &--secondary {
-        width: min(100% - 3rem, 689px, 1110px);
+        width: min(100% - 3rem, 1110px);
         margin-inline: auto;
+    }
+
+    @media(min-width: 1440px) {
+
+        &--hero {
+            position: relative;
+            width: 1110px;
+            min-height: 820px;
+            margin-inline: auto;
+        }
     }
 }
 
@@ -68,13 +82,15 @@ $tan: #9E7F66;
     background-color: $black-grey;
     position: relative;
 
-    .context { 
+    .wrapper { 
         min-height: 528px;
         min-width: 100%;
         background-color: $black;
         color: $white;
+        padding: 0 1.5rem;
         position: absolute;
         bottom: 0;
+        left: 0;
 
         .logo {
             max-width: 82.4px;
@@ -109,7 +125,7 @@ $tan: #9E7F66;
             min-height: 992px;
             background-image: url(../images/homepage/hero-bg-tablet@2x.jpg);
 
-            .context {
+            .wrapper {
                 min-height: 618px;
 
                 .logo {
@@ -130,6 +146,39 @@ $tan: #9E7F66;
         &__text {
             max-width: 45ch;
             margin-bottom: 1.5rem;
+        }
+    }
+
+    @media(min-width: 1440px) {
+
+        & {
+            min-height: 820px;
+            background-image: url("../images/homepage/hero-bg-desktop@2x.jpg");
+            background-size: contain;
+            background-position: bottom right;
+            background-color: $black;
+            position: unset;
+
+            .wrapper {
+                min-height: 820px;
+                min-width: unset;
+                width: 545px;
+                left: -165px;
+
+                .context {
+                    position: absolute;
+                    top: 65px;
+                    left: 165px;
+
+                    .logo {
+                        margin-bottom: 9.5625rem;
+                    }
+                }
+            }
+
+            &__text {
+                margin-bottom: 2.625rem;
+            }
         }
     }
 }
@@ -545,6 +594,11 @@ $tan: #9E7F66;
         &--menu,
         &--pattern {
             display: block;
+        }
+
+        // Only for testing purposes, remove later.
+        &--pattern {
+            display: none;
         }
 
         &--enjoyable-place,

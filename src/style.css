@@ -31,14 +31,27 @@
     letter-spacing: 0.85px;
   }
 }
+@media (min-width: 1440px) {
+  .body {
+    text-align: left;
+  }
+}
 
 .container {
-  width: min(100% - 3rem, 573px, 1110px);
+  width: min(100% - 3rem, 1110px);
   margin-inline: auto;
 }
 .container--secondary {
-  width: min(100% - 3rem, 689px, 1110px);
+  width: min(100% - 3rem, 1110px);
   margin-inline: auto;
+}
+@media (min-width: 1440px) {
+  .container--hero {
+    position: relative;
+    width: 1110px;
+    min-height: 820px;
+    margin-inline: auto;
+  }
 }
 
 .link {
@@ -58,15 +71,17 @@
   background-color: #111111;
   position: relative;
 }
-.hero .context {
+.hero .wrapper {
   min-height: 528px;
   min-width: 100%;
   background-color: #0E0E0E;
   color: #FFFFFF;
+  padding: 0 1.5rem;
   position: absolute;
   bottom: 0;
+  left: 0;
 }
-.hero .context .logo {
+.hero .wrapper .logo {
   max-width: 82.4px;
   max-height: 32px;
   margin-top: 0.75rem;
@@ -93,10 +108,10 @@
     min-height: 992px;
     background-image: url(../images/homepage/hero-bg-tablet@2x.jpg);
   }
-  .hero .context {
+  .hero .wrapper {
     min-height: 618px;
   }
-  .hero .context .logo {
+  .hero .wrapper .logo {
     margin-top: 0;
     max-width: initial;
     max-height: initial;
@@ -110,6 +125,33 @@
   .hero__text {
     max-width: 45ch;
     margin-bottom: 1.5rem;
+  }
+}
+@media (min-width: 1440px) {
+  .hero {
+    min-height: 820px;
+    background-image: url("../images/homepage/hero-bg-desktop@2x.jpg");
+    background-size: contain;
+    background-position: bottom right;
+    background-color: #0E0E0E;
+    position: unset;
+  }
+  .hero .wrapper {
+    min-height: 820px;
+    min-width: unset;
+    width: 545px;
+    left: -165px;
+  }
+  .hero .wrapper .context {
+    position: absolute;
+    top: 65px;
+    left: 165px;
+  }
+  .hero .wrapper .context .logo {
+    margin-bottom: 9.5625rem;
+  }
+  .hero__text {
+    margin-bottom: 2.625rem;
   }
 }
 
@@ -408,6 +450,9 @@
   }
   .image--tablet, .image--menu, .image--pattern {
     display: block;
+  }
+  .image--pattern {
+    display: none;
   }
   .image--enjoyable-place, .image--locally-sourced, .image--family-gathering, .image--special-events, .image--social-events {
     height: 360px;
