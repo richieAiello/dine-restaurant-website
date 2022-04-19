@@ -41,7 +41,10 @@ $tan: #9E7F66;
     }
 
     @media(min-width: 1440px) {
-        text-align: left;
+
+        & {
+            text-align: left;
+        } 
     }
 }
 
@@ -154,7 +157,7 @@ $tan: #9E7F66;
         & {
             min-height: 820px;
             background-image: url("../images/homepage/hero-bg-desktop@2x.jpg");
-            background-size: contain;
+            background-size: cover;
             background-position: bottom right;
             background-color: $black;
             position: unset;
@@ -167,6 +170,7 @@ $tan: #9E7F66;
 
                 .context {
                     position: absolute;
+                    width: max-content;
                     top: 65px;
                     left: 165px;
 
@@ -176,9 +180,25 @@ $tan: #9E7F66;
                 }
             }
 
+            &__heading {
+                font-weight: 100;
+                font-size: 5rem;
+                line-height: 4.5rem;
+                letter-spacing: 0;
+            }
+
             &__text {
+                max-width: 36ch;
+                margin-inline: unset;
                 margin-bottom: 2.625rem;
             }
+        }
+    }
+
+    @media(min-width: 1458px) {
+
+        & {
+            background-size: contain;
         }
     }
 }
@@ -597,9 +617,9 @@ $tan: #9E7F66;
         }
 
         // Only for testing purposes, remove later.
-        &--pattern {
-            display: none;
-        }
+        // &--pattern {
+        //     display: none;
+        // }
 
         &--enjoyable-place,
         &--locally-sourced,
@@ -741,8 +761,3 @@ $tan: #9E7F66;
         }
     }
 }
-
-
-
-
-

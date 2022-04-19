@@ -131,7 +131,7 @@
   .hero {
     min-height: 820px;
     background-image: url("../images/homepage/hero-bg-desktop@2x.jpg");
-    background-size: contain;
+    background-size: cover;
     background-position: bottom right;
     background-color: #0E0E0E;
     position: unset;
@@ -144,14 +144,28 @@
   }
   .hero .wrapper .context {
     position: absolute;
+    width: max-content;
     top: 65px;
     left: 165px;
   }
   .hero .wrapper .context .logo {
     margin-bottom: 9.5625rem;
   }
+  .hero__heading {
+    font-weight: 100;
+    font-size: 5rem;
+    line-height: 4.5rem;
+    letter-spacing: 0;
+  }
   .hero__text {
+    max-width: 36ch;
+    margin-inline: unset;
     margin-bottom: 2.625rem;
+  }
+}
+@media (min-width: 1458px) {
+  .hero {
+    background-size: contain;
   }
 }
 
@@ -450,9 +464,6 @@
   }
   .image--tablet, .image--menu, .image--pattern {
     display: block;
-  }
-  .image--pattern {
-    display: none;
   }
   .image--enjoyable-place, .image--locally-sourced, .image--family-gathering, .image--special-events, .image--social-events {
     height: 360px;
