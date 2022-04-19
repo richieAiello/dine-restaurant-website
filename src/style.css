@@ -480,6 +480,18 @@
     margin-left: 8.125rem;
   }
 }
+@media (min-width: 1440px) {
+  .footer {
+    padding: 4.875rem 0;
+  }
+  .footer .container--secondary .wrapper {
+    display: flex;
+    margin-left: 12.0625rem;
+  }
+  .footer .container--secondary .wrapper .address {
+    margin-right: 7.75rem;
+  }
+}
 
 /**************************************
     Images

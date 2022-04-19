@@ -639,6 +639,25 @@ $tan: #9E7F66;
             }
         }
     }
+
+    @media(min-width: 1440px) {
+
+        & {
+            padding: 4.875rem 0;
+
+            .container--secondary {
+
+                .wrapper {
+                    display: flex;
+                    margin-left: 12.0625rem;
+
+                    .address {
+                        margin-right: 7.75rem;
+                    }   
+                }
+            }
+        }
+    }
 }
 /**************************************
     Images
