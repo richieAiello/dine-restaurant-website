@@ -38,17 +38,19 @@
 }
 
 .container {
-  width: min(100% - 3rem, 1110px);
+  width: min(100% - 3rem, 573px);
   margin-inline: auto;
 }
 .container--secondary {
-  width: min(100% - 3rem, 1110px);
+  width: min(100% - 3rem, 689px);
   margin-inline: auto;
 }
 @media (min-width: 1440px) {
+  .container, .container--secondary, .container--hero {
+    width: 1110px;
+  }
   .container--hero {
     position: relative;
-    width: 1110px;
     min-height: 820px;
     margin-inline: auto;
   }
@@ -198,6 +200,14 @@
     max-width: 37ch;
   }
 }
+@media (min-width: 1440px) {
+  .main__text {
+    margin-inline: unset;
+  }
+  .main .divider {
+    margin-bottom: 3rem;
+  }
+}
 .main .location {
   color: #242B37;
 }
@@ -215,7 +225,7 @@
 .main .location .wrapper:first-child {
   padding-top: 23.5rem;
 }
-.main .location .wrapper:nth-of-type(2) .divider {
+.main .location .wrapper:last-child .divider {
   margin-top: 3rem;
 }
 @media (min-width: 635px) {
@@ -225,8 +235,28 @@
   .main .location .wrapper:first-child {
     padding-top: 20rem;
   }
-  .main .location .wrapper:nth-of-type(2) .divider {
+  .main .location .wrapper:last-child .divider {
     margin-top: 3.5rem;
+  }
+}
+@media (min-width: 1440px) {
+  .main .location .wrapper:first-child {
+    padding-top: 11.0625rem;
+  }
+  .main .location .wrapper:first-child .context {
+    margin-left: auto;
+  }
+  .main .location .wrapper:first-child .context .main__text {
+    margin-bottom: 32.5625rem;
+  }
+  .main .location .wrapper:last-child .context {
+    margin-right: auto;
+  }
+  .main .location .wrapper:last-child .context .divider {
+    margin-top: 0;
+  }
+  .main .location .wrapper:last-child .context .main__text {
+    margin-bottom: 10.4375rem;
   }
 }
 .main .highlights {
@@ -440,7 +470,7 @@
   height: 400px;
 }
 .image--enjoyable-place {
-  width: min(100% - 3rem);
+  width: 100%;
   position: absolute;
   top: -72px;
   left: 0;
@@ -504,6 +534,30 @@
     z-index: -1;
     top: -120px;
     right: 350px;
+  }
+}
+@media (min-width: 1440px) {
+  .image--tablet {
+    display: none;
+  }
+  .image--desktop {
+    display: block;
+  }
+  .image--enjoyable-place, .image--locally-sourced {
+    height: 720px;
+    width: 540px;
+  }
+  .image--enjoyable-place {
+    top: -70px;
+    left: unset;
+    right: unset;
+    margin-inline: unset;
+  }
+  .image--locally-sourced {
+    position: absolute;
+    bottom: -80px;
+    right: 0;
+    box-shadow: none;
   }
 }
 
