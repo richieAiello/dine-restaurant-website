@@ -343,33 +343,31 @@
   }
 }
 .main .events {
+  display: flex;
+  flex-direction: column;
   padding-top: 5rem;
   padding-bottom: 7.75rem;
 }
 .main .events__text {
   margin-bottom: 2rem;
 }
-.main .events .container--secondary {
-  display: flex;
-  flex-direction: column;
-}
-.main .events .container--secondary .wrapper {
+.main .events .wrapper {
   display: flex;
   flex-direction: column;
   order: 2;
 }
-.main .events .container--secondary .wrapper .context {
+.main .events .wrapper .context {
   order: 2;
   color: #242B37;
   margin-top: 1.5rem;
 }
-.main .events .container--secondary .wrapper--secondary {
+.main .events .wrapper--secondary {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 3rem;
 }
-.main .events .container--secondary .wrapper--secondary .accent {
+.main .events .wrapper--secondary .accent {
   height: 1px;
   width: 48px;
   background-color: #9E7F66;
@@ -379,14 +377,12 @@
   .main .events {
     padding-top: 7.5rem;
     padding-bottom: 7.5rem;
-  }
-  .main .events .container--secondary {
     position: relative;
   }
-  .main .events .container--secondary .wrapper .context {
+  .main .events .wrapper .context {
     margin-top: 2.5rem;
   }
-  .main .events .container--secondary .wrapper--secondary {
+  .main .events .wrapper--secondary {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
@@ -398,7 +394,7 @@
     padding-top: 7.5rem;
     padding-bottom: 7.5rem;
   }
-  .main .events .container--secondary .wrapper--secondary {
+  .main .events .wrapper--secondary {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -566,12 +562,12 @@
     width: 128px;
   }
   .image--lines-events {
-    top: -38px;
+    top: 82px;
     left: 0;
   }
   .image--top-right-events {
     z-index: -1;
-    top: -120px;
+    top: 0;
     right: 350px;
   }
 }
@@ -610,6 +606,14 @@
   .image--top-left-location {
     bottom: 0;
     left: 380px;
+  }
+  .image--lines-events {
+    top: 122px;
+    left: -40px;
+  }
+  .image--top-right-events {
+    top: 0;
+    right: 730px;
   }
 }
 
