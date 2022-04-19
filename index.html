@@ -16,17 +16,24 @@
 </head>
 <body class="body">
     <header class="hero">
-        <div class="context">
-            <div class="container">
-                <img src="./images/logo.svg" alt="Dine logo" class="logo">
-                <h1 class="hero__heading">Exquisite dining<br> since 1989</h1>
-                <p class="hero__text">
-                    Experience our seasonal menu in beautiful country surroundings.
-                    Eat the freshest produce from the comfort of our farmhouse.
-                </p>
-                <a href="./src/booking.html" class="btn btn--dark link">
-                    book a table
-                </a>
+        <!-- Activates on desktop -->
+        <div class="container--hero">
+            <div class="wrapper">
+                <div class="context">
+
+                    <img src="./images/logo.svg" alt="Dine logo" class="logo">
+
+                    <h1 class="hero__heading">Exquisite dining<br> since 1989</h1>
+
+                    <p class="hero__text">
+                        Experience our seasonal menu in beautiful country surroundings.
+                        Eat the freshest produce from the comfort of our farmhouse.
+                    </p>
+
+                    <a href="./src/booking.html" class="btn btn--dark link">
+                        book a table
+                    </a>
+                </div>
             </div>
         </div>
     </header>
@@ -199,8 +206,7 @@
             </div>   
         </section>
         <!-- Default event is Family Gathering, changed on click with JavaScript. -->
-        <section class="events">
-            <div class="container--secondary">
+        <section class="events container--secondary">
                 <div class="wrapper">
                     <div class="context">
                         <h2 class="events__heading main__heading">Family Gathering</h2>
@@ -217,15 +223,15 @@
                         <!-- Start with default btn disabled? -->
                         <button class="btn btn--events btn--family btn--active">
                             family gathering
-                            <div class="accent"></div>
+                            <div class="accent accent--family"></div>
                         </button>
                         <button class="btn btn--events btn--special">
                             special events
-                            <div class="accent hidden"></div>
+                            <div class="accent accent--special hidden"></div>
                         </button>
                         <button class="btn btn--events btn--social">
                             social events
-                            <div class="accent hidden"></div>
+                            <div class="accent accent--social hidden"></div>
                         </button>
                     </div>
                 </div>
@@ -300,7 +306,6 @@
                     alt=""
                     class="image--lines-events image--pattern"    
                 >
-            </div>
         </section>
         <section class="reservation">
             <div class="container--secondary">
