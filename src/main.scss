@@ -441,6 +441,23 @@ $tan: #9E7F66;
                 }
             }
         }
+
+        @media(min-width: 1440px) {
+
+            & {
+                padding: 12.5rem 0 7.5rem;
+
+                .container {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .menu {
+                        padding-top: 3.4375rem;
+                        max-width: 540px;
+                    }
+                }
+            }
+        }
     }
 
     .events {

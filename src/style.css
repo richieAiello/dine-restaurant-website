@@ -329,6 +329,19 @@
     top: 42px;
   }
 }
+@media (min-width: 1440px) {
+  .main .highlights {
+    padding: 12.5rem 0 7.5rem;
+  }
+  .main .highlights .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .main .highlights .container .menu {
+    padding-top: 3.4375rem;
+    max-width: 540px;
+  }
+}
 .main .events {
   padding-top: 5rem;
   padding-bottom: 7.75rem;
