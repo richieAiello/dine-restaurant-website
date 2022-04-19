@@ -345,8 +345,7 @@
 .main .events {
   display: flex;
   flex-direction: column;
-  padding-top: 5rem;
-  padding-bottom: 7.75rem;
+  padding: 5rem 0 7.75rem;
 }
 .main .events__text {
   margin-bottom: 2rem;
@@ -361,13 +360,13 @@
   color: #242B37;
   margin-top: 1.5rem;
 }
-.main .events .wrapper--secondary {
+.main .events .wrapper .wrapper--secondary {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 3rem;
 }
-.main .events .wrapper--secondary .accent {
+.main .events .wrapper .wrapper--secondary .accent {
   height: 1px;
   width: 48px;
   background-color: #9E7F66;
@@ -375,14 +374,13 @@
 }
 @media (min-width: 635px) {
   .main .events {
-    padding-top: 7.5rem;
-    padding-bottom: 7.5rem;
+    padding: 7.5rem 0;
     position: relative;
   }
   .main .events .wrapper .context {
     margin-top: 2.5rem;
   }
-  .main .events .wrapper--secondary {
+  .main .events .wrapper .wrapper--secondary {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
@@ -390,13 +388,27 @@
   }
 }
 @media (min-width: 700px) {
-  .main .events {
-    padding-top: 7.5rem;
-    padding-bottom: 7.5rem;
-  }
-  .main .events .wrapper--secondary {
+  .main .events .wrapper .wrapper--secondary {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1440px) {
+  .main .events {
+    flex-direction: row;
+    padding: 10rem 0;
+  }
+  .main .events .wrapper {
+    margin-left: 7.8125rem;
+  }
+  .main .events .wrapper .context {
+    order: -1;
+    margin-top: 4rem;
+  }
+  .main .events .wrapper .wrapper--secondary {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4.875rem;
   }
 }
 .main .reservation {
@@ -607,6 +619,11 @@
     bottom: 0;
     left: 380px;
   }
+  .image--family-gathering, .image--special-events, .image--social-events {
+    margin-inline: unset;
+    height: 600px;
+    width: 540px;
+  }
   .image--lines-events {
     top: 122px;
     left: -40px;
@@ -681,5 +698,10 @@
 @media (min-width: 700px) {
   .btn--special {
     margin: 0;
+  }
+}
+@media (min-width: 1440px) {
+  .btn--special {
+    margin: 0.75rem 0;
   }
 }

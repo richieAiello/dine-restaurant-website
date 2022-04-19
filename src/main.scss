@@ -463,8 +463,7 @@ $tan: #9E7F66;
     .events {
         display: flex;
         flex-direction: column;
-        padding-top: 5rem;
-        padding-bottom: 7.75rem;
+        padding: 5rem 0 7.75rem;
 
         &__text {
             margin-bottom: 2rem;
@@ -481,7 +480,7 @@ $tan: #9E7F66;
                 margin-top: 1.5rem;
             }
 
-            &--secondary {
+            .wrapper--secondary {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -500,8 +499,7 @@ $tan: #9E7F66;
         @media(min-width: 635px) {
 
             & {
-                padding-top: 7.5rem;
-                padding-bottom: 7.5rem;
+                padding: 7.5rem 0;
                 position: relative;
 
                 .wrapper {
@@ -510,7 +508,7 @@ $tan: #9E7F66;
                         margin-top: 2.5rem;
                     }
 
-                    &--secondary {
+                    .wrapper--secondary {
                         flex-direction: row;
                         justify-content: center;
                         align-items: flex-start;
@@ -523,14 +521,35 @@ $tan: #9E7F66;
         @media(min-width: 700px) {
 
             & {
-                padding-top: 7.5rem;
-                padding-bottom: 7.5rem;
 
                 .wrapper {
 
-                    &--secondary {
+                    .wrapper--secondary {
                         display: grid;
                         grid-template-columns: 1fr 1fr 1fr;
+                    }
+                }
+            }
+        }
+
+        @media(min-width: 1440px) {
+
+            & {
+                flex-direction: row;
+                padding: 10rem 0;
+
+                .wrapper {
+                    margin-left: 7.8125rem;
+
+                    .context {
+                        order: -1;
+                        margin-top: 4rem;
+                    }
+
+                    .wrapper--secondary {
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 4.875rem;
                     }
                 }
             }
@@ -819,6 +838,14 @@ $tan: #9E7F66;
             left: 380px;
         }
 
+        &--family-gathering,
+        &--special-events,
+        &--social-events {
+            margin-inline: unset;
+            height: 600px;
+            width: 540px;
+        }
+
         &--lines-events {
             top: 122px;
             left: -40px;
@@ -910,6 +937,13 @@ $tan: #9E7F66;
 
         &--special {
             margin: 0;
+        }
+    }
+
+    @media(min-width: 1440px) {
+
+        &--special {
+            margin: 0.75rem 0;
         }
     }
 }
