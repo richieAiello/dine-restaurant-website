@@ -410,6 +410,20 @@
     flex-direction: column;
     margin-top: 4.875rem;
   }
+  .main .events .wrapper .wrapper--secondary .accent {
+    position: absolute;
+    width: 95px;
+    top: 14px;
+  }
+  .main .events .wrapper .wrapper--secondary .accent--family {
+    right: 233px;
+  }
+  .main .events .wrapper .wrapper--secondary .accent--special {
+    right: 205px;
+  }
+  .main .events .wrapper .wrapper--secondary .accent--social {
+    right: 196px;
+  }
 }
 .main .reservation {
   background-image: url("../images/homepage/ready-bg-mobile@2x.jpg");
@@ -701,6 +715,9 @@
   }
 }
 @media (min-width: 1440px) {
+  .btn--events {
+    position: relative;
+  }
   .btn--special {
     margin: 0.75rem 0;
   }

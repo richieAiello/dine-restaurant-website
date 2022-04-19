@@ -550,6 +550,24 @@ $tan: #9E7F66;
                         display: flex;
                         flex-direction: column;
                         margin-top: 4.875rem;
+
+                        .accent {
+                            position: absolute;
+                            width: 95px;
+                            top: 14px;
+                        }
+
+                        .accent--family {
+                            right: 233px;
+                        }
+
+                        .accent--special {
+                            right: 205px;
+                        }
+
+                        .accent--social {
+                            right: 196px;
+                        }
                     }
                 }
             }
@@ -941,6 +959,10 @@ $tan: #9E7F66;
     }
 
     @media(min-width: 1440px) {
+
+        &--events {
+            position: relative;
+        }
 
         &--special {
             margin: 0.75rem 0;
