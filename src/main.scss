@@ -756,6 +756,22 @@ $tan: #9E7F66;
             right: 0;
             box-shadow: none;
         }
+
+        &--top-right-location {
+            top: 250px;
+            right: 380px;
+        }
+
+        &--lines-location {
+            bottom: 282px;
+            left: unset;
+            right: -114px;
+        }
+
+        &--top-left-location {
+            bottom: 0;
+            left: 380px;
+        }
     }
 }
 

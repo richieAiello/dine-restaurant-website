@@ -559,6 +559,19 @@
     right: 0;
     box-shadow: none;
   }
+  .image--top-right-location {
+    top: 250px;
+    right: 380px;
+  }
+  .image--lines-location {
+    bottom: 282px;
+    left: unset;
+    right: -114px;
+  }
+  .image--top-left-location {
+    bottom: 0;
+    left: 380px;
+  }
 }
 
 .hidden {
