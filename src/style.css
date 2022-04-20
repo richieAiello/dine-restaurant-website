@@ -414,6 +414,7 @@
     position: absolute;
     width: 95px;
     top: 14px;
+    z-index: -1;
   }
   .main .events .wrapper .wrapper--secondary .accent--family {
     right: 233px;
