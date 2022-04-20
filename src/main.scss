@@ -747,11 +747,6 @@ $tan: #9E7F66;
             display: block;
         }
 
-        // Only for testing purposes, remove later.
-        // &--pattern {
-        //     display: none;
-        // }
-
         &--enjoyable-place,
         &--locally-sourced,
         &--events {
@@ -865,6 +860,36 @@ $tan: #9E7F66;
         &--top-right-events {
             top: 0;
             right: 730px;
+        }
+    }
+}
+
+.pattern-extension {
+    display: none;
+    background-color: rgba(#5C6779, 7.74%);
+    width: 100vw;
+    height: 320px;
+    position: absolute;
+
+    &--location-top {
+        top: 250px;
+        right: 1275px;
+    }
+
+    &--location-bottom {
+        bottom: 0;
+        left: 1275px;
+    }
+
+    &--events {
+        top: 0;
+        right: 1625px;
+    }
+
+    @media(min-width: 1440px) {
+
+        & {
+            display: block;
         }
     }
 }

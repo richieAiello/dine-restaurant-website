@@ -649,6 +649,31 @@
   }
 }
 
+.pattern-extension {
+  display: none;
+  background-color: rgba(92, 103, 121, 0.0774);
+  width: 100vw;
+  height: 320px;
+  position: absolute;
+}
+.pattern-extension--location-top {
+  top: 250px;
+  right: 1275px;
+}
+.pattern-extension--location-bottom {
+  bottom: 0;
+  left: 1275px;
+}
+.pattern-extension--events {
+  top: 0;
+  right: 1625px;
+}
+@media (min-width: 1440px) {
+  .pattern-extension {
+    display: block;
+  }
+}
+
 .hidden {
   display: none;
 }
