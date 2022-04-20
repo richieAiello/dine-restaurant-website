@@ -1,25 +1,36 @@
-// Pull necessary elements from the DOM
-// all events pictures, btn--events, context heading and text.
+// Variables for section events
 const eventsImages = document.querySelectorAll('.image--events');
 const eventsBtns = document.querySelectorAll('.btn--events');
+const eventsAccents = document.querySelectorAll('.btn--events .accent');
 const eventsHeading = document.querySelector('.events__heading');
 const eventsText = document.querySelector('.events__text');
 
+// Varibales for family gathering button
 const familyBtn = document.querySelector('.btn--events.family');
-const familyBtnAccent = document.querySelector('.btn--events.family .accent');
+const familyHeading = `Family Gathering`;
+const familyText = 
+    `We love catering for entire families. So please 
+    bring everyone along for a special meal with your 
+    loved ones. We’ll provide a memorable experience for all.`;
 
+// Variables for special events button
 const specialBtn = document.querySelector('.btn--events.special');
-const specialBtnAccent = document.querySelector('.btn--events.special .accent');
+const specialHeading = `Special Events`;
+const specialText = 
+    `Whether it’s a romantic dinner or special date you’re 
+    celebrating with others we’ll look after you. We’ll be 
+    sure to mark your special date with an unforgettable meal.`;
 
+// Variables for social events button
 const socialBtn = document.querySelector('.btn--events.social');
-const socialBtnAccent = document.querySelector('.btn--events.social .accent');
+const socialHeading = `Social Events`;
+const socialText = 
+    `Are you looking to have a larger social event? No problem! 
+    We’re more than happy to cater for big parties. We’ll work 
+    with you to make your event a hit with everyone.`;
 
-
-// Write a function that takes a string as an argument
-// store Element.classList.contains("specific className") is a variable
-// For all events pictures remove class hidden if true, add class hidden if false.
-// Maybe use the ternary operator.
-// CSS takes care of hiding the other pictures based on screen size.
+// Checks each image in events for the provided class name.
+// Uses the ternary operator to decide the display status of each image.
 const imageContainsClass = (string => {
 
     eventsImages.forEach(image => {
@@ -29,43 +40,58 @@ const imageContainsClass = (string => {
     });
 });
 
-// Write another function that targets btn--events
-// follow the same procedure with Element.classList.contains()
-// if true button adds class "active" and child element with class "accent" removes class hidden
-// if false button removes class "active" and child element with class "accent" adds class hidden
+// Checks each button in events for the provided class name.
+// Uses the ternary operator to decide the active state of each button.
+const btnContainsClass = (string => {
 
-// In main section events, listen for clicks on events buttons
-// On click, the heading, text, and picture for events section changes accordingly with the current active button
-// Use textContent for heading and text
-// run both functions for events pictures and buttons with the argument matching the current button
-// Either "family", "special", "social" depending on the button 
+    eventsBtns.forEach(btn => {
+        const classes = btn.classList;
+        
+        classes.contains(string) ? classes.add('active') : classes.remove('active');
+    });
+});
+
+// Checks each accent in events for the provided class name.
+// Uses the ternary operator to decide the display status of each accent.
+const accentContainsClass = (string => {
+
+    eventsAccents.forEach(accent => {
+        const classes = accent.classList;
+        
+        classes.contains(string) ? classes.remove('hidden') : classes.add('hidden');
+    });
+});
+
+/**********************************************
+    EVENT LISTENERS
+**********************************************/
 
 // Family Gathering button
 familyBtn.addEventListener('click', e => {
 
-    e.currentTarget.classList.add('active');
-
     imageContainsClass('family');
-
-    familyBtnAccent.classList.remove('hidden');
+    btnContainsClass('family');
+    accentContainsClass('accent--family');
+    eventsHeading.textContent = familyHeading;
+    eventsText.textContent = familyText;
 });
 
 // Special Events button
 specialBtn.addEventListener('click', e => {
 
-    e.currentTarget.classList.add('active');
-
     imageContainsClass('special');
-
-    specialBtnAccent.classList.remove('hidden');
+    btnContainsClass('special');
+    accentContainsClass('accent--special');
+    eventsHeading.textContent = specialHeading;
+    eventsText.textContent = specialText;
 });
 
 // Social Events button
 socialBtn.addEventListener('click', e => {
 
-    e.currentTarget.classList.add('active');
-
     imageContainsClass('social');
-
-    socialBtnAccent.classList.remove('hidden');
+    btnContainsClass('social');
+    accentContainsClass('accent--social');
+    eventsHeading.textContent = socialHeading;
+    eventsText.textContent = socialText;
 });
