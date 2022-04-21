@@ -260,6 +260,28 @@ $tan: #9E7F66;
                 margin-inline: unset;
                 margin-bottom: 2.625rem;
             }
+
+            &--booking {
+                background-image: url("../images/booking/hero-bg-desktop@2x.jpg");
+                padding: 4.0625rem 0 7.875rem;
+                
+                .container--secondary {
+
+                    .context {
+
+                        .hero__heading {
+                            margin-bottom: 1.5rem;
+                        }
+                    }
+                }
+                
+                &__link {
+
+                    .logo {
+                        margin-bottom: 9.5625rem;
+                    }
+                }   
+            }
         }
     }
 
@@ -300,11 +322,11 @@ $tan: #9E7F66;
             position: relative;
         }
 
-        &__form {
+        .reservation-form {
             display: flex;
             flex-direction: column;
             min-height: 585px;
-            max-width: 540px;
+            width: min(100%, 540px);
             background-color: $white;
             border-radius: 3px;
             box-shadow: 0 75px 100px -50px rgba(#384255, 50.32%);
@@ -341,7 +363,7 @@ $tan: #9E7F66;
         &--booking {
             min-height: 435px;
 
-            &__form {
+            .reservation-form {
                 min-height: 545px;
                 top: -230px;
             }
@@ -356,6 +378,17 @@ $tan: #9E7F66;
 
         .divider {
             margin-bottom: 3rem;
+        }
+
+        &--booking {
+            min-height: 319px;
+
+            .reservation-form {
+                min-height: 560px;
+                left: unset;
+                margin-inline: unset;
+                top: -342px;
+            }
         }
     }
 
@@ -788,6 +821,7 @@ $tan: #9E7F66;
 
                     .address {
                         margin-right: 7.75rem;
+                        margin-bottom: 0;
                     }   
                 }
             }
@@ -805,6 +839,7 @@ $tan: #9E7F66;
     &--tablet,
     &--desktop,
     &--pattern,
+    &--pattern-booking,
     &--menu {
         display: none;
     }
@@ -867,7 +902,8 @@ $tan: #9E7F66;
             top: -96px;
         }
 
-        &--pattern {
+        &--pattern,
+        &--pattern-booking {
             position: absolute;
         }
 
@@ -911,7 +947,8 @@ $tan: #9E7F66;
             display: none;
         }
 
-        &--desktop {
+        &--desktop,
+        &--pattern-booking {
             display: block;
         }
 
@@ -966,6 +1003,18 @@ $tan: #9E7F66;
             top: 0;
             right: 730px;
         }
+
+        &--lines-booking {
+            z-index: -1;
+            right: 460px;
+            top: 166px;
+        }
+
+        &--bottom-right-booking {
+            z-index: -2;
+            right: 282px;
+            top: 0;
+        }
     }
 }
 
@@ -989,6 +1038,12 @@ $tan: #9E7F66;
     &--events {
         top: 0;
         right: 1625px;
+    }
+
+    &--booking {
+        z-index: -1;
+        top: 0;
+        right: 1275px;
     }
 
     @media(min-width: 1440px) {
