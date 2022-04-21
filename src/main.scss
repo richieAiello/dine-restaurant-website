@@ -112,6 +112,11 @@ $tan: #9E7F66;
     background-color: $black-grey;
     position: relative;
 
+    &--booking {
+        background-image: url("../images/booking/hero-bg-mobile@2x.jpg");
+        background-size: cover;
+    }
+
     .wrapper { 
         min-height: 528px;
         min-width: 100%;
