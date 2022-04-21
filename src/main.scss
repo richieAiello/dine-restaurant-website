@@ -112,11 +112,6 @@ $tan: #9E7F66;
     background-color: $black-grey;
     position: relative;
 
-    &--booking {
-        background-image: url("../images/booking/hero-bg-mobile@2x.jpg");
-        background-size: cover;
-    }
-
     .wrapper { 
         min-height: 528px;
         min-width: 100%;
@@ -152,6 +147,32 @@ $tan: #9E7F66;
 
     .btn--dark {
         border: 1px solid $white;
+    }
+
+    &--booking {
+        background-image: url("../images/booking/hero-bg-mobile@2x.jpg");
+        background-size: cover;
+        color: $white;
+        padding: 3.5rem 0 15.75rem;
+
+        .container--secondary {
+            display: flex;
+            flex-direction: column;
+
+            .context {
+                order: 2;
+
+                .hero__heading {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+
+        .logo {
+            max-width: 82.4px;
+            max-height: 32px;
+            margin-bottom: 2.5rem;
+        }
     }
 
     @media(min-width: 635px) {

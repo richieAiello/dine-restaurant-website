@@ -92,10 +92,6 @@
   background-color: #111111;
   position: relative;
 }
-.hero--booking {
-  background-image: url("../images/booking/hero-bg-mobile@2x.jpg");
-  background-size: cover;
-}
 .hero .wrapper {
   min-height: 528px;
   min-width: 100%;
@@ -127,6 +123,27 @@
 }
 .hero .btn--dark {
   border: 1px solid #FFFFFF;
+}
+.hero--booking {
+  background-image: url("../images/booking/hero-bg-mobile@2x.jpg");
+  background-size: cover;
+  color: #FFFFFF;
+  padding: 3.5rem 0 15.75rem;
+}
+.hero--booking .container--secondary {
+  display: flex;
+  flex-direction: column;
+}
+.hero--booking .container--secondary .context {
+  order: 2;
+}
+.hero--booking .container--secondary .context .hero__heading {
+  margin-bottom: 1rem;
+}
+.hero--booking .logo {
+  max-width: 82.4px;
+  max-height: 32px;
+  margin-bottom: 2.5rem;
 }
 @media (min-width: 635px) {
   .hero {
