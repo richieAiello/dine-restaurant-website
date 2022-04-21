@@ -190,18 +190,33 @@ $tan: #9E7F66;
                     max-height: initial;
                 }
             }
-        }
 
-        &__heading {
-            font-weight: 100;
-            font-size: 3.625rem;
-            line-height: 3.75rem;
-            letter-spacing: 1.5px;
-        }
-    
-        &__text {
-            max-width: 45ch;
-            margin-bottom: 1.5rem;
+            &__heading {
+                font-weight: 100;
+                font-size: 3.625rem;
+                line-height: 3.75rem;
+                letter-spacing: 1.5px;
+            }
+        
+            &__text {
+                max-width: 45ch;
+                margin-bottom: 1.5rem;
+            }
+
+            &--booking {
+                background-image: url("../images/booking/hero-bg-tablet@2x.jpg");
+                padding: 2.5rem 0 16.875rem;
+
+                &__link {
+                    margin-right: auto;
+
+                    .logo {
+                        max-width: initial;
+                        max-height: initial;
+                        margin-bottom: 4rem;
+                    }
+                }   
+            }
         }
     }
 
@@ -310,7 +325,7 @@ $tan: #9E7F66;
     }
 
     @media(min-width: 635px) {
-
+        
         &__heading {
             font-weight: 600;
             font-size: 3.125rem;
@@ -321,6 +336,15 @@ $tan: #9E7F66;
 
         &__text {
             max-width: 37ch;
+        }
+        
+        &--booking {
+            min-height: 435px;
+
+            &__form {
+                min-height: 545px;
+                top: -230px;
+            }
         }
     }
 

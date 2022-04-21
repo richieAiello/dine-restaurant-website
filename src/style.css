@@ -168,6 +168,18 @@
     max-width: 45ch;
     margin-bottom: 1.5rem;
   }
+  .hero--booking {
+    background-image: url("../images/booking/hero-bg-tablet@2x.jpg");
+    padding: 2.5rem 0 16.875rem;
+  }
+  .hero--booking__link {
+    margin-right: auto;
+  }
+  .hero--booking__link .logo {
+    max-width: initial;
+    max-height: initial;
+    margin-bottom: 4rem;
+  }
 }
 @media (min-width: 1440px) {
   .hero {
@@ -265,6 +277,13 @@
   }
   .main__text {
     max-width: 37ch;
+  }
+  .main--booking {
+    min-height: 435px;
+  }
+  .main--booking__form {
+    min-height: 545px;
+    top: -230px;
   }
 }
 @media (min-width: 1440px) {
