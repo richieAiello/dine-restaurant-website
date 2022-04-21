@@ -325,7 +325,7 @@ $tan: #9E7F66;
     }
 
     @media(min-width: 635px) {
-
+        
         &__heading {
             font-weight: 600;
             font-size: 3.125rem;
@@ -336,6 +336,15 @@ $tan: #9E7F66;
 
         &__text {
             max-width: 37ch;
+        }
+        
+        &--booking {
+            min-height: 435px;
+
+            &__form {
+                min-height: 545px;
+                top: -230px;
+            }
         }
     }
 

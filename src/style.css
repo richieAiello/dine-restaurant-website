@@ -278,6 +278,13 @@
   .main__text {
     max-width: 37ch;
   }
+  .main--booking {
+    min-height: 435px;
+  }
+  .main--booking__form {
+    min-height: 545px;
+    top: -230px;
+  }
 }
 @media (min-width: 1440px) {
   .main__text {
