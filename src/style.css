@@ -128,7 +128,7 @@
   background-image: url("../images/booking/hero-bg-mobile@2x.jpg");
   background-size: cover;
   color: #FFFFFF;
-  padding: 3.5rem 0 15.75rem;
+  padding: 3.5rem 0 10.75rem;
 }
 .hero--booking .container--secondary {
   display: flex;
@@ -227,6 +227,24 @@
 }
 .main .divider {
   margin-bottom: 2rem;
+}
+.main--booking {
+  min-height: 534px;
+}
+.main--booking .container {
+  position: relative;
+}
+.main--booking__form {
+  min-height: 585px;
+  max-width: 540px;
+  background-color: #FFFFFF;
+  border-radius: 3px;
+  box-shadow: 0 75px 100px -50px rgba(56, 66, 85, 0.5032);
+  position: absolute;
+  top: -137px;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
 }
 @media (min-width: 635px) {
   .main__heading {
