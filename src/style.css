@@ -256,11 +256,11 @@
 .main--booking .container {
   position: relative;
 }
-.main--booking__form {
+.main--booking .reservation-form {
   display: flex;
   flex-direction: column;
   min-height: 585px;
-  max-width: 540px;
+  width: min(100%, 540px);
   background-color: #FFFFFF;
   border-radius: 3px;
   box-shadow: 0 75px 100px -50px rgba(56, 66, 85, 0.5032);
@@ -271,7 +271,7 @@
   margin-inline: auto;
   padding: 2rem;
 }
-.main--booking__form input {
+.main--booking .reservation-form input {
   border: initial;
   outline: none;
   font-family: inherit;
@@ -291,7 +291,7 @@
   .main--booking {
     min-height: 435px;
   }
-  .main--booking__form {
+  .main--booking .reservation-form {
     min-height: 545px;
     top: -230px;
   }
@@ -302,6 +302,15 @@
   }
   .main .divider {
     margin-bottom: 3rem;
+  }
+  .main--booking {
+    min-height: 319px;
+  }
+  .main--booking .reservation-form {
+    min-height: 560px;
+    left: unset;
+    margin-inline: unset;
+    top: -342px;
   }
 }
 .main .location {
@@ -611,6 +620,7 @@
   }
   .footer .container--secondary .wrapper .address {
     margin-right: 7.75rem;
+    margin-bottom: 0;
   }
 }
 
@@ -622,7 +632,7 @@
   object-fit: cover;
   border-radius: 3px;
 }
-.image--tablet, .image--desktop, .image--pattern, .image--menu {
+.image--tablet, .image--desktop, .image--pattern, .image--pattern-booking, .image--menu {
   display: none;
 }
 .image--enjoyable-place, .image--locally-sourced, .image--events {
@@ -665,7 +675,7 @@
     width: 573px;
     top: -96px;
   }
-  .image--pattern {
+  .image--pattern, .image--pattern-booking {
     position: absolute;
   }
   .image--top-right-location {
@@ -700,7 +710,7 @@
   .image--tablet {
     display: none;
   }
-  .image--desktop {
+  .image--desktop, .image--pattern-booking {
     display: block;
   }
   .image--enjoyable-place, .image--locally-sourced {
@@ -745,6 +755,16 @@
     top: 0;
     right: 730px;
   }
+  .image--lines-booking {
+    z-index: -1;
+    right: 460px;
+    top: 166px;
+  }
+  .image--bottom-right-booking {
+    z-index: -2;
+    right: 282px;
+    top: 0;
+  }
 }
 
 .pattern-extension {
@@ -765,6 +785,11 @@
 .pattern-extension--events {
   top: 0;
   right: 1625px;
+}
+.pattern-extension--booking {
+  z-index: -1;
+  top: 0;
+  right: 1275px;
 }
 @media (min-width: 1440px) {
   .pattern-extension {
