@@ -216,6 +216,16 @@
     margin-inline: unset;
     margin-bottom: 2.625rem;
   }
+  .hero--booking {
+    background-image: url("../images/booking/hero-bg-desktop@2x.jpg");
+    padding: 4.0625rem 0 7.875rem;
+  }
+  .hero--booking .container--secondary .context .hero__heading {
+    margin-bottom: 1.5rem;
+  }
+  .hero--booking__link .logo {
+    margin-bottom: 9.5625rem;
+  }
 }
 @media (min-width: 1458px) {
   .hero {
