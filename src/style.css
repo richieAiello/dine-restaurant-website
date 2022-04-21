@@ -92,6 +92,10 @@
   background-color: #111111;
   position: relative;
 }
+.hero--booking {
+  background-image: url("../images/booking/hero-bg-mobile@2x.jpg");
+  background-size: cover;
+}
 .hero .wrapper {
   min-height: 528px;
   min-width: 100%;
