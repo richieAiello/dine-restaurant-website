@@ -235,6 +235,8 @@
   position: relative;
 }
 .main--booking__form {
+  display: flex;
+  flex-direction: column;
   min-height: 585px;
   max-width: 540px;
   background-color: #FFFFFF;
@@ -245,6 +247,13 @@
   left: 0;
   right: 0;
   margin-inline: auto;
+  padding: 2rem;
+}
+.main--booking__form input {
+  border: initial;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
 }
 @media (min-width: 635px) {
   .main__heading {
@@ -527,6 +536,8 @@
   background-color: #0E0E0E;
   color: #FFFFFF;
   padding: 5rem 0;
+  position: relative;
+  z-index: 1;
   transition: all 250ms;
 }
 .footer .logo {

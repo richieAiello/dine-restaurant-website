@@ -286,6 +286,8 @@ $tan: #9E7F66;
         }
 
         &__form {
+            display: flex;
+            flex-direction: column;
             min-height: 585px;
             max-width: 540px;
             background-color: $white;
@@ -296,9 +298,15 @@ $tan: #9E7F66;
             left: 0;
             right: 0;
             margin-inline: auto;
+            padding: 2rem;
+
+            input {
+                border: initial;
+                outline: none;
+                font-family: inherit;
+                font-size: inherit;
+            }
         }
-
-
     }
 
     @media(min-width: 635px) {
@@ -697,6 +705,8 @@ $tan: #9E7F66;
     background-color: $black;
     color: $white;
     padding: 5rem 0;
+    position: relative;
+    z-index: 1;
     transition: all 250ms;
 
     .logo {
