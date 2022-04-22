@@ -348,6 +348,47 @@ $tan: #9E7F66;
             .input::-webkit-inner-spin-button {
                 display: none;
             }
+
+            .input-container {
+                margin-bottom: 2rem;
+            }
+
+            .input,
+            .day-night,
+            .customer-total {
+                border-bottom: 1px solid #8e8e8e;
+                padding-bottom: 1rem;
+            }
+
+            .text {
+                padding-left: 1rem;
+                width: 100%;
+            }
+
+            .date,
+            .time {
+                display: flex;
+                text-align: left;
+                flex-direction: column;           
+                
+                .date-container,
+                .time-container {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 0.5rem;
+
+                    .number {
+                        padding-left: 1rem;
+                    }
+                }
+            }
+
+            .day-night {
+
+                &__select {
+                    display: none;
+                }
+            }
         }
     }
 
@@ -1069,20 +1110,32 @@ $tan: #9E7F66;
 **************************************/
 .btn {
     display: inline-block;
-    font-family: inherit;
     font-weight: 400;
     font-size: 1.125rem;
     line-height: 1rem;
     letter-spacing: 3px; 
-    background-color: initial;
-    border: initial;
     border-radius: 3px;
     text-transform: uppercase;
     padding: 1.5rem 3.4375rem;
     transition: all 400ms;
 
+    &,
+    &--form {
+        background-color: initial;
+        border: none;
+        font-family: inherit;
+    }
+
+    &--form {
+        font-weight: inherit;
+        font-size: inherit;
+        letter-spacing: inherit;
+    }
+
     &:hover,
-    &:focus {
+    &:focus,
+    &--form:hover,
+    &--form:focus {
         cursor: pointer;
     }
 
