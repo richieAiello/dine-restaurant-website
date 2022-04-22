@@ -99,6 +99,10 @@ $tan: #9E7F66;
     text-decoration: none;
     color: inherit;
 }
+
+.flip {
+    transform: rotate(-180deg);
+}
   
 /**************************************
     Header
@@ -769,12 +773,16 @@ $tan: #9E7F66;
                     padding-left: 1rem;
                 }
             }
-        }
 
-        .day-night {
+            .time-container {
+                position: relative;
 
-            &__select {
-                display: none;
+                .day-night {
+
+                    &__arrow {
+                        transition: all 250ms;
+                    }
+                }
             }
         }
 
@@ -824,6 +832,22 @@ $tan: #9E7F66;
             }
         }
     }   
+}
+
+// Placed outside of .main--booking to not conflict with the specificity of class hidden
+.day-night-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: $white;
+    height: 104px;
+    width: 106px;
+    padding: 1rem 1.875rem 1rem 1rem;
+    box-shadow: 0 15px 25px rgba(#384255, 24.62%);
+    position: absolute;
+    right: 0;
+    top: 45px;
 }
 
 /**************************************
@@ -1219,8 +1243,6 @@ $tan: #9E7F66;
         text-align: left;
         padding-left: 1rem;
         width: 30%;
-        border-bottom: 1px solid #8e8e8e;
-        padding-bottom: 1rem;
     }
 
     &--booking {

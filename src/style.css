@@ -80,6 +80,10 @@
   color: inherit;
 }
 
+.flip {
+  transform: rotate(-180deg);
+}
+
 /**************************************
     Header
 **************************************/
@@ -587,8 +591,13 @@
   width: 30%;
   padding-left: 1rem;
 }
-.main--booking .reservation-form .day-night__select {
-  display: none;
+.main--booking .reservation-form .date .time-container,
+.main--booking .reservation-form .time .time-container {
+  position: relative;
+}
+.main--booking .reservation-form .date .time-container .day-night__arrow,
+.main--booking .reservation-form .time .time-container .day-night__arrow {
+  transition: all 250ms;
 }
 .main--booking .reservation-form .input-container:last-of-type {
   display: flex;
@@ -628,6 +637,21 @@
     margin-inline: unset;
     top: -342px;
   }
+}
+
+.day-night-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: #FFFFFF;
+  height: 104px;
+  width: 106px;
+  padding: 1rem 1.875rem 1rem 1rem;
+  box-shadow: 0 15px 25px rgba(56, 66, 85, 0.2462);
+  position: absolute;
+  right: 0;
+  top: 45px;
 }
 
 /**************************************
@@ -935,8 +959,6 @@
   text-align: left;
   padding-left: 1rem;
   width: 30%;
-  border-bottom: 1px solid #8e8e8e;
-  padding-bottom: 1rem;
 }
 .btn--booking {
   padding: 1.5rem;

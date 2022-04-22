@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
-    <script type="module" src="index.js"></script>
+    <script type="module" src="booking.js"></script>
 
     <title>Frontend Mentor | Dine Website Challenge</title>
 </head>
@@ -58,11 +58,14 @@
                         <div class="time-container">
                             <input type="number" name="hour" class="input number" min="01" max="12" placeholder="06" required>
                             <input type="number" name="minute" class="input number" min="00" max="59" placeholder="00" required>
-                            <button type="button" class="btn--form btn--day-night">
-                                <span class="btn--day-night__text">PM</span>
-                                <img src="../images/icons/icon-arrow.svg" alt="" class="btn--day-night__arrow">
+                            <button type="button" class="btn--form btn--day-night day-night">
+
+                                <span class="day-night__text">PM</span>
+
+                                <img src="../images/icons/icon-arrow.svg" alt="" class="day-night__arrow">
                             </button>
-                            <div class="day-night__select">
+
+                            <div class="day-night-container hidden">
                                 <button type="button" class="btn--form btn--am">
                                     <img src="../images/icons/icon-check.svg" alt="" class="check hidden">
                                     AM
@@ -77,12 +80,18 @@
                 </div>
 
                 <div class="input-container" data-error="This field is incomplete">
-                    <button type="button" class="btn--form btn--subtract"><img src="../images/icons/icon-minus.svg" alt=""></button>
-                    <div class="customer-total">
-                        <span class="total">2</span>
-                        <span class="customer">People</span>
+                    <button type="button" class="btn--form btn--subtract">
+                        <img src="../images/icons/icon-minus.svg" alt="">
+                    </button>
+
+                    <div class="customer">
+                        <span class="customer__total">2</span>
+                        <span class="customer__text">People</span>
                     </div>
-                    <button type="button" class="btn--form btn--add"><img src="../images/icons/icon-plus.svg" alt=""></button>
+
+                    <button type="button" class="btn--form btn--add">
+                        <img src="../images/icons/icon-plus.svg" alt="">
+                    </button>
                 </div>
 
                 <button type="submit" class="btn btn--dark btn--booking">make reservation</button>
