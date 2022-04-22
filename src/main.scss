@@ -1241,12 +1241,18 @@ $tan: #9E7F66;
 
     &--day-night {
         text-align: left;
-        padding-left: 1rem;
         width: 30%;
     }
 
     &--booking {
         padding: 1.5rem;
+    }
+
+    @media(min-width: 350px) {
+
+        &--day-night {
+            padding-left: 1rem;
+        }
     }
 
     @media(min-width: 635px) {
