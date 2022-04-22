@@ -1,3 +1,8 @@
+// date variables
+const monthInput = document.querySelector('.month');
+const months30days = ["4", "6", "9", "11"];
+const dayInput = document.querySelector('.day');
+
 // btn--day-night variables
 const dayNightBtn = document.querySelector('.btn--day-night');
 const dayNightText = document.querySelector('.day-night__text');
@@ -21,6 +26,22 @@ const customerText = document.querySelector('.customer__text');
 /**********************************************
     EVENT LISTENERS
 **********************************************/
+monthInput.addEventListener('change', e => {
+
+    if (months30days.includes(monthInput.value)) {
+
+        dayInput.setAttribute('max', '30');
+
+    } else if (monthInput.value === "2") {
+
+        dayInput.setAttribute('max', '28');
+        
+    } else {
+
+        dayInput.setAttribute('max', '31');
+    }
+});
+
 dayNightBtn.addEventListener('click', e => {
 
     dayNightArrow.classList.toggle('flip');
