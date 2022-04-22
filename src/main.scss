@@ -337,11 +337,16 @@ $tan: #9E7F66;
             margin-inline: auto;
             padding: 2rem;
 
-            input {
+            .input {
                 border: initial;
                 outline: none;
                 font-family: inherit;
                 font-size: inherit;
+            }
+
+            .input::-webkit-outer-spin-button,
+            .input::-webkit-inner-spin-button {
+                display: none;
             }
         }
     }

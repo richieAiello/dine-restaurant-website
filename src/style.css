@@ -271,11 +271,15 @@
   margin-inline: auto;
   padding: 2rem;
 }
-.main--booking .reservation-form input {
+.main--booking .reservation-form .input {
   border: initial;
   outline: none;
   font-family: inherit;
   font-size: inherit;
+}
+.main--booking .reservation-form .input::-webkit-outer-spin-button,
+.main--booking .reservation-form .input::-webkit-inner-spin-button {
+  display: none;
 }
 @media (min-width: 635px) {
   .main__heading {
