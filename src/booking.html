@@ -58,13 +58,13 @@
                         <div class="time-container">
                             <input type="number" name="hour" class="input number" min="01" max="12" placeholder="06" required>
                             <input type="number" name="minute" class="input number" min="00" max="59" placeholder="00" required>
-                            <button type="button" class="btn--form btn--day-night day-night">
+                            <button type="button" class="btn--form btn--day-night">
                                 <span class="btn--day-night__text">PM</span>
                                 <img src="../images/icons/icon-arrow.svg" alt="" class="btn--day-night__arrow">
                             </button>
                             <div class="day-night__select">
                                 <button type="button" class="btn--form btn--am">
-                                    <img src="../images/icons/icon-check.svg" alt="" class="check">
+                                    <img src="../images/icons/icon-check.svg" alt="" class="check hidden">
                                     AM
                                 </button>
                                 <button type="button" class="btn--form btn--pm">
@@ -76,10 +76,12 @@
                     </label>
                 </div>
 
-                <div class="input-container customer-total" data-error="This field is incomplete">
+                <div class="input-container" data-error="This field is incomplete">
                     <button type="button" class="btn--form btn--subtract"><img src="../images/icons/icon-minus.svg" alt=""></button>
-                    <span class="total">2</span>
-                    <span class="people">People</span>
+                    <div class="customer-total">
+                        <span class="total">2</span>
+                        <span class="customer">People</span>
+                    </div>
                     <button type="button" class="btn--form btn--add"><img src="../images/icons/icon-plus.svg" alt=""></button>
                 </div>
 
