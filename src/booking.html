@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
-    <script type="module" src="index.js"></script>
+    <script type="module" src="booking.js"></script>
 
     <title>Frontend Mentor | Dine Website Challenge</title>
 </head>
@@ -31,12 +31,68 @@
     </header>
     <main class="main--booking">
         <div class="container">
+            <!-- Reference video- Styling Form Validation Errors - HTML & CSS Web Design Tutorial -->
+            <!-- https://www.youtube.com/watch?v=6NdWrZ77YO4&t=289s&ab_channel=dcode -->
             <form class="reservation-form">
-                <input type="text" class="name" placeholder="Name" required>
 
-                <input type="email" name="email" id="email" class="email" placeholder="Email" required>
+                <div class="input-container" data-error="This field is required">
+                    <input type="text" name="customer-name" placeholder="Name" class="input text name" required>
+                </div>
+                
+                <div class="input-container" data-error="This field is required">
+                    <input type="email" name="customer-email" placeholder="Email" class="input text email" required>
+                </div>
 
-                <input type="number" name="" id="" class="people">
+                <div class="input-container" data-error="This field is incomplete">
+                    <label class="date">Pick a date
+                        <div class="date-container">
+                            <input type="number" name="month" class="input number month" min="01" max="12" placeholder="MM" required>
+                            <input type="number" name="day" class="input number day" min="01" max="31" placeholder="DD" required>
+                            <input type="number" name="year" class="input number year" min="2022" max="2023" placeholder="YYYY" required>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="input-container" data-error="This field is incomplete">
+                    <label class="time">Pick a time
+                        <div class="time-container">
+                            <input type="number" name="hour" class="input number" min="01" max="12" placeholder="06" required>
+                            <input type="number" name="minute" class="input number" min="00" max="59" placeholder="00" required>
+                            <button type="button" class="btn--form btn--day-night day-night">
+
+                                <span class="day-night__text">PM</span>
+
+                                <img src="../images/icons/icon-arrow.svg" alt="" class="day-night__arrow">
+                            </button>
+
+                            <div class="day-night-container hidden">
+                                <button type="button" class="btn--form btn--am">
+                                    <img src="../images/icons/icon-check.svg" alt="" class="check hidden">
+                                    AM
+                                </button>
+                                <button type="button" class="btn--form btn--pm">
+                                    <img src="../images/icons/icon-check.svg" alt="" class="check">
+                                    PM
+                                </button>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="input-container" data-error="This field is incomplete">
+                    <button type="button" class="btn--form btn--subtract">
+                        <img src="../images/icons/icon-minus.svg" alt="">
+                    </button>
+
+                    <div class="customer">
+                        <span class="customer__total">2</span>
+                        <span class="customer__text">People</span>
+                    </div>
+
+                    <button type="button" class="btn--form btn--add">
+                        <img src="../images/icons/icon-plus.svg" alt="">
+                    </button>
+                </div>
 
                 <button type="submit" class="btn btn--dark btn--booking">make reservation</button>
             </form>
