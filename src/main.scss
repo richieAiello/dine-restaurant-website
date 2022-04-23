@@ -8,6 +8,8 @@ $grey: #5C6779;
 $light-grey: #4C4C4C;
 $dark-grey: #242B37;
 $tan: #9E7F66;
+$error-red: #B54949;
+ 
   
 /**************************************
     Reset and Scrollbar
@@ -677,26 +679,22 @@ $tan: #9E7F66;
 
         @media(min-width: 635px) {
 
-            & {
-                background-image: url("../images/homepage/ready-bg-tablet@2x.jpg");
-                padding: 4rem 0;
-            }
+            background-image: url("../images/homepage/ready-bg-tablet@2x.jpg");
+            padding: 4rem 0;
         }
 
         @media(min-width: 1440px) {
 
-            & {
-                background-image: url("../images/homepage/ready-bg-desktop@2x.jpg");
-                padding: 5.5rem 0;
+            background-image: url("../images/homepage/ready-bg-desktop@2x.jpg");
+            padding: 5.5rem 0;
 
-                .container--secondary {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
+            .container--secondary {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
 
-                    .main__heading {
-                        margin-bottom: 0;
-                    }
+                .main__heading {
+                    margin-bottom: 0;
                 }
             }
         }
@@ -730,6 +728,7 @@ $tan: #9E7F66;
         right: 0;
         margin-inline: auto;
         padding: 2rem;
+        caret-color: $tan;
 
         .input {
             border: initial;
@@ -743,13 +742,16 @@ $tan: #9E7F66;
             display: none;
         }
 
-        .input-container {
+        .text,
+        .date,
+        .time,
+        .customer-container {
             margin-bottom: 2rem;
         }
 
         .input,
         .day-night,
-        .input-container:last-of-type {
+        .customer-container {
             border-bottom: 1px solid #8e8e8e;
             padding-bottom: 1rem;
         }
@@ -764,24 +766,22 @@ $tan: #9E7F66;
             display: flex;
             text-align: left;
             flex-direction: column;           
-            
-            .date-container,
-            .time-container {
-                display: flex;
-                justify-content: space-between;
-                margin-top: 0.5rem;
+        }
 
-                
-            }
+        .date__container,
+        .time__container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.5rem;
+        }
 
-            .time-container {
-                position: relative;
+        .time__container {
+            position: relative;
 
-                .day-night {
+            .day-night {
 
-                    &__arrow {
-                        transition: all 250ms;
-                    }
+                &__arrow {
+                    transition: all 250ms;
                 }
             }
         }
@@ -791,7 +791,7 @@ $tan: #9E7F66;
             transition: all 250ms;
         }
 
-        .input-container:last-of-type {
+        .customer-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -801,52 +801,45 @@ $tan: #9E7F66;
 
     @media(min-width: 360px) {
 
-        & {
+        .reservation-form {
 
-            .reservation-form {
-
-                .number {
-                    padding-left: 1rem;
-                }
+            .number {
+                padding-left: 1rem;
             }
         }
     }
 
     @media(min-width: 635px) {
 
-        & {
-            min-height: 435px;
+        min-height: 435px;
 
-            .reservation-form {
-                top: -230px;
-                padding: 3rem;
+        .reservation-form {
+            top: -230px;
+            padding: 3rem;
 
-                .date,
-                .time {
-                    flex-direction: row;
-                    align-items: center; 
-                    justify-content: space-between;          
-                    
-                    .date-container,
-                    .time-container {
-                        width: 65%;
-                        margin-top: 0;
-                    }
-                }
+            .date,
+            .time {
+                flex-direction: row;
+                align-items: center; 
+                justify-content: space-between;          
+            }
+
+            .date__container,
+            .time__container {
+                width: 65%;
+                margin-top: 0;
             }
         }
     }
 
     @media(min-width: 1440px) {
 
-        & {
-            min-height: 319px;
+        min-height: 319px;
 
-            .reservation-form {
-                left: unset;
-                margin-inline: unset;
-                top: -365px;
-            }
+        .reservation-form {
+            left: unset;
+            margin-inline: unset;
+            top: -365px;
         }
     }   
 }
@@ -894,53 +887,45 @@ $tan: #9E7F66;
 
     @media(min-width: 340px) {
         
-        & {
-            font-size: 1rem;
-            letter-spacing: 2.5px;
-        }
+        font-size: 1rem;
+        letter-spacing: 2.5px;
     }
 
     @media(min-width: 380px) {
         
-        & {
-            font-size: 1.125rem;
-            letter-spacing: 3px;
-        }
+        font-size: 1.125rem;
+        letter-spacing: 3px;
     }
 
     @media(min-width: 635px) {
 
-        & {
-           padding: 4rem 0;
-            
-            .container--secondary {
-                display: flex;
-                align-items: flex-start;
+        padding: 4rem 0;
+        
+        .container--secondary {
+            display: flex;
+            align-items: flex-start;
 
-                .wrapper {
-                    text-align: left;
-                    margin-left: 8.125rem;
-                }
+            .wrapper {
+                text-align: left;
+                margin-left: 8.125rem;
             }
         }
     }
 
     @media(min-width: 1440px) {
 
-        & {
-            padding: 4.875rem 0;
+        padding: 4.875rem 0;
 
-            .container--secondary {
+        .container--secondary {
 
-                .wrapper {
-                    display: flex;
-                    margin-left: 12.0625rem;
+            .wrapper {
+                display: flex;
+                margin-left: 12.0625rem;
 
-                    .address {
-                        margin-right: 7.75rem;
-                        margin-bottom: 0;
-                    }   
-                }
+                .address {
+                    margin-right: 7.75rem;
+                    margin-bottom: 0;
+                }   
             }
         }
     }
@@ -1165,9 +1150,7 @@ $tan: #9E7F66;
 
     @media(min-width: 1440px) {
 
-        & {
-            display: block;
-        }
+        display: block;
     }
 }
 

@@ -86,3 +86,7 @@ addBtn.addEventListener('click', e => {
         customerText.textContent = 'People';
     }
 });
+
+/**********************************************
+    FORM VALIDATION
+**********************************************/
