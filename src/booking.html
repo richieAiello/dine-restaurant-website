@@ -38,40 +38,45 @@
                 <!-- Label hidden, but still accessible to screen readers -->
                 <label for="name" class="invisible-label">Enter your name.</label>
                 <input type="text" name="customer-name" class="input text" id="name" placeholder="Name">
-                
+        
                 <!-- Label hidden, but still accessible to screen readers -->
                 <label for="email" class="invisible-label">Enter a valid email address.</label>
                 <input type="email" name="customer-email" class="input text" id="email" placeholder="Email">
-            
+        
                 <div class="date-container">
                     <p class="label">Pick a date</p>
 
                     <div class="date-wrapper">
 
+                        <!-- Label hidden, but still accessible to screen readers -->
                         <label for="date" class="invisible-label">
                             Enter a month in number format (e.g. 02 or 2 for Feburary)
                         </label>
-                        <input 
-                            type="number" name="reservation-date-month" 
+                        <input
+                            type="number" name="reservation-date-month"
                             class="input date-time" id="month" placeholder="MM"
                             min="01" max="12"
                         >
+                       
+                        <!-- Label hidden, but still accessible to screen readers -->
                         <label for="date" class="invisible-label">
                             Enter a day in number format (e.g. 17)
                         </label>
-                        <input 
-                            type="number" name="reservation-date-day" 
+                        <input
+                            type="number" name="reservation-date-day"
                             class="input date-time" id="day" placeholder="DD"
-                            min="01" max="31"    
+                            min="01" max="31"
                         >
+                        
+                        <!-- Label hidden, but still accessible to screen readers -->
                         <label for="date" class="invisible-label">
                             Enter a year in four digit number format (e.g. 2022),
                             between the dates 2022 and 2024
                         </label>
-                        <input 
-                            type="number" name="reservation-date-year" 
+                        <input
+                            type="number" name="reservation-date-year"
                             class="input date-time" id="year" placeholder="YYYY"
-                            min="2022" max="2024"   
+                            min="2022" max="2024"
                         >
                     </div>
                 </div>
@@ -81,6 +86,7 @@
 
                     <div class="time-wrapper">
 
+                        <!-- Label hidden, but still accessible to screen readers -->
                         <label for="hour" class="invisible-label">
                             Provide the hour in 12-hour format.
                             Store hours Monday to Friday are 9AM to 10PM
@@ -88,6 +94,7 @@
                         </label>
                         <input type="number" class="input date-time" min="01" max="12" placeholder="06" required>
                         
+                        <!-- Label hidden, but still accessible to screen readers -->
                         <label for="minute" class="invisible-label"> Provide the minute</label>
                         <input type="number" class="input date-time" min="00" max="59" placeholder="00" required>
                         
@@ -127,6 +134,8 @@
                         <img src="../images/icons/icon-plus.svg" alt="">
                     </button>
                 </div>
+
+                <div class="invalid-container"></div>
 
                 <button type="submit" class="btn btn--dark btn--booking">make reservation</button>
             </form>

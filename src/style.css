@@ -602,6 +602,31 @@
   align-items: center;
   font-weight: 700;
 }
+.main--booking .reservation-form .invisible-label {
+  position: absolute;
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  border: 0;
+}
+.main--booking .reservation-form .invalid {
+  border-color: #B54949;
+}
+.main--booking .reservation-form .invalid::placeholder {
+  color: #B54949;
+}
+.main--booking .reservation-form .invalid-label {
+  text-align: left;
+  line-height: 1.25rem;
+  font-size: 1rem;
+  color: #B54949;
+  margin-bottom: 0.5rem;
+}
+.main--booking .reservation-form .invalid-container {
+  margin-top: -1rem;
+  margin-bottom: 0.5rem;
+}
 @media (min-width: 360px) {
   .main--booking .reservation-form .date-time {
     padding-left: 1rem;
@@ -618,7 +643,7 @@
   .main--booking .reservation-form .date-container,
 .main--booking .reservation-form .time-container {
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
   }
   .main--booking .reservation-form .date-wrapper,
@@ -651,16 +676,6 @@
   position: absolute;
   right: 0;
   top: 45px;
-}
-
-.invisible-label {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  border: 0;
 }
 
 /**************************************

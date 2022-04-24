@@ -76,12 +76,10 @@ addBtn.addEventListener('click', e => {
 const validation = new JustValidate(
     '#form',
     {
-        errorFieldCssClass: 'is-invalid',
-        errorLabelStyle: {
-            fontSize: '12px',
-            color: "#dc3545",
-        },
-        focusInvalidField: true
+        errorFieldCssClass: 'invalid',
+        errorLabelCssClass: 'invalid-label',
+        focusInvalidField: true,
+        errorsContainer: 'div.invalid-container'
     }
 );
 
@@ -89,7 +87,7 @@ validation
     .addField('#name', [
         {   
             rule: 'required',
-            errorMessage: 'This field is required',
+            errorMessage: 'Name is required',
         },
         {
             rule: 'minLength',
@@ -103,11 +101,11 @@ validation
     .addField('#email', [
         {
             rule: 'required',
-            errorMessage: 'This field is required',
+            errorMessage: 'Email is required',
         },
         {
             rule: 'email',
-            errorMessage: 'Please enter a valid email address e.g. (*********@gmail.com)'
+            errorMessage: 'Please enter a valid email address (******@gmail.com)'
         },
     ])
     .addField('#month', [

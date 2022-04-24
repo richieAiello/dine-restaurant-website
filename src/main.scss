@@ -799,6 +799,36 @@ $error-red: #B54949;
             align-items: center;
             font-weight: 700;
         }
+
+        .invisible-label {
+            position: absolute; 
+            overflow: hidden;
+            height: 1px; 
+            width: 1px; 
+            margin: -1px;
+            border: 0; 
+        }
+        
+        .invalid {
+            border-color: $error-red;
+        }
+
+        .invalid::placeholder {
+            color: $error-red;
+        }
+        
+        .invalid-label {
+            text-align: left;
+            line-height: 1.25rem;
+            font-size: 1rem;
+            color: $error-red;
+            margin-bottom: 0.5rem;
+        }
+
+        .invalid-container {
+            margin-top: -1rem;
+            margin-bottom: 0.5rem;
+        }
     }
 
     @media(min-width: 360px) {
@@ -822,7 +852,7 @@ $error-red: #B54949;
             .date-container,
             .time-container {
                 flex-direction: row;
-                align-items: center; 
+                align-items: flex-start; 
                 justify-content: space-between;          
             }
 
@@ -864,15 +894,7 @@ $error-red: #B54949;
 
 // Reference article: https://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/
 // Boiler plate code for turning labels invisible, while leaving them accessible
-.invisible-label {
-    position: absolute; 
-    overflow: hidden; 
-    clip: rect(0 0 0 0); 
-    height: 1px; 
-    width: 1px; 
-    margin: -1px;
-    border: 0; 
-}
+
 
 /**************************************
     Footer
