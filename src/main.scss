@@ -860,6 +860,18 @@ $error-red: #B54949;
     top: 45px;
 }
 
+// Reference article: https://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/
+// Boiler plate code for turning labels invisible, while leaving them accessible
+.invisible-label {
+    position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height: 1px; 
+    width: 1px; 
+    margin: -1px;
+    border: 0; 
+}
+
 /**************************************
     Footer
 **************************************/

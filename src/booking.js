@@ -1,7 +1,5 @@
-// date variables
-const monthInput = document.querySelector('.month');
-const months30days = ["4", "6", "9", "11"];
-const dayInput = document.querySelector('.day');
+import JustValidate from 'just-validate';
+import JustValidatePluginDate from 'just-validate-plugin-date';
 
 // btn--day-night variables
 const dayNightBtn = document.querySelector('.btn--day-night');
@@ -26,22 +24,6 @@ const customerText = document.querySelector('.customer__text');
 /**********************************************
     EVENT LISTENERS
 **********************************************/
-monthInput.addEventListener('change', e => {
-
-    if (months30days.includes(monthInput.value)) {
-
-        dayInput.setAttribute('max', '30');
-
-    } else if (monthInput.value === "2") {
-
-        dayInput.setAttribute('max', '28');
-        
-    } else {
-
-        dayInput.setAttribute('max', '31');
-    }
-});
-
 dayNightBtn.addEventListener('click', e => {
 
     dayNightArrow.classList.toggle('flip');
@@ -90,3 +72,55 @@ addBtn.addEventListener('click', e => {
 /**********************************************
     FORM VALIDATION
 **********************************************/
+
+const validation = new JustValidate(
+    '#form',
+    {
+        errorFieldCssClass: 'is-invalid',
+        errorLabelStyle: {
+            fontSize: '12px',
+            color: "#dc3545",
+        },
+        focusInvalidField: true
+    }
+);
+
+validation
+    .addField('#name', [
+        {   
+            rule: 'required',
+            errorMessage: 'This field is required',
+        },
+        {
+            rule: 'minLength',
+            value: 3,
+        },
+        {
+            rule: 'maxLength',
+            value: 30,
+        },
+    ])
+    .addField('#email', [
+        {
+            rule: 'required',
+            errorMessage: 'This field is required',
+        },
+        {
+            rule: 'email',
+            errorMessage: 'Please enter a valid email address e.g. (*********@gmail.com)'
+        },
+    ])
+    .addField('#date', [
+        {
+            plugin: JustValidatePluginDate(() => ({
+              required: true,  
+              format: 'MM dd yyyy',
+              isBefore: '01 01 2025',
+              isAfter: '12 31 2021',
+            })),
+            errorMessage: 'Date should be between 01 01 2022 and 12 31 2024',
+          },
+    ])
+    // .onSuccess(e => {
+    //     console.log('Passed', e);
+    // })
