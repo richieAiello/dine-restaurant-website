@@ -723,6 +723,7 @@ $error-red: #B54949;
         font-size: 1.5rem;
         line-height: 2rem;
         position: absolute;
+        z-index: 2;
         top: -137px;
         left: 0;
         right: 0;
@@ -737,14 +738,15 @@ $error-red: #B54949;
             font-size: inherit;
         }
 
-        .input::-webkit-outer-spin-button,
-        .input::-webkit-inner-spin-button {
-            display: none;
-        }
+        // Hides arrows for number inputs
+        // .input::-webkit-outer-spin-button,
+        // .input::-webkit-inner-spin-button {
+        //     display: none;
+        // }
 
         .text,
-        .date,
-        .time,
+        .date-container,
+        .time-container,
         .customer-container {
             margin-bottom: 2rem;
         }
@@ -761,21 +763,21 @@ $error-red: #B54949;
             width: 100%;
         }
 
-        .date,
-        .time {
+        .date-container,
+        .time-container {
             display: flex;
             text-align: left;
             flex-direction: column;           
         }
 
-        .date__container,
-        .time__container {
+        .date-wrapper,
+        .time-wrapper {
             display: flex;
             justify-content: space-between;
             margin-top: 0.5rem;
         }
 
-        .time__container {
+        .time-container {
             position: relative;
 
             .day-night {
@@ -786,7 +788,7 @@ $error-red: #B54949;
             }
         }
 
-        .number {
+        .date-time {
             width: 30%;
             transition: all 250ms;
         }
@@ -803,7 +805,7 @@ $error-red: #B54949;
 
         .reservation-form {
 
-            .number {
+            .date-time {
                 padding-left: 1rem;
             }
         }
@@ -817,15 +819,15 @@ $error-red: #B54949;
             top: -230px;
             padding: 3rem;
 
-            .date,
-            .time {
+            .date-container,
+            .time-container {
                 flex-direction: row;
                 align-items: center; 
                 justify-content: space-between;          
             }
 
-            .date__container,
-            .time__container {
+            .date-wrapper,
+            .time-wrapper {
                 width: 65%;
                 margin-top: 0;
             }
@@ -885,7 +887,7 @@ $error-red: #B54949;
     color: $white;
     padding: 5rem 0;
     position: relative;
-    z-index: 1;
+    z-index: -1;
     transition: all 250ms;
 
     .logo {

@@ -544,6 +544,7 @@
   font-size: 1.5rem;
   line-height: 2rem;
   position: absolute;
+  z-index: 2;
   top: -137px;
   left: 0;
   right: 0;
@@ -557,13 +558,9 @@
   font-family: inherit;
   font-size: inherit;
 }
-.main--booking .reservation-form .input::-webkit-outer-spin-button,
-.main--booking .reservation-form .input::-webkit-inner-spin-button {
-  display: none;
-}
 .main--booking .reservation-form .text,
-.main--booking .reservation-form .date,
-.main--booking .reservation-form .time,
+.main--booking .reservation-form .date-container,
+.main--booking .reservation-form .time-container,
 .main--booking .reservation-form .customer-container {
   margin-bottom: 2rem;
 }
@@ -577,25 +574,25 @@
   padding-left: 1rem;
   width: 100%;
 }
-.main--booking .reservation-form .date,
-.main--booking .reservation-form .time {
+.main--booking .reservation-form .date-container,
+.main--booking .reservation-form .time-container {
   display: flex;
   text-align: left;
   flex-direction: column;
 }
-.main--booking .reservation-form .date__container,
-.main--booking .reservation-form .time__container {
+.main--booking .reservation-form .date-wrapper,
+.main--booking .reservation-form .time-wrapper {
   display: flex;
   justify-content: space-between;
   margin-top: 0.5rem;
 }
-.main--booking .reservation-form .time__container {
+.main--booking .reservation-form .time-container {
   position: relative;
 }
-.main--booking .reservation-form .time__container .day-night__arrow {
+.main--booking .reservation-form .time-container .day-night__arrow {
   transition: all 250ms;
 }
-.main--booking .reservation-form .number {
+.main--booking .reservation-form .date-time {
   width: 30%;
   transition: all 250ms;
 }
@@ -606,7 +603,7 @@
   font-weight: 700;
 }
 @media (min-width: 360px) {
-  .main--booking .reservation-form .number {
+  .main--booking .reservation-form .date-time {
     padding-left: 1rem;
   }
 }
@@ -618,14 +615,14 @@
     top: -230px;
     padding: 3rem;
   }
-  .main--booking .reservation-form .date,
-.main--booking .reservation-form .time {
+  .main--booking .reservation-form .date-container,
+.main--booking .reservation-form .time-container {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
   }
-  .main--booking .reservation-form .date__container,
-.main--booking .reservation-form .time__container {
+  .main--booking .reservation-form .date-wrapper,
+.main--booking .reservation-form .time-wrapper {
     width: 65%;
     margin-top: 0;
   }
@@ -679,7 +676,7 @@
   color: #FFFFFF;
   padding: 5rem 0;
   position: relative;
-  z-index: 1;
+  z-index: -1;
   transition: all 250ms;
 }
 .footer .logo {

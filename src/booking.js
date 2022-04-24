@@ -1,5 +1,5 @@
 import JustValidate from 'just-validate';
-import JustValidatePluginDate from 'just-validate-plugin-date';
+// import JustValidatePluginDate from 'just-validate-plugin-date';
 
 // btn--day-night variables
 const dayNightBtn = document.querySelector('.btn--day-night');
@@ -110,16 +110,47 @@ validation
             errorMessage: 'Please enter a valid email address e.g. (*********@gmail.com)'
         },
     ])
-    .addField('#date', [
+    .addField('#month', [
         {
-            plugin: JustValidatePluginDate(() => ({
-              required: true,  
-              format: 'MM dd yyyy',
-              isBefore: '01 01 2025',
-              isAfter: '12 31 2021',
-            })),
-            errorMessage: 'Date should be between 01 01 2022 and 12 31 2024',
-          },
+            rule: 'required',
+            errorMessage: 'Please enter a month'
+        },
+        {
+            rule: 'minNumber',
+            value: 01
+        },
+        {
+            rule: 'maxNumber',
+            value: 12
+        }
+    ])
+    .addField('#day', [
+        {
+            rule: 'required',
+            errorMessage: 'Please enter a valid day for the corresponding month'
+        },
+        {
+            rule: 'minNumber',
+            value: 01
+        },
+        {
+            rule: 'maxNumber',
+            value: 31
+        }
+    ])
+    .addField('#year', [
+        {
+            rule: 'required',
+            errorMessage: 'Please choose a year from 2022 to 2024'
+        },
+        {
+            rule: 'minNumber',
+            value: 2022
+        },
+        {
+            rule: 'maxNumber',
+            value: 2024
+        }
     ])
     // .onSuccess(e => {
     //     console.log('Passed', e);

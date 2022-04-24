@@ -44,21 +44,50 @@
                 <input type="email" name="customer-email" class="input text" id="email" placeholder="Email">
             
                 <div class="date-container">
-                    <label for="date" class="label">Pick a date</label>
+                    <p class="label">Pick a date</p>
 
-                    <input type="text" name="reservation-date" class="input date" id="date" placeholder="MM DD YYYY">
+                    <div class="date-wrapper">
+
+                        <label for="date" class="invisible-label">
+                            Enter a month in number format (e.g. 02 or 2 for Feburary)
+                        </label>
+                        <input type="number" name="reservation-date-month" class="input date-time" id="month" placeholder="MM" min="01" max="12">
+                        <label for="date" class="invisible-label">
+                            Enter a day in number format (e.g. 17)
+                        </label>
+                        <input type="number" name="reservation-date-day" class="input date-time" id="day" placeholder="DD" min="01" max="31">
+                        <label for="date" class="invisible-label">
+                            Enter a year in four digit number format (e.g. 2022),
+                            between the dates 2022 and 2024
+                        </label>
+                        <input type="number" name="reservation-date-year" class="input date-time" id="year" placeholder="YYYY" min="2022" max="2024">
+                    </div>
                 </div>
                    
-                <div class="time">
-                    <p class="time__label">Pick a time</p>
+                <div class="time-container">
+                    <p class="label">Pick a time</p>
 
-                    <div class="time__container">
-                        <input type="number" class="input number" min="01" max="12" placeholder="06" required="">
-                        <input type="number" class="input number" min="00" max="59" placeholder="00" required="">
+                    <div class="time-wrapper">
+
+                        <label for="hour" class="invisible-label">
+                            Provide the hour in 12-hour format.
+                            Store hours Monday to Friday are 9AM to 10PM
+                            Store hours Saturday to Sunday are 9AM to 11:30PM
+                        </label>
+                        <input type="number" class="input date-time" min="01" max="12" placeholder="06" required="">
+                        
+                        <label for="minute" class="invisible-label"> Provide the minute</label>
+                        <input type="number" class="input date-time" min="00" max="59" placeholder="00" required="">
+                        
                         <button type="button" class="btn--form btn--day-night day-night">
                             <span class="day-night__text">PM</span>
                             <img src="/icon-arrow.d55d5212.svg" alt="" class="day-night__arrow">
                         </button>
+                        
+                        <!-- <select name="am-pm" id="am-pm">
+
+                        </select> -->
+
                         <div class="day-night-container hidden">
                             <button type="button" class="btn--form btn--am">
                                 <img src="/icon-check.348b8e9c.svg" alt="" class="check hidden">
@@ -71,8 +100,7 @@
                         </div>
                     </div>
                 </div>
-                  
-
+            
                 <div class="customer-container">
                     <button type="button" class="btn--form btn--subtract">
                         <img src="/icon-minus.0c32e231.svg" alt="">
