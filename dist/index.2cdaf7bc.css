@@ -668,8 +668,15 @@
   position: relative;
 }
 
-.main--booking .reservation-form .day-night__arrow {
-  transition: all .25s;
+.main--booking .reservation-form .day-night {
+  appearance: none;
+  background-image: url("icon-arrow.d55d5212.svg");
+  background-position: 100% 10%;
+  background-repeat: no-repeat;
+}
+
+.main--booking .reservation-form .day-night::-ms-expand {
+  display: none;
 }
 
 .main--booking .reservation-form .date-time, .main--booking .reservation-form .day-night {
@@ -690,6 +697,10 @@
   font-weight: 600;
 }
 
+.main--booking .reservation-form .customer-icon {
+  width: .875rem;
+}
+
 .main--booking .reservation-form .invisible-label {
   height: 1px;
   width: 1px;
@@ -700,6 +711,8 @@
 }
 
 .main--booking .reservation-form .invalid {
+  color: #b54949;
+  background-color: #f7e9e9;
   border-color: #b54949;
 }
 
@@ -723,6 +736,12 @@
 @media (min-width: 360px) {
   .main--booking .reservation-form .date-time, .main--booking .reservation-form .day-night {
     padding-left: 1rem;
+  }
+}
+
+@media (min-width: 420px) {
+  .main--booking .reservation-form .day-night {
+    background-position: 85% 10%;
   }
 }
 

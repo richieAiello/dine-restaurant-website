@@ -592,8 +592,14 @@
 .main--booking .reservation-form .time-container {
   position: relative;
 }
-.main--booking .reservation-form .day-night__arrow {
-  transition: all 250ms;
+.main--booking .reservation-form .day-night {
+  background-image: url("../images/icons/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 100% 10%;
+  appearance: none;
+}
+.main--booking .reservation-form .day-night::-ms-expand {
+  display: none;
 }
 .main--booking .reservation-form .date-time,
 .main--booking .reservation-form .day-night {
@@ -611,6 +617,9 @@
   font-weight: 600;
   width: 100%;
 }
+.main--booking .reservation-form .customer-icon {
+  width: 0.875rem;
+}
 .main--booking .reservation-form .invisible-label {
   position: absolute;
   overflow: hidden;
@@ -620,6 +629,8 @@
   border: 0;
 }
 .main--booking .reservation-form .invalid {
+  color: #B54949;
+  background-color: #f7e9e9;
   border-color: #B54949;
 }
 .main--booking .reservation-form .invalid::placeholder {
@@ -640,6 +651,11 @@
   .main--booking .reservation-form .date-time,
 .main--booking .reservation-form .day-night {
     padding-left: 1rem;
+  }
+}
+@media (min-width: 420px) {
+  .main--booking .reservation-form .day-night {
+    background-position: 85% 10%;
   }
 }
 @media (min-width: 635px) {

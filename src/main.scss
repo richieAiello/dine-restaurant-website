@@ -9,6 +9,7 @@ $light-grey: #4C4C4C;
 $dark-grey: #242B37;
 $tan: #9E7F66;
 $error-red: #B54949;
+$error-light-red: #f7e9e9;
  
   
 /**************************************
@@ -777,12 +778,16 @@ $error-red: #B54949;
             position: relative;
         }
 
-        // Figure out how to implement this or remove it
+        // Custom Select reference: https://moderncss.dev/custom-select-styles-with-pure-css/
         .day-night {
+            background-image: url('../images/icons/icon-arrow.svg');
+            background-repeat: no-repeat;
+            background-position: 100% 10%;
+            appearance: none;
+        }
 
-            &__arrow {
-                transition: all 250ms;
-            }
+        .day-night::-ms-expand {
+            display: none;
         }
 
         .date-time,
@@ -804,6 +809,10 @@ $error-red: #B54949;
             width: 100%;
         }
 
+        .customer-icon {
+            width: 0.875rem ;
+        }
+
         // Reference article: https://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/
         // Boiler plate code for turning labels invisible, while leaving them accessible
         .invisible-label {
@@ -816,6 +825,8 @@ $error-red: #B54949;
         }
         
         .invalid {
+            color: $error-red;
+            background-color: $error-light-red;
             border-color: $error-red;
         }
 
@@ -847,6 +858,17 @@ $error-red: #B54949;
             }
         }
     }
+
+    @media(min-width: 420px) {
+
+        .reservation-form {
+
+            .day-night {
+                background-position: 85% 10%;
+            }
+        }
+    }
+
 
     @media(min-width: 635px) {
 
