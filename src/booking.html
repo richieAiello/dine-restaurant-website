@@ -98,27 +98,16 @@
                         <label for="minute" class="invisible-label"> Provide the minute</label>
                         <input type="number" class="input date-time" id="minute" min="00" max="59" placeholder="00">
                         
-                        <!-- <button type="button" class="btn--form btn--day-night day-night">
-                            <span class="day-night__text">PM</span>
-                            <img src="../images/icons/icon-arrow.svg" alt="" class="day-night__arrow">
-                        </button> -->
-                        
+                        <!-- Label hidden, but still accessible to screen readers -->
+                        <label for="day-night" class="invisible-label">
+                            Please use the dropdown menu to select either
+                            AM or PM for your reservation time. PM is 
+                            selected by default.
+                        </label>
                         <select name="day-night" class="day-night" id="day-night" placeholder="PM">
-                            <!-- <option value="" selected></option> -->
-                            <option value="pm">PM</option>
-                            <option value="am">AM</option>
+                            <option value="PM">PM</option>
+                            <option value="AM">AM</option>
                         </select>
-
-                        <!-- <div class="day-night-container hidden">
-                            <button type="button" class="btn--form btn--am">
-                                <img src="../images/icons/icon-check.svg" alt="" class="check hidden">
-                                AM
-                            </button>
-                            <button type="button" class="btn--form btn--pm">
-                                <img src="../images/icons/icon-check.svg" alt="" class="check">
-                                PM
-                            </button>
-                        </div> -->
                     </div>
                 </div>
             
@@ -132,10 +121,14 @@
                         <img src="../images/icons/icon-minus.svg" alt="">
                     </button>
 
-                    <div class="customer">
-                        <span class="customer__total">2</span>
-                        <span class="customer__text">People</span>
-                    </div>
+                    <label for="customer-total" class="invisible-label">
+                        Please use the subtract and add buttons to alter the customer total
+                    </label>
+                    <input 
+                        type="text" name="customer-total" 
+                        class="customer-total" id="customer-total" 
+                        value="2 People" readonly
+                    >
 
                     <label for="add" class="invisible-label">
                         Click this button to alter the total number
@@ -147,9 +140,13 @@
                     </button>
                 </div>
 
+                <!-- Displays error messages during form validation -->
                 <div class="invalid-container"></div>
 
-                <button type="submit" class="btn btn--dark btn--booking">make reservation</button>
+                <label for="submit" class="invisible-label">
+                    Click to sumbit form and secure your reservation.
+                </label>
+                <button type="submit" class="btn btn--dark btn--booking" id="submit">make reservation</button>
             </form>
             <!-- Displayed on desktop -->
             <img 

@@ -732,7 +732,8 @@ $error-red: #B54949;
         caret-color: $tan;
 
         .input,
-        .day-night {
+        .day-night,
+        .customer-total {
             border: initial;
             outline: none;
             font-family: inherit;
@@ -776,6 +777,7 @@ $error-red: #B54949;
             position: relative;
         }
 
+        // Figure out how to implement this or remove it
         .day-night {
 
             &__arrow {
@@ -794,6 +796,12 @@ $error-red: #B54949;
             justify-content: space-between;
             align-items: center;
             font-weight: 700;
+        }
+
+        .customer-total {
+            text-align: center;
+            font-weight: 600;
+            width: 100%;
         }
 
         // Reference article: https://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/
@@ -874,22 +882,6 @@ $error-red: #B54949;
         }
     }   
 }
-
-// Placed outside of .main--booking to not conflict with the specificity of class hidden
-// .day-night-container {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-//     align-items: flex-end;
-//     background-color: $white;
-//     height: 104px;
-//     width: 106px;
-//     padding: 1rem 1.875rem 1rem 1rem;
-//     box-shadow: 0 15px 25px rgba(#384255, 24.62%);
-//     position: absolute;
-//     right: 0;
-//     top: 45px;
-// }
 
 /**************************************
     Footer
@@ -1276,12 +1268,6 @@ $error-red: #B54949;
         color: rgba($light-grey, 100%);
     }
 
-    &--day-night {
-        transition: all 250ms;
-        text-align: left;
-        width: 30%;
-    }
-
     &--subtract,
     &--add {
         padding: 0 1.25rem;
@@ -1290,13 +1276,6 @@ $error-red: #B54949;
 
     &--booking {
         padding: 1.5rem;
-    }
-
-    @media(min-width: 360px) {
-
-        &--day-night {
-            padding-left: 1rem;
-        }
     }
 
     @media(min-width: 635px) {

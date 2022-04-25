@@ -532,29 +532,31 @@ var _justValidateDefault = parcelHelpers.interopDefault(_justValidate);
 // customer total variables
 const subtractBtn = document.querySelector('.btn--subtract');
 const addBtn = document.querySelector('.btn--add');
-const customerTotal = document.querySelector('.customer__total');
-const customerText = document.querySelector('.customer__text');
+const customerTotal = document.querySelector('.customer-total');
 /**********************************************
     EVENT LISTENERS
 **********************************************/ subtractBtn.addEventListener('click', (e)=>{
-    let total = Number.parseInt(customerTotal.textContent, 10);
+    let total = Number.parseInt(customerTotal.value, 10);
     if (total > 1) {
         total--;
-        customerTotal.textContent = total;
+        customerTotal.value = `${total} People`;
     }
-    if (total === 1) customerText.textContent = 'Person';
+    if (total === 1) customerTotal.value = `1 Person`;
 });
 addBtn.addEventListener('click', (e)=>{
-    let total = Number.parseInt(customerTotal.textContent, 10);
+    let total = Number.parseInt(customerTotal.value, 10);
     if (total < 30) {
         total++;
-        customerTotal.textContent = total;
-        customerText.textContent = 'People';
+        customerTotal.value = `${total} People`;
     }
 });
 /**********************************************
     FORM VALIDATION
-**********************************************/ const validation = new _justValidateDefault.default('#form', {
+**********************************************/ // define a varibale that represents the max attribute for days depending on the selected month
+// months30days = [04, 06, 09, 11];
+// Determine the value using a function and the array above
+// Replace days maxNumber with value variable
+const validation = new _justValidateDefault.default('#form', {
     errorFieldCssClass: 'invalid',
     errorLabelCssClass: 'invalid-label',
     focusInvalidField: true,
