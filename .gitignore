@@ -1,6 +1,6 @@
 node_modules/
 .parcel-cache/
-.dist/
+dist/
 # Avoid accidental Sketch file upload 
 ###############################################
 ## Please do not remove line 5 - thanks! 🙂 ##
