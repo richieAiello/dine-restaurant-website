@@ -529,13 +529,36 @@ function hmrAcceptRun(bundle, id) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _justValidate = require("just-validate");
 var _justValidateDefault = parcelHelpers.interopDefault(_justValidate);
+// date validation variables
+const months30days = [
+    '4',
+    '6',
+    '9',
+    '11'
+];
+const monthInput = document.querySelector('#month');
+const dayInput = document.querySelector('#day');
 // customer total variables
 const subtractBtn = document.querySelector('.btn--subtract');
 const addBtn = document.querySelector('.btn--add');
 const customerTotal = document.querySelector('.customer-total');
+// Global variable for max days to be used with form validation and listeners 
+let maxDays = 31;
 /**********************************************
     EVENT LISTENERS
-**********************************************/ subtractBtn.addEventListener('click', (e)=>{
+**********************************************/ monthInput.addEventListener('change', (e)=>{
+    if (months30days.includes(monthInput.value)) {
+        dayInput.setAttribute('max', '30');
+        maxDays = 30;
+    } else if (monthInput.value === "2") {
+        dayInput.setAttribute('max', '28');
+        maxDays = 28;
+    } else {
+        dayInput.setAttribute('max', '31');
+        maxDays = 31;
+    }
+});
+subtractBtn.addEventListener('click', (e)=>{
     let total = Number.parseInt(customerTotal.value, 10);
     if (total > 1) {
         total--;
@@ -552,11 +575,7 @@ addBtn.addEventListener('click', (e)=>{
 });
 /**********************************************
     FORM VALIDATION
-**********************************************/ // define a varibale that represents the max attribute for days depending on the selected month
-// months30days = [04, 06, 09, 11];
-// Determine the value using a function and the array above
-// Replace days maxNumber with value variable
-const validation = new _justValidateDefault.default('#form', {
+**********************************************/ const validation = new _justValidateDefault.default('#form', {
     errorFieldCssClass: 'invalid',
     errorLabelCssClass: 'invalid-label',
     focusInvalidField: true,
@@ -600,15 +619,16 @@ validation.addField('#name', [
 ]).addField('#day', [
     {
         rule: 'required',
-        errorMessage: 'Please enter a valid day for the corresponding month'
+        errorMessage: 'Please enter a day'
     },
     {
         rule: 'minNumber',
         value: 01
     },
     {
-        rule: 'maxNumber',
-        value: 31
+        validator: ()=>maxDays >= dayInput.value
+        ,
+        errorMessage: 'Please enter a valid day for the corresponding month'
     }
 ]).addField('#year', [
     {
