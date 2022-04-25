@@ -574,31 +574,66 @@ const accentContainsClass = (string)=>{
         classes.contains(string) ? classes.remove('hidden') : classes.add('hidden');
     });
 };
+// Listens for the end of animation on events heading and text
+// Animates events heading and text by adding a class containing keyframes
+// Removes keyframes class at the end of animation
+const animateContext = ()=>{
+    eventsHeading.addEventListener('animationend', (e)=>{
+        e.currentTarget.classList.remove('slide');
+    });
+    eventsText.addEventListener('animationend', (e)=>{
+        e.currentTarget.classList.remove('slide');
+    });
+    eventsHeading.classList.add('slide');
+    eventsText.classList.add('slide');
+};
+// Disables all buttons for section events
+// Enables all buttons for section events after 500ms to allow animations to finish.
+// Changes content of events heading and text
+const changeContext = (heading, text)=>{
+    eventsBtns.forEach((btn)=>btn.setAttribute('disabled', 'disabled')
+    );
+    setTimeout(()=>{
+        eventsBtns.forEach((btn)=>btn.removeAttribute('disabled')
+        );
+    }, "500");
+    eventsHeading.textContent = heading;
+    eventsText.textContent = text;
+};
 /**********************************************
     EVENT LISTENERS
 **********************************************/ // Family Gathering button
 familyBtn.addEventListener('click', (e)=>{
-    imageContainsClass('family');
-    btnContainsClass('family');
-    accentContainsClass('accent--family');
-    eventsHeading.textContent = familyHeading;
-    eventsText.textContent = familyText;
+    if (eventsHeading.textContent !== familyHeading) {
+        imageContainsClass('family');
+        btnContainsClass('family');
+        accentContainsClass('accent--family');
+        // animateContext is placed above changeContext to ensure condition functionality
+        animateContext();
+        changeContext(familyHeading, familyText);
+    }
 });
 // Special Events button
 specialBtn.addEventListener('click', (e)=>{
-    imageContainsClass('special');
-    btnContainsClass('special');
-    accentContainsClass('accent--special');
-    eventsHeading.textContent = specialHeading;
-    eventsText.textContent = specialText;
+    if (eventsHeading.textContent !== specialHeading) {
+        imageContainsClass('special');
+        btnContainsClass('special');
+        accentContainsClass('accent--special');
+        // animateContext is placed above changeContext to ensure condition functionality
+        animateContext();
+        changeContext(specialHeading, specialText);
+    }
 });
 // Social Events button
 socialBtn.addEventListener('click', (e)=>{
-    imageContainsClass('social');
-    btnContainsClass('social');
-    accentContainsClass('accent--social');
-    eventsHeading.textContent = socialHeading;
-    eventsText.textContent = socialText;
+    if (eventsHeading.textContent !== socialHeading) {
+        imageContainsClass('social');
+        btnContainsClass('social');
+        accentContainsClass('accent--social');
+        // animateContext is placed above changeContext to ensure condition functionality
+        animateContext();
+        changeContext(socialHeading, socialText);
+    }
 });
 
 },{}]},["7fmqN","8lqZg"], "8lqZg", "parcelRequire1ee4")

@@ -582,12 +582,11 @@ $error-red: #B54949;
                     width: 48px;
                     background-color: $tan;
                     margin-inline: auto;
-                    animation: 1s fade-in;
+                    animation: 500ms 350ms backwards fade-in;
                 }
             }
         } 
         
-
         @media(min-width: 635px) {
 
             & {
@@ -739,12 +738,6 @@ $error-red: #B54949;
             font-size: inherit;
         }
 
-        // Hides arrows for number inputs
-        // .input::-webkit-outer-spin-button,
-        // .input::-webkit-inner-spin-button {
-        //     display: none;
-        // }
-
         .text,
         .date-container,
         .time-container,
@@ -801,6 +794,8 @@ $error-red: #B54949;
             font-weight: 700;
         }
 
+        // Reference article: https://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/
+        // Boiler plate code for turning labels invisible, while leaving them accessible
         .invisible-label {
             position: absolute; 
             overflow: hidden;
@@ -892,10 +887,6 @@ $error-red: #B54949;
     right: 0;
     top: 45px;
 }
-
-// Reference article: https://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/
-// Boiler plate code for turning labels invisible, while leaving them accessible
-
 
 /**************************************
     Footer
@@ -1195,11 +1186,6 @@ $error-red: #B54949;
     }
 }
 
-// Placed at bottom for a higher specificity
-.hidden {
-    display: none;
-}   
-
 /**************************************
     Buttons
 **************************************/
@@ -1272,6 +1258,13 @@ $error-red: #B54949;
         }
     }
 
+    &--events[disabled] {
+
+         &:hover {
+            cursor: wait;
+         }
+    }
+
     &--events.special {
         margin: 1rem 0;
     }
@@ -1324,25 +1317,29 @@ $error-red: #B54949;
 }
 
 /**************************************
-    Keyframes
+    Keyframes and Display Classes
 **************************************/
 @keyframes slide-in {
     from {
-        transform: translateX(-100%);
+        opacity: 0;
+        transform: translateX(-150%);
     }
     
     to {
-    transform: translateX(0%);
+        opacity: 1;
+        transform: translateX(0%);
     }
 }
 
-@keyframes slide-out {
+@keyframes slide-in-right {
     from {
-        transform: translateY(0%);
+        opacity: 0;
+        transform: translateX(150%);
     }
     
     to {
-    transform: translateY(-200%);
+        opacity: 1;
+        transform: translateX(0%);
     }
 }
 
@@ -1354,4 +1351,12 @@ $error-red: #B54949;
     to {
         opacity: 1;
     }
+}
+
+.hidden {
+    display: none;
+}  
+
+.slide {
+    animation: 400ms slide-in-right;
 }
