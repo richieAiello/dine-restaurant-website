@@ -30,71 +30,127 @@
         </div>
     </header>
     <main class="main--booking">
+        
         <div class="container">
-            <!-- Reference video- Styling Form Validation Errors - HTML & CSS Web Design Tutorial -->
-            <!-- https://www.youtube.com/watch?v=6NdWrZ77YO4&t=289s&ab_channel=dcode -->
-            <form class="reservation-form">
+            
+            <form class="reservation-form" id="form" autocomplete="off">
 
-                <div class="input-container" data-error="This field is required">
-                    <input type="text" name="customer-name" placeholder="Name" class="input text name" required>
-                </div>
-                
-                <div class="input-container" data-error="This field is required">
-                    <input type="email" name="customer-email" placeholder="Email" class="input text email" required>
-                </div>
+                <!-- Label hidden, but still accessible to screen readers -->
+                <label for="name" class="invisible-label">Enter your name.</label>
+                <input type="text" name="customer-name" class="input text" id="name" placeholder="Name">
+        
+                <!-- Label hidden, but still accessible to screen readers -->
+                <label for="email" class="invisible-label">Enter a valid email address.</label>
+                <input type="email" name="customer-email" class="input text" id="email" placeholder="Email">
+        
+                <div class="date-container">
+                    <p class="label">Pick a date</p>
 
-                <div class="input-container" data-error="This field is incomplete">
-                    <label class="date">Pick a date
-                        <div class="date-container">
-                            <input type="number" name="month" class="input number month" min="01" max="12" placeholder="MM" required>
-                            <input type="number" name="day" class="input number day" min="01" max="31" placeholder="DD" required>
-                            <input type="number" name="year" class="input number year" min="2022" max="2023" placeholder="YYYY" required>
-                        </div>
-                    </label>
-                </div>
+                    <div class="date-wrapper">
 
-                <div class="input-container" data-error="This field is incomplete">
-                    <label class="time">Pick a time
-                        <div class="time-container">
-                            <input type="number" name="hour" class="input number" min="01" max="12" placeholder="06" required>
-                            <input type="number" name="minute" class="input number" min="00" max="59" placeholder="00" required>
-                            <button type="button" class="btn--form btn--day-night day-night">
-
-                                <span class="day-night__text">PM</span>
-
-                                <img src="../images/icons/icon-arrow.svg" alt="" class="day-night__arrow">
-                            </button>
-
-                            <div class="day-night-container hidden">
-                                <button type="button" class="btn--form btn--am">
-                                    <img src="../images/icons/icon-check.svg" alt="" class="check hidden">
-                                    AM
-                                </button>
-                                <button type="button" class="btn--form btn--pm">
-                                    <img src="../images/icons/icon-check.svg" alt="" class="check">
-                                    PM
-                                </button>
-                            </div>
-                        </div>
-                    </label>
-                </div>
-
-                <div class="input-container" data-error="This field is incomplete">
-                    <button type="button" class="btn--form btn--subtract">
-                        <img src="../images/icons/icon-minus.svg" alt="">
-                    </button>
-
-                    <div class="customer">
-                        <span class="customer__total">2</span>
-                        <span class="customer__text">People</span>
+                        <!-- Label hidden, but still accessible to screen readers -->
+                        <label for="month" class="invisible-label">
+                            Enter a month in number format (e.g. 02 or 2 for Feburary)
+                        </label>
+                        <input
+                            type="number" name="reservation-date-month"
+                            class="input date-time" id="month" placeholder="MM"
+                            min="01" max="12"
+                        >
+                       
+                        <!-- Label hidden, but still accessible to screen readers -->
+                        <label for="day" class="invisible-label">
+                            Enter a day in number format (e.g. 17)
+                        </label>
+                        <input
+                            type="number" name="reservation-date-day"
+                            class="input date-time" id="day" placeholder="DD"
+                            min="01" max="31"
+                        >
+                        
+                        <!-- Label hidden, but still accessible to screen readers -->
+                        <label for="year" class="invisible-label">
+                            Enter a year in four digit number format (e.g. 2022),
+                            between the dates 2022 and 2024
+                        </label>
+                        <input
+                            type="number" name="reservation-date-year"
+                            class="input date-time" id="year" placeholder="YYYY"
+                            min="2022" max="2024"
+                        >
                     </div>
+                </div>
+                   
+                <div class="time-container">
+                    <p class="label">Pick a time</p>
 
-                    <button type="button" class="btn--form btn--add">
-                        <img src="../images/icons/icon-plus.svg" alt="">
+                    <div class="time-wrapper">
+
+                        <!-- Label hidden, but still accessible to screen readers -->
+                        <label for="hour" class="invisible-label">
+                            Provide the hour in 12-hour format.
+                            Store hours Monday to Friday are 9AM to 10PM
+                            Store hours Saturday to Sunday are 9AM to 11:30PM
+                        </label>
+                        <input type="number" class="input date-time" id="hour" min="01" max="12" placeholder="12">
+                        
+                        <!-- Label hidden, but still accessible to screen readers -->
+                        <label for="minute" class="invisible-label"> Provide the minute</label>
+                        <input type="number" class="input date-time" id="minute" min="00" max="59" placeholder="00">
+                        
+                        <!-- Label hidden, but still accessible to screen readers -->
+                        <label for="day-night" class="invisible-label">
+                            Please use the dropdown menu to select either
+                            AM or PM for your reservation time. PM is 
+                            selected by default.
+                        </label>
+                        <select name="day-night" class="day-night" id="day-night" placeholder="PM">
+                            <option value="PM">PM</option>
+                            <option value="AM">AM</option>
+                        </select>
+                    </div>
+                </div>
+            
+                <div class="customer-container">
+                    <!-- Label hidden, but still accessible to screen readers -->
+                    <label for="subtract" class="invisible-label">
+                        Click this button to alter the total number
+                        of people for this reservation by subtracting
+                        1 from the current total.
+                    </label>
+                    <button type="button" class="btn--form btn--customer-subtract" id="subtract">
+                        <img src="../images/icons/icon-minus.svg" alt="" class="customer-icon">
+                    </button>
+
+                    <!-- Label hidden, but still accessible to screen readers -->
+                    <label for="customer-total" class="invisible-label">
+                        Please use the subtract and add buttons to alter the customer total
+                    </label>
+                    <input 
+                        type="text" name="customer-total" 
+                        class="customer-total" id="customer-total" 
+                        value="2 People" readonly
+                    >
+
+                    <!-- Label hidden, but still accessible to screen readers -->
+                    <label for="add" class="invisible-label">
+                        Click this button to alter the total number
+                        of people for this reservation by adding
+                        1 to the current total.
+                    </label>
+                    <button type="button" class="btn--form btn--customer-add" id="add">
+                        <img src="../images/icons/icon-plus.svg" alt="" class="customer-icon">
                     </button>
                 </div>
 
-                <button type="submit" class="btn btn--dark btn--booking">make reservation</button>
+                <!-- Displays error messages during form validation -->
+                <div class="invalid-container"></div>
+
+                <!-- Label hidden, but still accessible to screen readers -->
+                <label for="submit" class="invisible-label">
+                    Click to sumbit form and secure your reservation.
+                </label>
+                <button type="submit" class="btn btn--dark btn--booking" id="submit">make reservation</button>
             </form>
             <!-- Displayed on desktop -->
             <img 

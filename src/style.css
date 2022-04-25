@@ -437,6 +437,7 @@
   width: 48px;
   background-color: #9E7F66;
   margin-inline: auto;
+  animation: 500ms 350ms backwards fade-in;
 }
 @media (min-width: 635px) {
   .main .events {
@@ -535,34 +536,46 @@
 .main--booking .reservation-form {
   display: flex;
   flex-direction: column;
-  min-height: 585px;
+  min-height: max-content;
   width: min(100%, 540px);
   background-color: #FFFFFF;
   border-radius: 3px;
   box-shadow: 0 75px 100px -50px rgba(56, 66, 85, 0.5032);
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2rem;
   position: absolute;
+  z-index: 2;
   top: -137px;
   left: 0;
   right: 0;
   margin-inline: auto;
   padding: 2rem;
+  caret-color: #9E7F66;
 }
-.main--booking .reservation-form .input {
+.main--booking .reservation-form .input,
+.main--booking .reservation-form .day-night,
+.main--booking .reservation-form .customer-total {
   border: initial;
-  outline: none;
   font-family: inherit;
   font-size: inherit;
 }
-.main--booking .reservation-form .input::-webkit-outer-spin-button,
-.main--booking .reservation-form .input::-webkit-inner-spin-button {
-  display: none;
+.main--booking .reservation-form .input:focus,
+.main--booking .reservation-form .day-night:focus,
+.main--booking .reservation-form .customer-total:focus {
+  outline-style: inset;
+  outline-width: 0.2rem;
+  outline-color: inherit;
 }
-.main--booking .reservation-form .input-container {
+.main--booking .reservation-form .text,
+.main--booking .reservation-form .date-container,
+.main--booking .reservation-form .time-container,
+.main--booking .reservation-form .customer-container {
   margin-bottom: 2rem;
 }
 .main--booking .reservation-form .input,
 .main--booking .reservation-form .day-night,
-.main--booking .reservation-form .input-container:last-of-type {
+.main--booking .reservation-form .customer-container {
   border-bottom: 1px solid #8e8e8e;
   padding-bottom: 1rem;
 }
@@ -570,59 +583,103 @@
   padding-left: 1rem;
   width: 100%;
 }
-.main--booking .reservation-form .date,
-.main--booking .reservation-form .time {
+.main--booking .reservation-form .date-container,
+.main--booking .reservation-form .time-container {
   display: flex;
   text-align: left;
   flex-direction: column;
 }
-.main--booking .reservation-form .date .date-container,
-.main--booking .reservation-form .date .time-container,
-.main--booking .reservation-form .time .date-container,
-.main--booking .reservation-form .time .time-container {
+.main--booking .reservation-form .date-wrapper,
+.main--booking .reservation-form .time-wrapper {
   display: flex;
   justify-content: space-between;
   margin-top: 0.5rem;
 }
-.main--booking .reservation-form .date .date-container .number,
-.main--booking .reservation-form .date .time-container .number,
-.main--booking .reservation-form .time .date-container .number,
-.main--booking .reservation-form .time .time-container .number {
-  width: 30%;
-  padding-left: 1rem;
-}
-.main--booking .reservation-form .date .time-container,
-.main--booking .reservation-form .time .time-container {
+.main--booking .reservation-form .time-container {
   position: relative;
 }
-.main--booking .reservation-form .date .time-container .day-night__arrow,
-.main--booking .reservation-form .time .time-container .day-night__arrow {
-  transition: all 250ms;
+.main--booking .reservation-form .day-night {
+  background-image: url("../images/icons/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 100% 10%;
+  appearance: none;
 }
-.main--booking .reservation-form .input-container:last-of-type {
+.main--booking .reservation-form .day-night::-ms-expand {
+  display: none;
+}
+.main--booking .reservation-form .date-time,
+.main--booking .reservation-form .day-night {
+  width: 30%;
+}
+.main--booking .reservation-form .customer-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-weight: 700;
+}
+.main--booking .reservation-form .customer-total {
+  text-align: center;
+  font-weight: 600;
+  width: 100%;
+  background-color: transparent;
+}
+.main--booking .reservation-form .customer-icon {
+  width: 0.875rem;
+}
+.main--booking .reservation-form .invisible-label {
+  position: absolute;
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  border: 0;
+}
+.main--booking .reservation-form .invalid {
+  color: #B54949;
+  background-color: #f7e9e9;
+  border-color: #B54949;
+}
+.main--booking .reservation-form .invalid::placeholder {
+  color: #B54949;
+}
+.main--booking .reservation-form .invalid-label {
+  text-align: left;
+  line-height: 1.25rem;
+  font-size: 1rem;
+  color: #B54949;
+  margin-bottom: 0.5rem;
+}
+.main--booking .reservation-form .invalid-container {
+  margin-top: -1rem;
+  margin-bottom: 0.5rem;
+}
+@media (min-width: 360px) {
+  .main--booking .reservation-form .date-time,
+.main--booking .reservation-form .day-night {
+    padding-left: 1rem;
+  }
+}
+@media (min-width: 420px) {
+  .main--booking .reservation-form .day-night {
+    background-position: 85% 10%;
+  }
 }
 @media (min-width: 635px) {
   .main--booking {
     min-height: 435px;
   }
   .main--booking .reservation-form {
-    min-height: 545px;
     top: -230px;
     padding: 3rem;
   }
-  .main--booking .reservation-form .date,
-.main--booking .reservation-form .time {
+  .main--booking .reservation-form .date-container,
+.main--booking .reservation-form .time-container {
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
   }
-  .main--booking .reservation-form .date .date-container,
-.main--booking .reservation-form .date .time-container,
-.main--booking .reservation-form .time .date-container,
-.main--booking .reservation-form .time .time-container {
+  .main--booking .reservation-form .date-wrapper,
+.main--booking .reservation-form .time-wrapper {
     width: 65%;
     margin-top: 0;
   }
@@ -632,26 +689,10 @@
     min-height: 319px;
   }
   .main--booking .reservation-form {
-    min-height: 560px;
     left: unset;
     margin-inline: unset;
-    top: -342px;
+    top: -365px;
   }
-}
-
-.day-night-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
-  background-color: #FFFFFF;
-  height: 104px;
-  width: 106px;
-  padding: 1rem 1.875rem 1rem 1rem;
-  box-shadow: 0 15px 25px rgba(56, 66, 85, 0.2462);
-  position: absolute;
-  right: 0;
-  top: 45px;
 }
 
 /**************************************
@@ -667,7 +708,7 @@
   color: #FFFFFF;
   padding: 5rem 0;
   position: relative;
-  z-index: 1;
+  z-index: -1;
   transition: all 250ms;
 }
 .footer .logo {
@@ -677,13 +718,13 @@
   font-style: initial;
   margin-bottom: 2rem;
 }
-@media (min-width: 335px) {
+@media (min-width: 340px) {
   .footer {
     font-size: 1rem;
     letter-spacing: 2.5px;
   }
 }
-@media (min-width: 375px) {
+@media (min-width: 380px) {
   .footer {
     font-size: 1.125rem;
     letter-spacing: 3px;
@@ -730,6 +771,9 @@
 .image--enjoyable-place, .image--locally-sourced, .image--events {
   box-shadow: 0 75px 100px -50px rgba(56, 66, 85, 0.5032);
   height: 400px;
+}
+.image--events {
+  animation: 500ms slide-in;
 }
 .image--enjoyable-place {
   width: 100%;
@@ -889,10 +933,6 @@
   }
 }
 
-.hidden {
-  display: none;
-}
-
 /**************************************
     Buttons
 **************************************/
@@ -949,23 +989,24 @@
 .btn--events:hover, .btn--events:focus {
   color: #4c4c4c;
 }
+.btn--events[disabled]:hover {
+  cursor: wait;
+}
 .btn--events.special {
   margin: 1rem 0;
 }
 .btn--events.active {
   color: #4c4c4c;
 }
-.btn--day-night {
-  text-align: left;
-  width: 30%;
+.btn--customer-subtract, .btn--customer-add {
+  padding: 0 1.25rem;
+}
+.btn--customer-subtract:focus, .btn--customer-add:focus {
+  outline-style: inset;
+  outline-width: 0.2rem;
 }
 .btn--booking {
   padding: 1.5rem;
-}
-@media (min-width: 350px) {
-  .btn--day-night {
-    padding-left: 1rem;
-  }
 }
 @media (min-width: 635px) {
   .btn--events.special {
@@ -984,4 +1025,43 @@
   .btn--events.special {
     margin: 0.75rem 0;
   }
+}
+
+/**************************************
+    Keyframes and Display Classes
+**************************************/
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-150%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(150%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.hidden {
+  display: none;
+}
+
+.slide {
+  animation: 400ms slide-in-right;
 }
