@@ -736,9 +736,16 @@ $error-light-red: #f7e9e9;
         .day-night,
         .customer-total {
             border: initial;
-            outline: none;
             font-family: inherit;
             font-size: inherit;
+        }
+
+        .input:focus,
+        .day-night:focus,
+        .customer-total:focus {             
+            outline-style: inset;
+            outline-width: 0.2rem;
+            outline-color: inherit;
         }
 
         .text,
@@ -793,7 +800,6 @@ $error-light-red: #f7e9e9;
         .date-time,
         .day-night {
             width: 30%;
-            transition: all 250ms;
         }
 
         .customer-container {
@@ -807,6 +813,8 @@ $error-light-red: #f7e9e9;
             text-align: center;
             font-weight: 600;
             width: 100%;
+            // To not interfere with neighbor button outlines
+            background-color: transparent;
         }
 
         .customer-icon {
@@ -1290,10 +1298,14 @@ $error-light-red: #f7e9e9;
         color: rgba($light-grey, 100%);
     }
 
-    &--subtract,
-    &--add {
+    &--customer-subtract,
+    &--customer-add {
         padding: 0 1.25rem;
 
+        &:focus {
+            outline-style: inset;
+            outline-width: 0.2rem;
+        }
     }
 
     &--booking {

@@ -635,7 +635,12 @@
   border: initial;
   font-family: inherit;
   font-size: inherit;
-  outline: none;
+}
+
+.main--booking .reservation-form .input:focus, .main--booking .reservation-form .day-night:focus, .main--booking .reservation-form .customer-total:focus {
+  outline-width: .2rem;
+  outline-style: inset;
+  outline-color: inherit;
 }
 
 .main--booking .reservation-form .text, .main--booking .reservation-form .date-container, .main--booking .reservation-form .time-container, .main--booking .reservation-form .customer-container {
@@ -681,7 +686,6 @@
 
 .main--booking .reservation-form .date-time, .main--booking .reservation-form .day-night {
   width: 30%;
-  transition: all .25s;
 }
 
 .main--booking .reservation-form .customer-container {
@@ -694,6 +698,7 @@
 .main--booking .reservation-form .customer-total {
   text-align: center;
   width: 100%;
+  background-color: #0000;
   font-weight: 600;
 }
 
@@ -1133,8 +1138,13 @@
   color: #4c4c4c;
 }
 
-.btn--subtract, .btn--add {
+.btn--customer-subtract, .btn--customer-add {
   padding: 0 1.25rem;
+}
+
+.btn--customer-subtract:focus, .btn--customer-add:focus {
+  outline-width: .2rem;
+  outline-style: inset;
 }
 
 .btn--booking {

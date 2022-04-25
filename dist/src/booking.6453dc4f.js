@@ -539,8 +539,8 @@ const months30days = [
 const monthInput = document.querySelector('#month');
 const dayInput = document.querySelector('#day');
 // customer total variables
-const subtractBtn = document.querySelector('.btn--subtract');
-const addBtn = document.querySelector('.btn--add');
+const subtractBtn = document.querySelector('.btn--customer-subtract');
+const addBtn = document.querySelector('.btn--customer-add');
 const customerTotal = document.querySelector('.customer-total');
 // Global variable for max days to be used with form validation and listeners 
 let maxDays = 31;
