@@ -497,6 +497,7 @@
   width: 48px;
   background-color: #9e7f66;
   margin-inline: auto;
+  animation: fade-in 1s;
 }
 
 @media (min-width: 635px) {
@@ -852,6 +853,10 @@
   box-shadow: 0 75px 100px -50px #38425580;
 }
 
+.image--events {
+  animation: slide-in .5s;
+}
+
 .image--enjoyable-place {
   width: 100%;
   object-position: left top;
@@ -1153,6 +1158,36 @@
 
   .btn--events.special {
     margin: .75rem 0;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateY(0%);
+  }
+
+  to {
+    transform: translateY(-200%);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
 

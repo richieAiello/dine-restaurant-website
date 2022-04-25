@@ -437,6 +437,7 @@
   width: 48px;
   background-color: #9E7F66;
   margin-inline: auto;
+  animation: 1s fade-in;
 }
 @media (min-width: 635px) {
   .main .events {
@@ -755,6 +756,9 @@
   box-shadow: 0 75px 100px -50px rgba(56, 66, 85, 0.5032);
   height: 400px;
 }
+.image--events {
+  animation: 500ms slide-in;
+}
 .image--enjoyable-place {
   width: 100%;
   position: absolute;
@@ -1008,5 +1012,33 @@
   }
   .btn--events.special {
     margin: 0.75rem 0;
+  }
+}
+
+/**************************************
+    Keyframes
+**************************************/
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes slide-out {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-200%);
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

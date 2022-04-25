@@ -582,6 +582,7 @@ $error-red: #B54949;
                     width: 48px;
                     background-color: $tan;
                     margin-inline: auto;
+                    animation: 1s fade-in;
                 }
             }
         } 
@@ -989,6 +990,10 @@ $error-red: #B54949;
         height: 400px;
     }
 
+    &--events {
+        animation: 500ms slide-in;
+    }
+
     &--enjoyable-place {
         width: 100%;
         position: absolute;
@@ -1315,5 +1320,38 @@ $error-red: #B54949;
         &--events.special {
             margin: 0.75rem 0;
         }
+    }
+}
+
+/**************************************
+    Keyframes
+**************************************/
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+    }
+    
+    to {
+    transform: translateX(0%);
+    }
+}
+
+@keyframes slide-out {
+    from {
+        transform: translateY(0%);
+    }
+    
+    to {
+    transform: translateY(-200%);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }
