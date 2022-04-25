@@ -92,22 +92,24 @@
                             Store hours Monday to Friday are 9AM to 10PM
                             Store hours Saturday to Sunday are 9AM to 11:30PM
                         </label>
-                        <input type="number" class="input date-time" min="01" max="12" placeholder="06" required>
+                        <input type="number" class="input date-time" id="hour" min="01" max="12" placeholder="06">
                         
                         <!-- Label hidden, but still accessible to screen readers -->
                         <label for="minute" class="invisible-label"> Provide the minute</label>
-                        <input type="number" class="input date-time" min="00" max="59" placeholder="00" required>
+                        <input type="number" class="input date-time" id="minute" min="00" max="59" placeholder="00">
                         
-                        <button type="button" class="btn--form btn--day-night day-night">
+                        <!-- <button type="button" class="btn--form btn--day-night day-night">
                             <span class="day-night__text">PM</span>
                             <img src="../images/icons/icon-arrow.svg" alt="" class="day-night__arrow">
-                        </button>
+                        </button> -->
                         
-                        <!-- <select name="am-pm" id="am-pm">
+                        <select name="day-night" class="day-night" id="day-night" placeholder="PM">
+                            <!-- <option value="" selected></option> -->
+                            <option value="pm">PM</option>
+                            <option value="am">AM</option>
+                        </select>
 
-                        </select> -->
-
-                        <div class="day-night-container hidden">
+                        <!-- <div class="day-night-container hidden">
                             <button type="button" class="btn--form btn--am">
                                 <img src="../images/icons/icon-check.svg" alt="" class="check hidden">
                                 AM
@@ -116,12 +118,17 @@
                                 <img src="../images/icons/icon-check.svg" alt="" class="check">
                                 PM
                             </button>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             
                 <div class="customer-container">
-                    <button type="button" class="btn--form btn--subtract">
+                    <label for="subtract" class="invisible-label">
+                        Click this button to alter the total number
+                        of people for this reservation by subtracting
+                        1 from the current total.
+                    </label>
+                    <button type="button" class="btn--form btn--subtract" id="subtract">
                         <img src="../images/icons/icon-minus.svg" alt="">
                     </button>
 
@@ -130,7 +137,12 @@
                         <span class="customer__text">People</span>
                     </div>
 
-                    <button type="button" class="btn--form btn--add">
+                    <label for="add" class="invisible-label">
+                        Click this button to alter the total number
+                        of people for this reservation by adding
+                        1 to the current total.
+                    </label>
+                    <button type="button" class="btn--form btn--add" id="add">
                         <img src="../images/icons/icon-plus.svg" alt="">
                     </button>
                 </div>

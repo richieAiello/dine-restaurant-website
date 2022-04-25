@@ -24,7 +24,6 @@
     "sass": "^1.50.0"
   },
   "dependencies": {
-    "just-validate": "^3.5.2",
-    "just-validate-plugin-date": "^1.1.1"
+    "just-validate": "^3.5.2"
   }
 }

@@ -731,7 +731,8 @@ $error-red: #B54949;
         padding: 2rem;
         caret-color: $tan;
 
-        .input {
+        .input,
+        .day-night {
             border: initial;
             outline: none;
             font-family: inherit;
@@ -773,16 +774,17 @@ $error-red: #B54949;
 
         .time-container {
             position: relative;
+        }
 
-            .day-night {
+        .day-night {
 
-                &__arrow {
-                    transition: all 250ms;
-                }
+            &__arrow {
+                transition: all 250ms;
             }
         }
 
-        .date-time {
+        .date-time,
+        .day-night {
             width: 30%;
             transition: all 250ms;
         }
@@ -831,7 +833,8 @@ $error-red: #B54949;
 
         .reservation-form {
 
-            .date-time {
+            .date-time,
+            .day-night {
                 padding-left: 1rem;
             }
         }
@@ -873,20 +876,20 @@ $error-red: #B54949;
 }
 
 // Placed outside of .main--booking to not conflict with the specificity of class hidden
-.day-night-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
-    background-color: $white;
-    height: 104px;
-    width: 106px;
-    padding: 1rem 1.875rem 1rem 1rem;
-    box-shadow: 0 15px 25px rgba(#384255, 24.62%);
-    position: absolute;
-    right: 0;
-    top: 45px;
-}
+// .day-night-container {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     align-items: flex-end;
+//     background-color: $white;
+//     height: 104px;
+//     width: 106px;
+//     padding: 1rem 1.875rem 1rem 1rem;
+//     box-shadow: 0 15px 25px rgba(#384255, 24.62%);
+//     position: absolute;
+//     right: 0;
+//     top: 45px;
+// }
 
 /**************************************
     Footer
@@ -1277,6 +1280,12 @@ $error-red: #B54949;
         transition: all 250ms;
         text-align: left;
         width: 30%;
+    }
+
+    &--subtract,
+    &--add {
+        padding: 0 1.25rem;
+
     }
 
     &--booking {
