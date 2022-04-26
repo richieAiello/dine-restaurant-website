@@ -30,123 +30,123 @@ const validation = new JustValidate(
     }
 );
 
-// validation
-//     .addField('#name', [
-//         {   
-//             rule: 'required',
-//             errorMessage: 'Name is required',
-//         },
-//         {
-//             rule: 'customRegexp',
-//             value: /(^[A-Za-z]*$)/,
-//             errorMessage: 'Name may only contain letters',
-//         },
-//         {
-//             rule: 'minLength',
-//             value: 3,
-//             errorMessage: 'Name must contain a minimum of 3 characters',
-//         },
-//         {
-//             rule: 'maxLength',
-//             value: 30,
-//             errorMessage: 'Name must contain a maximum of 30 characters',
-//         },
-//     ])
-//     .addField('#email', [
-//         {
-//             rule: 'required',
-//             errorMessage: 'Email is required',
-//         },
-//         {
-//             rule: 'email',
-//             errorMessage: 'Please enter a valid email address (******@gmail.com)',
-//         },
-//     ])
-//     .addField('#month', [
-//         {
-//             rule: 'required',
-//             errorMessage: 'Please enter a month',
-//         },
-//         {
-//             rule: 'minNumber',
-//             value: 01,
-//             errorMessage: 'Month should be at least 01',
-//         },
-//         {
-//             rule: 'maxNumber',
-//             value: 12,
-//             errorMessage: 'Month should be at most 12',
-//         }
-//     ])
-//     .addField('#day', [
-//         {
-//             rule: 'required',
-//             errorMessage: 'Please enter a day',
-//         },
-//         {
-//             rule: 'minNumber',
-//             value: 01,
-//             errorMessage: 'Day should be atleast 01',
-//         },
-//         {
-//             validator: () => maxDays >= dayInput.value,
-//             errorMessage: 'Please enter a valid day for the corresponding month',
-//         }
-//     ])
-//     .addField('#year', [
-//         {
-//             rule: 'required',
-//             errorMessage: 'Please choose a year from 2022 to 2024',
-//         },
-//         {
-//             rule: 'minNumber',
-//             value: 2022,
-//             errorMessage: 'Year should be at least 2022',
-//         },
-//         {
-//             rule: 'maxNumber',
-//             value: 2024,
-//             errorMessage: 'Month should be at most 2024',
-//         }
-//     ])
-//     .addField('#hour', [
-//         {
-//             rule: 'required',
-//             errorMessage: 'Hour field is required',
-//         },
-//         {
-//             rule: 'minNumber',
-//             value: 01,
-//             errorMessage: 'Hour should be at least 01',
-//         },
-//         {
-//             rule: 'maxNumber',
-//             value: 12,
-//             errorMessage: 'Hour should be at most 12',
-//         }
-//     ])
-//     .addField('#minute', [
-//         {
-//             rule: 'required',
-//             errorMessage: 'Minute field is required',
-//         },
-//         {
-//             rule: 'minNumber',
-//             value: 00,
-//             errorMessage: 'Minute should be at least 00',
-//         },
-//         {
-//             rule: 'maxNumber',
-//             value: 59,
-//             errorMessage: 'Minute should be at most 59',
-//         }
-//     ])
-//     .onFail(e => {
-//         console.log('Invalid', e);
-//     })
-//     .onSuccess(e => {
-//         console.log('Passed', e);
-//     })
+validation
+    .addField('#name', [
+        {   
+            rule: 'required',
+            errorMessage: 'Name is required',
+        },
+        {
+            rule: 'customRegexp',
+            value: /(^[A-Za-z]*$)/,
+            errorMessage: 'Name may only contain letters',
+        },
+        {
+            rule: 'minLength',
+            value: 3,
+            errorMessage: 'Name must contain a minimum of 3 characters',
+        },
+        {
+            rule: 'maxLength',
+            value: 30,
+            errorMessage: 'Name must contain a maximum of 30 characters',
+        },
+    ])
+    .addField('#email', [
+        {
+            rule: 'required',
+            errorMessage: 'Email is required',
+        },
+        {
+            rule: 'email',
+            errorMessage: 'Please enter a valid email address (******@gmail.com)',
+        },
+    ])
+    .addField('#month', [
+        {
+            rule: 'required',
+            errorMessage: 'Please enter a month',
+        },
+        {
+            rule: 'minNumber',
+            value: 01,
+            errorMessage: 'Month should be at least 01',
+        },
+        {
+            rule: 'maxNumber',
+            value: 12,
+            errorMessage: 'Month should be at most 12',
+        }
+    ])
+    .addField('#day', [
+        {
+            rule: 'required',
+            errorMessage: 'Please enter a day',
+        },
+        {
+            rule: 'minNumber',
+            value: 01,
+            errorMessage: 'Day should be atleast 01',
+        },
+        {
+            validator: () => maxDays >= dayInput.value,
+            errorMessage: 'Please enter a valid day for the corresponding month',
+        }
+    ])
+    .addField('#year', [
+        {
+            rule: 'required',
+            errorMessage: 'Please choose a year from 2022 to 2024',
+        },
+        {
+            rule: 'minNumber',
+            value: 2022,
+            errorMessage: 'Year should be at least 2022',
+        },
+        {
+            rule: 'maxNumber',
+            value: 2024,
+            errorMessage: 'Month should be at most 2024',
+        }
+    ])
+    .addField('#hour', [
+        {
+            rule: 'required',
+            errorMessage: 'Hour field is required',
+        },
+        {
+            rule: 'minNumber',
+            value: 01,
+            errorMessage: 'Hour should be at least 01',
+        },
+        {
+            rule: 'maxNumber',
+            value: 12,
+            errorMessage: 'Hour should be at most 12',
+        }
+    ])
+    .addField('#minute', [
+        {
+            rule: 'required',
+            errorMessage: 'Minute field is required',
+        },
+        {
+            rule: 'minNumber',
+            value: 00,
+            errorMessage: 'Minute should be at least 00',
+        },
+        {
+            rule: 'maxNumber',
+            value: 59,
+            errorMessage: 'Minute should be at most 59',
+        }
+    ])
+    .onFail(e => {
+        console.log('Invalid', e);
+    })
+    .onSuccess(e => {
+        console.log('Passed', e);
+    })
 
 /**********************************************
     EVENT LISTENERS
