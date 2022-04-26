@@ -116,7 +116,7 @@ $error-light-red: #f7e9e9;
 **************************************/
 .hero {
     min-height: 748px;
-    background-image: url(../images/homepage/hero-bg-mobile@2x.jpg);
+    background-image: url(./images/homepage/hero-bg-mobile@2x.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: top;
@@ -161,7 +161,7 @@ $error-light-red: #f7e9e9;
     }
 
     &--booking {
-        background-image: url("../images/booking/hero-bg-mobile@2x.jpg");
+        background-image: url("./images/booking/hero-bg-mobile@2x.jpg");
         background-size: cover;
         color: $white;
         padding: 3.5rem 0 10.75rem;
@@ -189,7 +189,7 @@ $error-light-red: #f7e9e9;
     @media(min-width: 565px) {
 
         &--booking {
-            background-image: url("../images/booking/hero-bg-tablet@2x.jpg");
+            background-image: url("./images/booking/hero-bg-tablet@2x.jpg");
             padding: 2.5rem 0 16.875rem;
 
             .hero__heading {
@@ -222,7 +222,7 @@ $error-light-red: #f7e9e9;
     @media(min-width: 635px) {
 
         min-height: 992px;
-        background-image: url(../images/homepage/hero-bg-tablet@2x.jpg);
+        background-image: url(./images/homepage/hero-bg-tablet@2x.jpg);
 
         .wrapper {
             min-height: 618px;
@@ -250,7 +250,7 @@ $error-light-red: #f7e9e9;
     @media(min-width: 1440px) {
 
         min-height: 820px;
-        background-image: url("../images/homepage/hero-bg-desktop@2x.jpg");
+        background-image: url("./images/homepage/hero-bg-desktop@2x.jpg");
         background-size: cover;
         background-position: bottom right;
         background-color: $black;
@@ -288,7 +288,7 @@ $error-light-red: #f7e9e9;
         }
 
         &--booking {
-            background-image: url("../images/booking/hero-bg-desktop@2x.jpg");
+            background-image: url("./images/booking/hero-bg-desktop@2x.jpg");
             padding: 4.0625rem 0 7.875rem;
             
             .hero__heading {
@@ -684,7 +684,7 @@ $error-light-red: #f7e9e9;
     }
 
     .reservation {
-        background-image: url("../images/homepage/ready-bg-mobile@2x.jpg");
+        background-image: url("./images/homepage/ready-bg-mobile@2x.jpg");
         background-size: cover;
         background-position: bottom;
         padding: 5rem 0;
@@ -696,13 +696,13 @@ $error-light-red: #f7e9e9;
 
         @media(min-width: 635px) {
 
-            background-image: url("../images/homepage/ready-bg-tablet@2x.jpg");
+            background-image: url("./images/homepage/ready-bg-tablet@2x.jpg");
             padding: 4rem 0;
         }
 
         @media(min-width: 1440px) {
 
-            background-image: url("../images/homepage/ready-bg-desktop@2x.jpg");
+            background-image: url("./images/homepage/ready-bg-desktop@2x.jpg");
             padding: 5.5rem 0;
 
             .container--secondary {
@@ -814,7 +814,7 @@ $error-light-red: #f7e9e9;
             appearance: none;
 
             // Custom arrow image for select
-            background-image: url('../images/icons/icon-arrow.svg');
+            background-image: url('./images/icons/icon-arrow.svg');
             background-repeat: no-repeat;
             background-position: 100% 40%;
 
