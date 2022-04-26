@@ -69,7 +69,7 @@ validation
         },
         {
             rule: 'minNumber',
-            value: 01,
+            value: 1,
             errorMessage: 'Month should be at least 01',
         },
         {
@@ -85,7 +85,7 @@ validation
         },
         {
             rule: 'minNumber',
-            value: 01,
+            value: 1,
             errorMessage: 'Day should be atleast 01',
         },
         {
@@ -116,7 +116,7 @@ validation
         },
         {
             rule: 'minNumber',
-            value: 01,
+            value: 1,
             errorMessage: 'Hour should be at least 01',
         },
         {
@@ -132,7 +132,7 @@ validation
         },
         {
             rule: 'minNumber',
-            value: 00,
+            value: 0,
             errorMessage: 'Minute should be at least 00',
         },
         {
