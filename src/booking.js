@@ -37,6 +37,11 @@ validation
             errorMessage: 'Name is required',
         },
         {
+            rule: 'customRegexp',
+            value: /^[A-Za-z]*$/,
+            errorMessage: 'Name may only contain letters'
+        },
+        {
             rule: 'minLength',
             value: 3,
             errorMessage: 'Name must contain a minimum of 3 characters'
