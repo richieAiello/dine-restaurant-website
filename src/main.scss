@@ -165,16 +165,16 @@ $error-light-red: #f7e9e9;
         .container--secondary {
             display: flex;
             flex-direction: column;
-
-            .context {
-                order: 2;
-
-                .hero__heading {
-                    margin-bottom: 1rem;
-                }
-            }
         }
 
+        .context {
+            order: 2;
+        }
+
+        .hero__heading {
+            margin-bottom: 1rem;
+        }
+        
         .logo {
             max-width: 82.4px;
             max-height: 32px;
@@ -182,121 +182,133 @@ $error-light-red: #f7e9e9;
         }
     }
 
-    @media(min-width: 635px) {
+    @media(min-width: 565px) {
 
-        & {
-            min-height: 992px;
-            background-image: url(../images/homepage/hero-bg-tablet@2x.jpg);
+        &--booking {
+            background-image: url("../images/booking/hero-bg-tablet@2x.jpg");
+            padding: 2.5rem 0 16.875rem;
 
-            .wrapper {
-                min-height: 618px;
-
-                .logo {
-                    margin-top: 0;
-                    max-width: initial;
-                    max-height: initial;
-                }
-            }
-
-            &__heading {
+            .hero__heading {
                 font-weight: 100;
                 font-size: 3.625rem;
                 line-height: 3.75rem;
                 letter-spacing: 1.5px;
             }
-        
-            &__text {
+    
+            .hero__text {
                 max-width: 45ch;
                 margin-bottom: 1.5rem;
+                font-size: 1.375rem;
+                line-height: 1.75rem;
+                letter-spacing: 0.85px;
             }
 
-            &--booking {
-                background-image: url("../images/booking/hero-bg-tablet@2x.jpg");
-                padding: 2.5rem 0 16.875rem;
-
-                &__link {
-                    margin-right: auto;
-
-                    .logo {
-                        max-width: initial;
-                        max-height: initial;
-                        margin-bottom: 4rem;
-                    }
-                }   
+            &__link {
+                margin-right: auto;
             }
+
+            .logo {
+                max-width: initial;
+                max-height: initial;
+                margin-bottom: 4rem;
+            }  
+        }
+    }
+
+    @media(min-width: 635px) {
+
+        min-height: 992px;
+        background-image: url(../images/homepage/hero-bg-tablet@2x.jpg);
+
+        .wrapper {
+            min-height: 618px;
+
+            .logo {
+                margin-top: 0;
+                max-width: initial;
+                max-height: initial;
+            }
+        }
+
+        &__heading {
+            font-weight: 100;
+            font-size: 3.625rem;
+            line-height: 3.75rem;
+            letter-spacing: 1.5px;
+        }
+    
+        &__text {
+            max-width: 45ch;
+            margin-bottom: 1.5rem;
         }
     }
 
     @media(min-width: 1440px) {
 
-        & {
+        min-height: 820px;
+        background-image: url("../images/homepage/hero-bg-desktop@2x.jpg");
+        background-size: cover;
+        background-position: bottom right;
+        background-color: $black;
+        position: unset;
+
+        .wrapper {
             min-height: 820px;
-            background-image: url("../images/homepage/hero-bg-desktop@2x.jpg");
-            background-size: cover;
-            background-position: bottom right;
-            background-color: $black;
-            position: unset;
+            min-width: unset;
+            width: 545px;
+            left: -165px;
 
-            .wrapper {
-                min-height: 820px;
-                min-width: unset;
-                width: 545px;
-                left: -165px;
+            .context {
+                position: absolute;
+                width: max-content;
+                top: 65px;
+                left: 165px;
 
-                .context {
-                    position: absolute;
-                    width: max-content;
-                    top: 65px;
-                    left: 165px;
-
-                    .logo {
-                        margin-bottom: 9.5625rem;
-                    }
+                .logo {
+                    margin-bottom: 9.5625rem;
                 }
             }
+        }
 
-            &__heading {
-                font-weight: 100;
+        &__heading {
+            font-weight: 100;
+            font-size: 5rem;
+            line-height: 4.5rem;
+            letter-spacing: 0;
+        }
+
+        &__text {
+            max-width: 36ch;
+            margin-inline: unset;
+            margin-bottom: 2.625rem;
+        }
+
+        &--booking {
+            background-image: url("../images/booking/hero-bg-desktop@2x.jpg");
+            padding: 4.0625rem 0 7.875rem;
+            
+            .hero__heading {
                 font-size: 5rem;
                 line-height: 4.5rem;
                 letter-spacing: 0;
+                margin-bottom: 1.5rem;
             }
 
-            &__text {
+            .hero__text {
                 max-width: 36ch;
                 margin-inline: unset;
                 margin-bottom: 2.625rem;
             }
-
-            &--booking {
-                background-image: url("../images/booking/hero-bg-desktop@2x.jpg");
-                padding: 4.0625rem 0 7.875rem;
-                
-                .container--secondary {
-
-                    .context {
-
-                        .hero__heading {
-                            margin-bottom: 1.5rem;
-                        }
-                    }
-                }
-                
-                &__link {
-
-                    .logo {
-                        margin-bottom: 9.5625rem;
-                    }
-                }   
+        
+            .logo {
+                margin-bottom: 9.5625rem;
             }
         }
     }
 
     @media(min-width: 1458px) {
 
-        & {
-            background-size: contain;
-        }
+        background-size: contain;
     }
 }
 
@@ -706,7 +718,7 @@ $error-light-red: #f7e9e9;
     Main - Booking Page
 **************************************/
 .main--booking {
-    min-height: 534px;
+    min-height: 588px;
 
     .container {
         position: relative;
@@ -724,8 +736,7 @@ $error-light-red: #f7e9e9;
         font-size: 1.5rem;
         line-height: 2rem;
         position: absolute;
-        z-index: 2;
-        top: -137px;
+        top: -165px;
         left: 0;
         right: 0;
         margin-inline: auto;
@@ -769,6 +780,7 @@ $error-light-red: #f7e9e9;
 
         .text {
             padding-left: 1rem;
+            padding-right: 1rem;
             width: 100%;
         }
 
@@ -890,13 +902,16 @@ $error-light-red: #f7e9e9;
     }
 
 
-    @media(min-width: 635px) {
+    @media(min-width: 565px) {
 
-        min-height: 435px;
+        min-height: 466px;
 
         .reservation-form {
             top: -230px;
             padding: 3rem;
+            font-size: 1.375rem;
+            line-height: 1.75rem;
+            letter-spacing: 0.85px;
 
             .date-container,
             .time-container {
@@ -960,6 +975,11 @@ $error-light-red: #f7e9e9;
         
         font-size: 1.125rem;
         letter-spacing: 3px;
+    }
+
+    @media(min-width: 466px) {
+        
+        z-index: unset;
     }
 
     @media(min-width: 635px) {
@@ -1337,7 +1357,14 @@ $error-light-red: #f7e9e9;
     }
 
     &--booking {
-        padding: 1.5rem;
+        padding: 0.875rem 1.5rem;
+        line-height: 1.5rem;
+
+        @media(min-width: 364px) {
+
+            padding: 1.5rem;
+            line-height: 1rem;
+        }
     }
 
     @media(min-width: 635px) {

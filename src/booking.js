@@ -39,10 +39,12 @@ validation
         {
             rule: 'minLength',
             value: 3,
+            errorMessage: 'Name must contain a minimum of 3 characters'
         },
         {
             rule: 'maxLength',
             value: 30,
+            errorMessage: 'Name must contain a maximum of 30 characters'
         },
     ])
     .addField('#email', [
@@ -62,11 +64,13 @@ validation
         },
         {
             rule: 'minNumber',
-            value: 01
+            value: 01,
+            errorMessage: 'Month should be at least 01'
         },
         {
             rule: 'maxNumber',
-            value: 12
+            value: 12,
+            errorMessage: 'Month should be at most 12'
         }
     ])
     .addField('#day', [
@@ -76,7 +80,8 @@ validation
         },
         {
             rule: 'minNumber',
-            value: 01
+            value: 01,
+            errorMessage: 'Day should be atleast 01'
         },
         {
             validator: () => maxDays >= dayInput.value,
@@ -90,11 +95,13 @@ validation
         },
         {
             rule: 'minNumber',
-            value: 2022
+            value: 2022,
+            errorMessage: 'Year should be at least 2022'
         },
         {
             rule: 'maxNumber',
-            value: 2024
+            value: 2024,
+            errorMessage: 'Month should be at most 2024'
         }
     ])
     .addField('#hour', [
@@ -104,11 +111,13 @@ validation
         },
         {
             rule: 'minNumber',
-            value: 01
+            value: 01,
+            errorMessage: 'Hour should be at least 01'
         },
         {
             rule: 'maxNumber',
-            value: 12
+            value: 12,
+            errorMessage: 'Hour should be at most 12'
         }
     ])
     .addField('#minute', [
@@ -118,11 +127,13 @@ validation
         },
         {
             rule: 'minNumber',
-            value: 00
+            value: 00,
+            errorMessage: 'Minute should be at least 00'
         },
         {
             rule: 'maxNumber',
-            value: 59
+            value: 59,
+            errorMessage: 'Minute should be at most 59'
         }
     ])
     .onFail(e => {
@@ -131,7 +142,7 @@ validation
     .onSuccess(e => {
         console.log('Passed', e);
     })
-    
+
 /**********************************************
     EVENT LISTENERS
 **********************************************/
@@ -197,4 +208,3 @@ addBtn.addEventListener('click', e => {
         customerTotal.value = `${total} People`;
     }
 });
-
