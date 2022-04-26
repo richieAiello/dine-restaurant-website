@@ -56,6 +56,11 @@ $error-light-red: #f7e9e9;
     letter-spacing: -0.19px;
     text-align: center;
     overflow-x: hidden;
+    // Allows footer to stretch to bottom of page when zoomed out
+    // Avoids whitespace at bottom of screen
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
 
     @media(min-width: 635px) {
         & {
