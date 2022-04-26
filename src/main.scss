@@ -758,8 +758,13 @@ $error-light-red: #f7e9e9;
         .input,
         .day-night,
         .customer-container {
-            border-bottom: 1px solid #8e8e8e;
-            padding-bottom: 1rem;
+            border-bottom: 1px solid #8e8e8e;  
+        }
+
+        .input,
+        .day-night {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
         }
 
         .text {
@@ -787,14 +792,20 @@ $error-light-red: #f7e9e9;
 
         // Custom Select reference: https://moderncss.dev/custom-select-styles-with-pure-css/
         .day-night {
+            // Removes default select arrow for old and new browser versions
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+
+            // Custom arrow image for select
             background-image: url('../images/icons/icon-arrow.svg');
             background-repeat: no-repeat;
-            background-position: 100% 10%;
-            appearance: none;
-        }
+            background-position: 100% 40%;
 
-        .day-night::-ms-expand {
-            display: none;
+            // Hide select arrow in IE 10 & 11
+            &::-ms-expand {
+                display: none;
+            }
         }
 
         .date-time,
@@ -807,6 +818,7 @@ $error-light-red: #f7e9e9;
             justify-content: space-between;
             align-items: center;
             font-weight: 700;
+            padding-bottom: 1rem;
         }
 
         .customer-total {
@@ -872,7 +884,7 @@ $error-light-red: #f7e9e9;
         .reservation-form {
 
             .day-night {
-                background-position: 85% 10%;
+                background-position: 85% 40%;
             }
         }
     }

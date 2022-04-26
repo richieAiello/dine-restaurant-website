@@ -577,7 +577,11 @@
 .main--booking .reservation-form .day-night,
 .main--booking .reservation-form .customer-container {
   border-bottom: 1px solid #8e8e8e;
-  padding-bottom: 1rem;
+}
+.main--booking .reservation-form .input,
+.main--booking .reservation-form .day-night {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 .main--booking .reservation-form .text {
   padding-left: 1rem;
@@ -599,10 +603,12 @@
   position: relative;
 }
 .main--booking .reservation-form .day-night {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background-image: url("../images/icons/icon-arrow.svg");
   background-repeat: no-repeat;
-  background-position: 100% 10%;
-  appearance: none;
+  background-position: 100% 40%;
 }
 .main--booking .reservation-form .day-night::-ms-expand {
   display: none;
@@ -616,6 +622,7 @@
   justify-content: space-between;
   align-items: center;
   font-weight: 700;
+  padding-bottom: 1rem;
 }
 .main--booking .reservation-form .customer-total {
   text-align: center;
@@ -661,7 +668,7 @@
 }
 @media (min-width: 420px) {
   .main--booking .reservation-form .day-night {
-    background-position: 85% 10%;
+    background-position: 85% 40%;
   }
 }
 @media (min-width: 635px) {
