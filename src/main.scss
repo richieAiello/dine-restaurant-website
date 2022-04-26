@@ -1064,6 +1064,17 @@ $error-light-red: #f7e9e9;
             height: 360px;
         }
 
+        &--menu {
+            outline: none;
+            transition: all 250ms;
+            z-index: 1;
+
+            &:hover,
+            &:focus {
+                transform: scale(1.5) translateX(1rem);
+            }
+        }
+
         &--events {
             margin-inline: auto;
         }
@@ -1157,6 +1168,11 @@ $error-light-red: #f7e9e9;
         &--top-left-location {
             bottom: 0;
             left: 380px;
+        }
+
+        &--menu:hover,
+        &--menu:focus {
+            transform: scale(1.8) translateX(-0.5rem);
         }
 
         &--events {

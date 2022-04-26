@@ -5,6 +5,9 @@ const months30days = ['4', '6', '9', '11'];
 const monthInput = document.querySelector('#month');
 const dayInput = document.querySelector('#day');
 
+// date-time variables
+const dateTimeInputs = document.querySelectorAll('.date-time');
+
 // customer total variables
 const subtractBtn = document.querySelector('.btn--customer-subtract');
 const addBtn = document.querySelector('.btn--customer-add');
@@ -14,53 +17,9 @@ const customerTotal = document.querySelector('.customer-total');
 let maxDays = 31;
 
 /**********************************************
-    EVENT LISTENERS
-**********************************************/
-monthInput.addEventListener('change', e => {
-
-    if (months30days.includes(monthInput.value)) {
-
-        dayInput.setAttribute('max', '30');
-        maxDays = 30;
-
-    } else if (monthInput.value === "2") {
-
-        dayInput.setAttribute('max', '28');
-        maxDays = 28;
-
-    } else {
-
-        dayInput.setAttribute('max', '31');
-        maxDays = 31;
-    }
-});
-subtractBtn.addEventListener('click', e => {
-
-    let total = Number.parseInt(customerTotal.value, 10);
-
-    if (total > 1) {
-        total--;
-        customerTotal.value = `${total} People`;
-    } 
-    
-    if (total === 1) {
-        customerTotal.value = `1 Person`;
-    }
-});
-
-addBtn.addEventListener('click', e => {
-
-    let total = Number.parseInt(customerTotal.value, 10);
-
-    if (total < 30) {
-        total++;
-        customerTotal.value = `${total} People`;
-    }
-});
-
-/**********************************************
     FORM VALIDATION
 **********************************************/
+// Implements JustValidate to add custom form validation
 const validation = new JustValidate(
     '#form',
     {
@@ -172,3 +131,70 @@ validation
     .onSuccess(e => {
         console.log('Passed', e);
     })
+    
+/**********************************************
+    EVENT LISTENERS
+**********************************************/
+// Listens for change in the month field
+// Determines the max attribute value for the days field based on the current month
+// Updates the global maxDays value based on the current month
+monthInput.addEventListener('change', e => {
+
+    if (months30days.includes(monthInput.value)) {
+
+        dayInput.setAttribute('max', '30');
+        maxDays = 30;
+
+    } else if (monthInput.value === "2") {
+
+        dayInput.setAttribute('max', '28');
+        maxDays = 28;
+
+    } else {
+
+        dayInput.setAttribute('max', '31');
+        maxDays = 31;
+    }
+});
+
+// Two digit appearence for date-time fields
+dateTimeInputs.forEach(input => {
+
+    input.addEventListener('change', e => {
+
+        const value =  Number.parseInt(e.currentTarget.value, 10);
+    
+        if (value < 10) {
+            e.currentTarget.value = `0${value}`;
+        }
+    });
+});
+
+// Displays the total customers when booking a reservation
+// Subtracts from total customers on click
+subtractBtn.addEventListener('click', e => {
+
+    let total = Number.parseInt(customerTotal.value, 10);
+
+    if (total > 1) {
+        total--;
+        customerTotal.value = `${total} People`;
+    } 
+    
+    if (total === 1) {
+        customerTotal.value = `1 Person`;
+    }
+});
+
+// Displays the total customers when booking a reservation
+// Adds to total customers on click
+addBtn.addEventListener('click', e => {
+
+    let total = Number.parseInt(customerTotal.value, 10);
+
+    if (total < 30) {
+        total++;
+        customerTotal.value = `${total} People`;
+    }
+});
+

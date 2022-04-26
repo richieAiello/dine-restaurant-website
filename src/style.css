@@ -811,6 +811,14 @@
   .image--enjoyable-place, .image--locally-sourced, .image--events {
     height: 360px;
   }
+  .image--menu {
+    outline: none;
+    transition: all 250ms;
+    z-index: 1;
+  }
+  .image--menu:hover, .image--menu:focus {
+    transform: scale(1.5) translateX(1rem);
+  }
   .image--events {
     margin-inline: auto;
   }
@@ -884,6 +892,9 @@
   .image--top-left-location {
     bottom: 0;
     left: 380px;
+  }
+  .image--menu:hover, .image--menu:focus {
+    transform: scale(1.8) translateX(-0.5rem);
   }
   .image--events {
     margin-inline: unset;
