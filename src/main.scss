@@ -349,15 +349,6 @@ $error-light-red: #f7e9e9;
 
     @media(min-width: 1440px) {
 
-        // display: grid;
-        // grid-template-columns: 1fr 1100px 1fr;
-        // grid-template-rows: auto auto auto auto;
-        // grid-template-areas: 
-        //     "location-left location location-right"
-        //     "highlights highlights highlights"
-        //     "events-left events ."
-        //     "reservation reservation reservation";
-
         &__text {
             margin-inline: unset;
         }
@@ -368,7 +359,6 @@ $error-light-red: #f7e9e9;
     }
 
     .location {
-        // grid-area: location;
         color: $dark-grey;
         
         
@@ -452,7 +442,6 @@ $error-light-red: #f7e9e9;
     }
 
     .highlights {
-        // grid-area: highlights;
         background-color: $black;
         color: $white;
         padding: 4.5rem 0;
@@ -564,7 +553,6 @@ $error-light-red: #f7e9e9;
     }
 
     .events {
-        // grid-area: events;
         display: flex;
         flex-direction: column;
         padding: 5rem 0 7.75rem;
@@ -674,7 +662,6 @@ $error-light-red: #f7e9e9;
     }
 
     .reservation {
-        // grid-area: reservation;
         background-image: url("./images/homepage/ready-bg-mobile@2x.jpg");
         background-size: cover;
         background-position: bottom;
@@ -740,6 +727,7 @@ $error-light-red: #f7e9e9;
         margin-inline: auto;
         padding: 2rem;
         caret-color: $tan;
+        z-index: 1;
 
         .input,
         .day-night,
@@ -803,11 +791,10 @@ $error-light-red: #f7e9e9;
         // Custom Select reference: https://moderncss.dev/custom-select-styles-with-pure-css/
         .day-night {
             // Removes default select arrow for old and new browser versions
+            appearance: none;
             -webkit-appearance: none;
             -moz-appearance: none;
-            -o-appearance: none;
-            appearance: none;
-
+            
             // Custom arrow image for select
             background-image: url('./images/icons/icon-arrow.svg');
             background-repeat: no-repeat;
@@ -900,7 +887,6 @@ $error-light-red: #f7e9e9;
         }
     }
 
-
     @media(min-width: 565px) {
 
         min-height: 466px;
@@ -952,11 +938,11 @@ $error-light-red: #f7e9e9;
     color: $white;
     padding: 5rem 0;
     position: relative;
-    z-index: -1;
     transition: all 250ms;
+    z-index: 0;
 
     .logo {
-        margin-bottom: 2.5rem;
+        padding-bottom: 2.5rem;
     }
 
     .address {
@@ -978,7 +964,7 @@ $error-light-red: #f7e9e9;
 
     @media(min-width: 466px) {
         
-        z-index: unset;
+        z-index: 2;
     }
 
     @media(min-width: 635px) {
@@ -1235,21 +1221,16 @@ $error-light-red: #f7e9e9;
         }
 
         &--top-right-location-extension {
-            // grid-area: location-left;
-            // margin-top: 250px;
             top: 250px;
             right: 600px;
         }
 
         &--top-left-location-extension {
-            // grid-area: location-right;
-            // margin-top: auto;
             bottom: 0;
             left: 600px;
         }
 
         &--top-right-events-extension {
-            // grid-area: events-left;
             top: 0;
             right: 900px;
         }
