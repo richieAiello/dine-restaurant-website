@@ -47,10 +47,6 @@ $error-light-red: #f7e9e9;
 /**************************************
     Base Styles
 **************************************/
-.root {
-    overflow-x: clip;
-}
-
 .body {
     font-family: 'League Spartan', sans-serif;
     font-weight: 300;
@@ -58,7 +54,7 @@ $error-light-red: #f7e9e9;
     line-height: 1.5625rem;
     letter-spacing: -0.19px;
     text-align: center;
-  
+    
     // Avoids whitespace at bottom of screen when zoomed out
     min-height: 100vh;
     display: grid;
@@ -78,12 +74,17 @@ $error-light-red: #f7e9e9;
 }
 
 .container {
-    width: min(100% - 3rem, 573px);
+    width: calc(100% - 3rem);
     margin-inline: auto;
     
     &--secondary {
         width: min(100% - 3rem, 689px);
         margin-inline: auto;
+    }
+
+    @media(min-width: 635px) {
+
+        width: 573px;
     }
 
     @media(min-width: 1440px) {
@@ -317,7 +318,6 @@ $error-light-red: #f7e9e9;
 **************************************/
 .main {
     // Prevents patterns and extensions from disrupting screen size on mobile devices
-    overflow-x: clip;
 
     &__heading  {
         font-weight: 700;
@@ -337,7 +337,7 @@ $error-light-red: #f7e9e9;
     }
 
     @media(min-width: 635px) {
-        
+ 
         &__heading {
             font-weight: 600;
             font-size: 3.125rem;
@@ -362,10 +362,13 @@ $error-light-red: #f7e9e9;
         }
     }
 
-    .location {
+    .location { 
         color: $dark-grey;
         
-        
+        .location-mini {
+            grid-area: location;
+        }
+
         .wrapper {
             display: flex;
             flex-direction: column;
@@ -393,6 +396,10 @@ $error-light-red: #f7e9e9;
 
         @media(min-width: 635px) {
 
+            display: grid;
+            grid-template-columns: 1fr 573px 1fr;
+            grid-template-areas: ". location location-right";
+
             .wrapper {
 
                 .context {
@@ -416,6 +423,8 @@ $error-light-red: #f7e9e9;
         }
 
         @media(min-width: 1440px) {
+
+            grid-template-columns: 1fr 1110px 1fr;
 
             .wrapper:first-child {
                 padding-top: 11.0625rem;
@@ -560,7 +569,7 @@ $error-light-red: #f7e9e9;
         display: flex;
         flex-direction: column;
         padding: 5rem 0 7.75rem;
-        
+        // overflow-x: hidden;
 
         &__text {
             margin-bottom: 2rem;
@@ -705,8 +714,6 @@ $error-light-red: #f7e9e9;
     Main - Booking Page
 **************************************/
 .main--booking {
-    // Prevents patterns and extensions from disrupting screen size on mobile devices
-    overflow-x: clip;
     min-height: 588px;
 
     .container {
@@ -1105,14 +1112,34 @@ $error-light-red: #f7e9e9;
         }
 
         &--lines-location {
+            transition: all 250ms;
             bottom: 489px;
-            left: 471px;
+            left: 435px;
         }
 
         &--top-left-location {
             z-index: -1;
             bottom: 0;
             left: 287px;
+        }
+
+        &--top-left-location-extension,
+        &--top-left-location-page-extension {
+            background-color: #f2f2f2;
+            height: 320px;
+            z-index: -2;
+        }
+
+        &--top-left-location-extension {
+            width: calc(100% - 400px);
+            bottom: 0;
+            left: 400px;
+        }
+
+        &--top-left-location-page-extension {
+            grid-area: location-right;
+            width: 100%;
+            margin-top: auto;
         }
 
         &--menu {
@@ -1129,6 +1156,13 @@ $error-light-red: #f7e9e9;
             z-index: -1;
             top: 0;
             right: 350px;
+        }
+    }
+
+    @media(min-width: 695px) {
+
+        &--lines-location {
+            left: 471px;
         }
     }
 
@@ -1216,6 +1250,11 @@ $error-light-red: #f7e9e9;
             right: 282px;
         }
 
+        &--top-left-location-extension {
+            width: calc(100% - 500px);
+            left: 500px;
+        }
+
         &--pattern-extension {
             position: absolute;
             width: 100vw;
@@ -1227,11 +1266,6 @@ $error-light-red: #f7e9e9;
         &--top-right-location-extension {
             top: 250px;
             right: 600px;
-        }
-
-        &--top-left-location-extension {
-            bottom: 0;
-            left: 600px;
         }
 
         &--top-right-events-extension {
@@ -1385,7 +1419,7 @@ $error-light-red: #f7e9e9;
 @keyframes slide-in {
     from {
         opacity: 0;
-        transform: translateX(-150%);
+        transform: translateX(-100%);
     }
     
     to {
@@ -1397,7 +1431,7 @@ $error-light-red: #f7e9e9;
 @keyframes slide-in-right {
     from {
         opacity: 0;
-        transform: translateX(150%);
+        transform: translateX(100%);
     }
     
     to {
