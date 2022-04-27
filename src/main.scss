@@ -47,6 +47,10 @@ $error-light-red: #f7e9e9;
 /**************************************
     Base Styles
 **************************************/
+.root {
+    overflow-x: clip;
+}
+
 .body {
     font-family: 'League Spartan', sans-serif;
     font-weight: 300;
