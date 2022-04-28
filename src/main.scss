@@ -542,10 +542,13 @@ $error-light-red: #f7e9e9;
   }
 
   .events {
-    display: flex;
-    flex-direction: column;
-    padding: 5rem 0 7.75rem;
-    // overflow-x: hidden;
+    overflow-x: hidden;
+
+    .container--secondary {
+      display: flex;
+      flex-direction: column;
+      padding: 5rem 0 7.75rem;
+    }
 
     &__text {
       margin-bottom: 2rem;
@@ -579,8 +582,11 @@ $error-light-red: #f7e9e9;
     }
 
     @media (min-width: 635px) {
-      padding: 7.5rem 0;
-      position: relative;
+
+      .container--secondary {
+        position: relative;
+        padding: 7.5rem 0;
+      }
 
       .wrapper {
         .context {
@@ -606,8 +612,11 @@ $error-light-red: #f7e9e9;
     }
 
     @media (min-width: 1440px) {
-      flex-direction: row;
-      padding: 10rem 0;
+      
+      .container--secondary {
+        flex-direction: row;
+        padding: 10rem 0;
+      }
 
       .wrapper {
         margin-left: 7.8125rem;
