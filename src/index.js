@@ -30,7 +30,8 @@ const socialText = `Are you looking to have a larger social event? No problem!
     FUNCTIONS
 **********************************************/
 // Disables all buttons for section events
-// Enables all buttons for section events after 500ms to allow animations to finish.
+// Enables all buttons for section events after 500ms to allow animations to finish
+// Allows animations to finish before another button is clicked
 const btnTimeout = () => {
   eventsBtns.forEach((btn) => btn.setAttribute("disabled", "disabled"));
 
@@ -39,12 +40,18 @@ const btnTimeout = () => {
   }, "650");
 }
 
+// Animates elements and cleans up after animation
+// Adds the provided animation class
+// Listens for end of animation and removes animation class
+// Removes event listener on completion
 const animate = (element, animation) => {
-  element.classList.add(animation);
+  const clearAnimation = e => {
+    e.currentTarget.classList.remove(animation);
+    e.currentTarget.removeEventListener('animationend', clearAnimation);
+  }
 
-  element.addEventListener('animationend', e => {
-    e.currentTarget.classList.remove(animation)
-  })
+  element.addEventListener('animationend', clearAnimation)
+  element.classList.add(animation);
 };
 
 // Checks each image in events for the provided class name.
@@ -108,7 +115,6 @@ const changeContext = (heading, text) => {
 /**********************************************
     EVENT LISTENERS
 **********************************************/
-
 // Family Gathering button
 familyBtn.addEventListener("click", (e) => {
   if (eventsHeading.textContent !== familyHeading) {
