@@ -787,7 +787,7 @@ $error-light-red: #f7e9e9;
         display: none;
       }
 
-      @supports (appearance: none) or (-webkit-appearance: none) or (-moz-appearance: none) {
+      @supports (appearance: none) or (-moz-appearance: none) {
         // Custom arrow image for select
         background-image: url("./images/icons/icon-arrow.svg");
         background-repeat: no-repeat;
