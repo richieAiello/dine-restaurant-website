@@ -28,13 +28,18 @@ const socialText = `Are you looking to have a larger social event? No problem!
 
 // Checks each image in events for the provided class name.
 // Uses the ternary operator to decide the display status of each image.
+// Uses the ternary operator to animate the current image.
 const imageContainsClass = (string) => {
   eventsImages.forEach((image) => {
     const classes = image.classList;
 
     classes.contains(string) ? 
-    classes.replace("hidden", "slide-in-left") : 
-    classes.toggle("hidden", "slide-in-left");
+    classes.remove("hidden") : 
+    classes.add("hidden");
+
+    classes.contains(string) ? 
+    classes.add("slide-in-left") : 
+    classes.remove("slide-in-left");
   });
 };
 
@@ -52,13 +57,18 @@ const btnContainsClass = (string) => {
 
 // Checks each accent in events for the provided class name.
 // Uses the ternary operator to decide the display status of each accent.
+// Uses the ternary operator to animate the current accent.
 const accentContainsClass = (string) => {
   eventsAccents.forEach((accent) => {
     const classes = accent.classList;
 
     classes.contains(string) ? 
-    classes.replace("hidden", "fade-in") : 
-    classes.toggle("hidden", "fade-in");
+    classes.remove("hidden") : 
+    classes.add("hidden");
+
+    classes.contains(string) ? 
+    classes.add("fade-in") : 
+    classes.remove("fade-in");
   });
 };
 
