@@ -1407,7 +1407,7 @@ $error-light-red: #f7e9e9;
 }
 
 .slide-in-left {
-  animation: 400ms slide-in-left;
+  animation: 400ms slide-in-left 0.00001s;
 }
 
 .slide-in-right {
@@ -1415,5 +1415,5 @@ $error-light-red: #f7e9e9;
 }
 
 .fade-in {
-  animation: 500ms 350ms backwards fade-in;
+  animation: 500ms 350ms backwards fade-in 0.00001s;
 }
