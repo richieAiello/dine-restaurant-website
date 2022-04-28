@@ -777,20 +777,22 @@ $error-light-red: #f7e9e9;
 
     // Custom Select reference: https://moderncss.dev/custom-select-styles-with-pure-css/
     .day-night {
-      // Removes default select arrow for old and new browser versions
+      // Removes default select arrow on multiple browsers
       appearance: none;
       -webkit-appearance: none;
       -moz-appearance: none;
-
-      // Custom arrow image for select
-      background-image: url("./images/icons/icon-arrow.svg");
-      background-repeat: no-repeat;
-      background-position: 100% 40%;
 
       // Hide select arrow in IE 10 & 11
       &::-ms-expand {
         display: none;
       }
+
+      @supports (appearance: none) or (-webkit-appearance: none) or (-moz-appearance: none) {
+        // Custom arrow image for select
+        background-image: url("./images/icons/icon-arrow.svg");
+        background-repeat: no-repeat;
+        background-position: 100% 40%;
+      }      
     }
 
     .date-time,
