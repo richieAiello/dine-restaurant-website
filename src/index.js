@@ -32,7 +32,9 @@ const imageContainsClass = (string) => {
   eventsImages.forEach((image) => {
     const classes = image.classList;
 
-    classes.contains(string) ? classes.replace("hidden", "slide-in-left") : classes.add("hidden");
+    classes.contains(string) ? 
+    classes.replace("hidden", "slide-in-left") : 
+    classes.toggle("hidden", "slide-in-left");
   });
 };
 
@@ -42,7 +44,9 @@ const btnContainsClass = (string) => {
   eventsBtns.forEach((btn) => {
     const classes = btn.classList;
 
-    classes.contains(string) ? classes.add("active") : classes.remove("active");
+    classes.contains(string) ? 
+    classes.add("active") : 
+    classes.remove("active");
   });
 };
 
@@ -52,7 +56,9 @@ const accentContainsClass = (string) => {
   eventsAccents.forEach((accent) => {
     const classes = accent.classList;
 
-    classes.contains(string) ? classes.replace("hidden", "fade-in") : classes.add("hidden");
+    classes.contains(string) ? 
+    classes.replace("hidden", "fade-in") : 
+    classes.toggle("hidden", "fade-in");
   });
 };
 
