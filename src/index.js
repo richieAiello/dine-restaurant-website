@@ -26,9 +26,30 @@ const socialText = `Are you looking to have a larger social event? No problem!
     We’re more than happy to cater for big parties. We’ll work 
     with you to make your event a hit with everyone.`;
 
+/**********************************************
+    FUNCTIONS
+**********************************************/
+// Disables all buttons for section events
+// Enables all buttons for section events after 500ms to allow animations to finish.
+const btnTimeout = () => {
+  eventsBtns.forEach((btn) => btn.setAttribute("disabled", "disabled"));
+
+  setTimeout(() => {
+    eventsBtns.forEach((btn) => btn.removeAttribute("disabled"));
+  }, "650");
+}
+
+const animate = (element, animation) => {
+  element.classList.add(animation);
+
+  element.addEventListener('animationend', e => {
+    e.currentTarget.classList.remove(animation)
+  })
+};
+
 // Checks each image in events for the provided class name.
 // Uses the ternary operator to decide the display status of each image.
-// Uses the ternary operator to animate the current image.
+// Uses the ternary operator and animate function to animate the current image.
 const imageContainsClass = (string) => {
   eventsImages.forEach((image) => {
     const classes = image.classList;
@@ -38,8 +59,25 @@ const imageContainsClass = (string) => {
     classes.add("hidden");
 
     classes.contains(string) ? 
-    classes.add("slide-in-left") : 
-    classes.remove("slide-in-left");
+    animate(image, "slide-in-left") :
+    null;
+  });
+};
+
+// Checks each accent in events for the provided class name.
+// Uses the ternary operator to decide the display status of each accent.
+// Uses the ternary operator and animate function to animate the current accent.
+const accentContainsClass = (string) => {
+  eventsAccents.forEach((accent) => {
+    const classes = accent.classList;
+
+    classes.contains(string) ? 
+    classes.remove("hidden") : 
+    classes.add("hidden");
+
+    classes.contains(string) ? 
+    animate(accent, "fade-in") :
+    null;
   });
 };
 
@@ -55,49 +93,14 @@ const btnContainsClass = (string) => {
   });
 };
 
-// Checks each accent in events for the provided class name.
-// Uses the ternary operator to decide the display status of each accent.
-// Uses the ternary operator to animate the current accent.
-const accentContainsClass = (string) => {
-  eventsAccents.forEach((accent) => {
-    const classes = accent.classList;
-
-    classes.contains(string) ? 
-    classes.remove("hidden") : 
-    classes.add("hidden");
-
-    classes.contains(string) ? 
-    classes.add("fade-in") : 
-    classes.remove("fade-in");
-  });
-};
-
-// Listens for the end of animation on events heading and text
-// Animates events heading and text by adding a class containing keyframes
-// Removes keyframes class at the end of animation
+// Uses the animate function to animate events heading and text
 const animateContext = () => {
-  eventsHeading.classList.add("slide-in-right");
-  eventsText.classList.add("slide-in-right");
-
-  eventsHeading.addEventListener("animationend", (e) => {
-    e.currentTarget.classList.remove("slide-in-right");
-  });
-
-  eventsText.addEventListener("animationend", (e) => {
-    e.currentTarget.classList.remove("slide-in-right");
-  });
+  animate(eventsHeading, "slide-in-right");
+  animate(eventsText, "slide-in-right");
 };
 
-// Disables all buttons for section events
-// Enables all buttons for section events after 500ms to allow animations to finish.
 // Changes content of events heading and text
 const changeContext = (heading, text) => {
-  eventsBtns.forEach((btn) => btn.setAttribute("disabled", "disabled"));
-
-  setTimeout(() => {
-    eventsBtns.forEach((btn) => btn.removeAttribute("disabled"));
-  }, "500");
-
   eventsHeading.textContent = heading;
   eventsText.textContent = text;
 };
@@ -109,11 +112,12 @@ const changeContext = (heading, text) => {
 // Family Gathering button
 familyBtn.addEventListener("click", (e) => {
   if (eventsHeading.textContent !== familyHeading) {
+    btnTimeout();
+
     imageContainsClass("family");
     btnContainsClass("family");
     accentContainsClass("accent--family");
 
-    // animateContext is placed above changeContext to ensure condition functionality
     animateContext();
     changeContext(familyHeading, familyText);
   }
@@ -122,11 +126,12 @@ familyBtn.addEventListener("click", (e) => {
 // Special Events button
 specialBtn.addEventListener("click", (e) => {
   if (eventsHeading.textContent !== specialHeading) {
+    btnTimeout();
+
     imageContainsClass("special");
     btnContainsClass("special");
     accentContainsClass("accent--special");
 
-    // animateContext is placed above changeContext to ensure condition functionality
     animateContext();
     changeContext(specialHeading, specialText);
   }
@@ -135,11 +140,12 @@ specialBtn.addEventListener("click", (e) => {
 // Social Events button
 socialBtn.addEventListener("click", (e) => {
   if (eventsHeading.textContent !== socialHeading) {
+    btnTimeout();
+
     imageContainsClass("social");
     btnContainsClass("social");
     accentContainsClass("accent--social");
 
-    // animateContext is placed above changeContext to ensure condition functionality
     animateContext();
     changeContext(socialHeading, socialText);
   }
