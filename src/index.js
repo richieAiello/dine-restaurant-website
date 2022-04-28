@@ -32,7 +32,7 @@ const imageContainsClass = (string) => {
   eventsImages.forEach((image) => {
     const classes = image.classList;
 
-    classes.contains(string) ? classes.remove("hidden") : classes.add("hidden");
+    classes.contains(string) ? classes.replace("hidden", "slide-in-left") : classes.add("hidden");
   });
 };
 
@@ -52,7 +52,7 @@ const accentContainsClass = (string) => {
   eventsAccents.forEach((accent) => {
     const classes = accent.classList;
 
-    classes.contains(string) ? classes.remove("hidden") : classes.add("hidden");
+    classes.contains(string) ? classes.replace("hidden", "fade-in") : classes.add("hidden");
   });
 };
 
@@ -60,16 +60,16 @@ const accentContainsClass = (string) => {
 // Animates events heading and text by adding a class containing keyframes
 // Removes keyframes class at the end of animation
 const animateContext = () => {
+  eventsHeading.classList.add("slide-in-right");
+  eventsText.classList.add("slide-in-right");
+
   eventsHeading.addEventListener("animationend", (e) => {
-    e.currentTarget.classList.remove("slide");
+    e.currentTarget.classList.remove("slide-in-right");
   });
 
   eventsText.addEventListener("animationend", (e) => {
-    e.currentTarget.classList.remove("slide");
+    e.currentTarget.classList.remove("slide-in-right");
   });
-
-  eventsHeading.classList.add("slide");
-  eventsText.classList.add("slide");
 };
 
 // Disables all buttons for section events

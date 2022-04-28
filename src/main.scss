@@ -576,7 +576,6 @@ $error-light-red: #f7e9e9;
           width: 48px;
           background-color: $tan;
           margin-inline: auto;
-          animation: 500ms 350ms backwards fade-in;
         }
       }
     }
@@ -1000,10 +999,6 @@ $error-light-red: #f7e9e9;
     height: 400px;
   }
 
-  &--events {
-    animation: 500ms slide-in;
-  }
-
   &--enjoyable-place {
     width: 100%;
     position: absolute;
@@ -1373,10 +1368,10 @@ $error-light-red: #f7e9e9;
 /**************************************
     Keyframes and Display Classes
 **************************************/
-@keyframes slide-in {
+@keyframes slide-in-left {
   from {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateX(-150%);
   }
 
   to {
@@ -1388,7 +1383,7 @@ $error-light-red: #f7e9e9;
 @keyframes slide-in-right {
   from {
     opacity: 0;
-    transform: translateX(100%);
+    transform: translateX(150%);
   }
 
   to {
@@ -1411,6 +1406,14 @@ $error-light-red: #f7e9e9;
   display: none;
 }
 
-.slide {
+.slide-in-left {
+  animation: 400ms slide-in-left;
+}
+
+.slide-in-right {
   animation: 400ms slide-in-right;
+}
+
+.fade-in {
+  animation: 500ms 350ms backwards fade-in;
 }
