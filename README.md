@@ -4,7 +4,6 @@ This is a solution to the [Dine Website Challenge challenge on Frontend Mentor](
 
 ## Table of contents
 
-- [Overview](#overview)
 - [Links](#links)
 - [Built with](#built-with)
 - [What I learned](#what-i-learned)
@@ -14,7 +13,7 @@ This is a solution to the [Dine Website Challenge challenge on Frontend Mentor](
 ## Links
 
 - [Dine Restaurant Live URL](https://dine-restaurant-website-richieaiello.netlify.app/)
-- [Soulution URL](https://your-solution-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/built-with-scss-parcel-and-justvalidate-form-validation-library-BJGnLhdrc)
 
 ### Built with
 
