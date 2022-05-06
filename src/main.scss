@@ -2,8 +2,7 @@
     Colors
 **************************************/
 $white: #ffffff;
-$black: #0e0e0e;
-$black-grey: #111111;
+$black: #111111;
 $grey: #5c6779;
 $light-grey: #4c4c4c;
 $dark-grey: #242b37;
@@ -22,7 +21,7 @@ $error-light-red: #f7e9e9;
   padding: 0;
 
   // firefox support
-  scrollbar-color: $black-grey #f5f5f5;
+  scrollbar-color: $black #f5f5f5;
   scrollbar-width: thin;
 }
 
@@ -35,12 +34,12 @@ $error-light-red: #f7e9e9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: $black-grey;
+  background-color: $black;
   border-radius: 100vw;
   border: 0.25rem solid #f5f5f5;
 
   &:hover {
-    background-color: rgba($black-grey, 0.85);
+    background-color: rgba($black, 0.85);
   }
 }
 
@@ -113,7 +112,7 @@ $error-light-red: #f7e9e9;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top;
-  background-color: $black-grey;
+  background-color: $black;
   position: relative;
 
   .wrapper {
@@ -243,7 +242,6 @@ $error-light-red: #f7e9e9;
     background-image: url("./images/homepage/hero-bg-desktop@2x.jpg");
     background-size: cover;
     background-position: bottom right;
-    background-color: $black;
     position: unset;
 
     .wrapper {
