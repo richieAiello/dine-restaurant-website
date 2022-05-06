@@ -808,13 +808,13 @@ $error-light-red: #f7e9e9;
 
 @media (min-width: 360px) {
   .input--date-time,
-  .day-night {
+  .input--day-night {
     padding-left: 1rem;
   }
 }
 
 @media (min-width: 420px) {
-  .day-night {
+  .input--day-night {
     background-position: 85% 40%;
   }
 }
