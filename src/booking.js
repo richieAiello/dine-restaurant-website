@@ -6,12 +6,12 @@ const monthInput = document.querySelector("#month");
 const dayInput = document.querySelector("#day");
 
 // date-time variables
-const dateTimeInputs = document.querySelectorAll(".date-time");
+const dateTimeInputs = document.querySelectorAll(".input--date-time");
 
 // customer total variables
 const subtractBtn = document.querySelector(".btn--customer-subtract");
 const addBtn = document.querySelector(".btn--customer-add");
-const customerTotal = document.querySelector(".customer-total");
+const customerTotal = document.querySelector(".customer__total");
 
 // Global variable for max days to be used with form validation and listeners
 let maxDays = 31;
@@ -22,9 +22,9 @@ let maxDays = 31;
 // Implements JustValidate to add custom form validation
 const validation = new JustValidate("#form", {
   errorFieldCssClass: "invalid",
-  errorLabelCssClass: "invalid-label",
+  errorLabelCssClass: "invalid__label",
   focusInvalidField: true,
-  errorsContainer: "div.invalid-container",
+  errorsContainer: "div.invalid__container",
 });
 
 validation

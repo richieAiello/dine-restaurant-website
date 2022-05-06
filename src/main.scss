@@ -486,7 +486,7 @@ $error-light-red: #f7e9e9;
       grid-template-columns: auto auto auto;
       align-items: flex-start;
       margin-top: 3.5rem;
-    } 
+    }
   }
 
   @media (min-width: 1440px) {
@@ -522,11 +522,11 @@ $error-light-red: #f7e9e9;
       .accent--family {
         right: 233px;
       }
-  
+
       .accent--special {
         right: 205px;
       }
-  
+
       .accent--social {
         right: 196px;
       }
@@ -653,216 +653,208 @@ $error-light-red: #f7e9e9;
   .container {
     position: relative;
   }
+}
+
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  min-height: max-content;
+  width: min(100%, 540px);
+  background-color: $white;
+  border-radius: 3px;
+  box-shadow: 0 75px 100px -50px rgba(#384255, 50.32%);
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  position: absolute;
+  top: -165px;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  padding: 2rem;
+  caret-color: $tan;
+  z-index: 1;
+}
+
+.input,
+.customer__total {
+  border: initial;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.input,
+.customer {
+  border-bottom: 1px solid #8e8e8e;
+}
+
+.input:focus,
+.customer__total:focus {
+  outline-style: inset;
+  outline-width: 0.2rem;
+  outline-color: inherit;
+}
+
+.input {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  &--text {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+  }
+
+  &--date-time,
+  &--day-night {
+    width: 30%;
+  }
+
+  &--day-night {
+    // Removes default select arrow on multiple browsers
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    // Hide select arrow in IE 10 & 11
+    &::-ms-expand {
+      display: none;
+    }
+
+    @supports (appearance: none) or (-moz-appearance: none) {
+      // Custom arrow image for select
+      background-image: url("./images/icons/icon-arrow.svg");
+      background-repeat: no-repeat;
+      background-position: 100% 40%;
+    }
+  }
+}
+
+.input--text,
+.date,
+.time,
+.customer {
+  margin-bottom: 2rem;
+}
+
+.date,
+.time {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+}
+
+.time {
+  position: relative;
+}
+
+.date__wrapper,
+.time__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.customer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  padding-bottom: 1rem;
+
+  &__total {
+    text-align: center;
+    font-weight: 600;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  &__icon {
+    width: 0.875rem;
+  }
+}
+
+.invisible-label {
+  position: absolute;
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  border: 0;
+}
+
+.invalid {
+  color: $error-red;
+  background-color: $error-light-red;
+  border-color: $error-red;
+
+  &::placeholder {
+    color: $error-red;
+  }
+
+  &__label {
+    text-align: left;
+    line-height: 1.25rem;
+    font-size: 1rem;
+    color: $error-red;
+    margin-bottom: 0.5rem;
+  }
+
+  &__container {
+    margin-top: -1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: 360px) {
+  .input--date-time,
+  .day-night {
+    padding-left: 1rem;
+  }
+}
+
+@media (min-width: 420px) {
+  .day-night {
+    background-position: 85% 40%;
+  }
+}
+
+@media (min-width: 565px) {
+  .main--booking {
+    min-height: 466px;
+  }
 
   .reservation-form {
-    display: flex;
-    flex-direction: column;
-    min-height: max-content;
-    width: min(100%, 540px);
-    background-color: $white;
-    border-radius: 3px;
-    box-shadow: 0 75px 100px -50px rgba(#384255, 50.32%);
-    font-weight: 500;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    position: absolute;
-    top: -165px;
-    left: 0;
-    right: 0;
-    margin-inline: auto;
-    padding: 2rem;
-    caret-color: $tan;
-    z-index: 1;
-
-    .input,
-    .day-night,
-    .customer-total {
-      border: initial;
-      font-family: inherit;
-      font-size: inherit;
-    }
-
-    .input:focus,
-    .day-night:focus,
-    .customer-total:focus {
-      outline-style: inset;
-      outline-width: 0.2rem;
-      outline-color: inherit;
-    }
-
-    .text,
-    .date-container,
-    .time-container,
-    .customer-container {
-      margin-bottom: 2rem;
-    }
-
-    .input,
-    .day-night,
-    .customer-container {
-      border-bottom: 1px solid #8e8e8e;
-    }
-
-    .input,
-    .day-night {
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
-    }
-
-    .text {
-      padding-left: 1rem;
-      padding-right: 1rem;
-      width: 100%;
-    }
-
-    .date-container,
-    .time-container {
-      display: flex;
-      text-align: left;
-      flex-direction: column;
-    }
-
-    .date-wrapper,
-    .time-wrapper {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 0.5rem;
-    }
-
-    .time-container {
-      position: relative;
-    }
-
-    // Custom Select reference: https://moderncss.dev/custom-select-styles-with-pure-css/
-    .day-night {
-      // Removes default select arrow on multiple browsers
-      appearance: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-
-      // Hide select arrow in IE 10 & 11
-      &::-ms-expand {
-        display: none;
-      }
-
-      @supports (appearance: none) or (-moz-appearance: none) {
-        // Custom arrow image for select
-        background-image: url("./images/icons/icon-arrow.svg");
-        background-repeat: no-repeat;
-        background-position: 100% 40%;
-      }
-    }
-
-    .date-time,
-    .day-night {
-      width: 30%;
-    }
-
-    .customer-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-weight: 700;
-      padding-bottom: 1rem;
-    }
-
-    .customer-total {
-      text-align: center;
-      font-weight: 600;
-      width: 100%;
-      // To not interfere with neighbor button outlines
-      background-color: transparent;
-    }
-
-    .customer-icon {
-      width: 0.875rem;
-    }
-
-    // Reference article: https://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/
-    // Boiler plate code for turning labels invisible, while leaving them accessible
-    .invisible-label {
-      position: absolute;
-      overflow: hidden;
-      height: 1px;
-      width: 1px;
-      margin: -1px;
-      border: 0;
-    }
-
-    .invalid {
-      color: $error-red;
-      background-color: $error-light-red;
-      border-color: $error-red;
-    }
-
-    .invalid::placeholder {
-      color: $error-red;
-    }
-
-    .invalid-label {
-      text-align: left;
-      line-height: 1.25rem;
-      font-size: 1rem;
-      color: $error-red;
-      margin-bottom: 0.5rem;
-    }
-
-    .invalid-container {
-      margin-top: -1rem;
-      margin-bottom: 0.5rem;
-    }
+    top: -230px;
+    padding: 3rem;
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.85px;
   }
 
-  @media (min-width: 360px) {
-    .reservation-form {
-      .date-time,
-      .day-night {
-        padding-left: 1rem;
-      }
-    }
+  .date,
+  .time {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
   }
 
-  @media (min-width: 420px) {
-    .reservation-form {
-      .day-night {
-        background-position: 85% 40%;
-      }
-    }
+  .date__wrapper,
+  .time__wrapper {
+    width: 65%;
+    margin-top: 0;
   }
+}
 
-  @media (min-width: 565px) {
-    min-height: 466px;
-
-    .reservation-form {
-      top: -230px;
-      padding: 3rem;
-      font-size: 1.375rem;
-      line-height: 1.75rem;
-      letter-spacing: 0.85px;
-
-      .date-container,
-      .time-container {
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: space-between;
-      }
-
-      .date-wrapper,
-      .time-wrapper {
-        width: 65%;
-        margin-top: 0;
-      }
-    }
-  }
-
-  @media (min-width: 1440px) {
+@media (min-width: 1440px) {
+  .main--booking {
     min-height: 319px;
+  }
 
-    .reservation-form {
-      left: unset;
-      margin-inline: unset;
-      top: -365px;
-    }
+  .reservation-form {
+    left: unset;
+    margin-inline: unset;
+    top: -365px;
   }
 }
 
@@ -925,7 +917,7 @@ $error-light-red: #f7e9e9;
       display: flex;
       margin-left: 12.0625rem;
     }
-    
+
     .address {
       margin-right: 7.75rem;
       margin-bottom: 0;
