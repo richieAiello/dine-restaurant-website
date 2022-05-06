@@ -441,33 +441,33 @@ $error-light-red: #f7e9e9;
     margin-bottom: 2rem;
   }
 
-  .wrapper {
+  &__wrapper {
     display: flex;
     flex-direction: column;
     order: 2;
+  }
 
-    .context {
-      order: 2;
-      color: $dark-grey;
-      margin-top: 1.5rem;
-    }
+  &__context {
+    order: 2;
+    color: $dark-grey;
+    margin-top: 1.5rem;
+  }
 
-    .wrapper--secondary {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 3rem;
+  &__buttons-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
 
-      .accent {
-        height: 1px;
-        width: 48px;
-        background-color: $tan;
-        margin-inline: auto;
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-      }
+    .accent {
+      height: 1px;
+      width: 48px;
+      background-color: $tan;
+      margin-inline: auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
     }
   }
 
@@ -477,27 +477,16 @@ $error-light-red: #f7e9e9;
       padding: 7.5rem 0;
     }
 
-    .wrapper {
-      .context {
-        margin-top: 2.5rem;
-      }
-
-      .wrapper--secondary {
-        flex-direction: row;
-        justify-content: center;
-        align-items: flex-start;
-        margin-top: 3.5rem;
-      }
+    &__context {
+      margin-top: 2.5rem;
     }
-  }
 
-  @media (min-width: 700px) {
-    .wrapper {
-      .wrapper--secondary {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-      }
-    }
+    &__buttons-wrapper {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      align-items: flex-start;
+      margin-top: 3.5rem;
+    } 
   }
 
   @media (min-width: 1440px) {
@@ -506,45 +495,46 @@ $error-light-red: #f7e9e9;
       padding: 10rem 0;
     }
 
-    .wrapper {
+    &__wrapper {
       margin-left: 7.8125rem;
+    }
 
-      .context {
-        order: -1;
-        margin-top: 4rem;
+    &__context {
+      order: -1;
+      margin-top: 4rem;
+    }
+
+    &__buttons-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin-top: 4.875rem;
+
+      .accent {
+        position: absolute;
+        width: 95px;
+        top: 14px;
+        left: unset;
+        right: unset;
+        bottom: unset;
+        z-index: -1;
       }
 
-      .wrapper--secondary {
-        display: flex;
-        flex-direction: column;
-        margin-top: 4.875rem;
-
-        .accent {
-          position: absolute;
-          width: 95px;
-          top: 14px;
-          left: unset;
-          right: unset;
-          bottom: unset;
-          z-index: -1;
-        }
-
-        .accent--family {
-          right: 233px;
-        }
-
-        .accent--special {
-          right: 205px;
-        }
-
-        .accent--social {
-          right: 196px;
-        }
+      .accent--family {
+        right: 233px;
+      }
+  
+      .accent--special {
+        right: 205px;
+      }
+  
+      .accent--social {
+        right: 196px;
       }
     }
   }
 }
 
+// section reservation
 .reservation {
   background-image: url("./images/homepage/ready-bg-mobile@2x.jpg");
   background-size: cover;
@@ -1313,12 +1303,6 @@ $error-light-red: #f7e9e9;
   }
 
   @media (min-width: 635px) {
-    &--events.special {
-      margin: 0 2rem;
-    }
-  }
-
-  @media (min-width: 700px) {
     &--events.special {
       margin: 0;
     }
