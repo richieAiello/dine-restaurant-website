@@ -542,7 +542,7 @@ $error-light-red: #f7e9e9;
   padding: 5rem 0;
   color: $white;
 
-  .main__heading {
+  &__heading {
     margin-bottom: 1.5rem;
   }
 
@@ -559,10 +559,10 @@ $error-light-red: #f7e9e9;
       display: flex;
       justify-content: space-between;
       align-items: center;
-
-      .main__heading {
-        margin-bottom: 0;
-      }
+    }
+    
+    &__heading {
+      margin-bottom: 0;
     }
   }
 }
