@@ -576,12 +576,15 @@ $error-light-red: #f7e9e9;
           width: 48px;
           background-color: $tan;
           margin-inline: auto;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
         }
       }
     }
 
     @media (min-width: 635px) {
-
       .container--secondary {
         position: relative;
         padding: 7.5rem 0;
@@ -611,7 +614,6 @@ $error-light-red: #f7e9e9;
     }
 
     @media (min-width: 1440px) {
-      
       .container--secondary {
         flex-direction: row;
         padding: 10rem 0;
@@ -634,6 +636,9 @@ $error-light-red: #f7e9e9;
             position: absolute;
             width: 95px;
             top: 14px;
+            left: unset;
+            right: unset;
+            bottom: unset;
             z-index: -1;
           }
 
@@ -792,7 +797,7 @@ $error-light-red: #f7e9e9;
         background-image: url("./images/icons/icon-arrow.svg");
         background-repeat: no-repeat;
         background-position: 100% 40%;
-      }      
+      }
     }
 
     .date-time,
@@ -1303,6 +1308,7 @@ $error-light-red: #f7e9e9;
     letter-spacing: 3px;
     padding: 0;
     color: rgba($light-grey, 50%);
+    position: relative;
 
     &:hover,
     &:focus {
@@ -1357,10 +1363,6 @@ $error-light-red: #f7e9e9;
   }
 
   @media (min-width: 1440px) {
-    &--events {
-      position: relative;
-    }
-
     &--events.special {
       margin: 0.75rem 0;
     }
