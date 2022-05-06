@@ -195,7 +195,6 @@ $error-light-red: #f7e9e9;
     Main - Home Page
 **************************************/
 .main {
-
   &__heading {
     font-weight: 700;
     font-size: 2.35rem;
@@ -261,7 +260,6 @@ $error-light-red: #f7e9e9;
   }
 
   &__wrapper:last-child {
-
     .divider {
       margin-top: 3rem;
     }
@@ -283,13 +281,12 @@ $error-light-red: #f7e9e9;
     &__text {
       margin-bottom: 7.5rem;
     }
-    
+
     &__wrapper:first-child {
       padding-top: 20rem;
     }
 
     &__wrapper:last-child {
-
       .divider {
         margin-top: 3.5rem;
       }
@@ -305,14 +302,13 @@ $error-light-red: #f7e9e9;
       .location__context {
         margin-left: auto;
       }
-  
+
       .location__text {
         margin-bottom: 32.5625rem;
       }
     }
 
     &__wrapper:last-child {
-     
       .divider {
         margin-top: 0;
       }
@@ -330,88 +326,15 @@ $error-light-red: #f7e9e9;
   color: $white;
   padding: 4.5rem 0;
 
-  .main__text {
+  &__text {
     margin-bottom: 4rem;
-  }
-
-  .menu {
-    .wrapper {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .wrapper:nth-of-type(2),
-    .wrapper:nth-of-type(3) {
-      margin-top: 1.5rem;
-      border-top: 1.5px solid rgba(#979797, 15%);
-      padding-top: 1.5rem;
-    }
-
-    &__item {
-      order: 2;
-    }
-
-    &__heading {
-      font-weight: 600;
-      font-size: 1.375rem;
-      line-height: 1.75rem;
-      letter-spacing: 0.5px;
-      margin-bottom: 0.25rem;
-    }
-
-    &__text {
-      font-weight: 200;
-      font-size: 1.125rem;
-      line-height: 1.75rem;
-      letter-spacing: 0.5px;
-      max-width: 28ch;
-      margin-inline: auto;
-    }
   }
 
   @media (min-width: 635px) {
     padding: 6rem 0;
 
-    .main__text {
+    &__text {
       margin-bottom: 3.5rem;
-    }
-
-    .menu {
-      .wrapper {
-        flex-direction: row;
-        position: relative;
-
-        .accent {
-          position: absolute;
-          left: 128px;
-          height: 1px;
-          width: 32px;
-          background-color: $tan;
-        }
-      }
-
-      &__item {
-        text-align: left;
-        margin-left: 3.875rem;
-      }
-
-      &__text {
-        margin-inline: unset;
-        max-width: unset;
-      }
-
-      .wrapper:first-of-type {
-        .accent {
-          top: 18px;
-        }
-      }
-
-      .wrapper:nth-of-type(2),
-      .wrapper:nth-of-type(3) {
-        .accent {
-          top: 42px;
-        }
-      }
     }
   }
 
@@ -421,15 +344,90 @@ $error-light-red: #f7e9e9;
     .container {
       display: flex;
       justify-content: space-between;
-
-      .menu {
-        padding-top: 3.4375rem;
-        max-width: 540px;
-      }
     }
   }
 }
 
+// section menu
+.menu {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__wrapper:nth-of-type(2),
+  &__wrapper:nth-of-type(3) {
+    margin-top: 1.5rem;
+    border-top: 1.5px solid rgba(#979797, 15%);
+    padding-top: 1.5rem;
+  }
+
+  &__item {
+    order: 2;
+  }
+
+  &__heading {
+    font-weight: 600;
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.25rem;
+  }
+
+  &__text {
+    font-weight: 200;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.5px;
+    max-width: 28ch;
+    margin-inline: auto;
+  }
+
+  @media (min-width: 635px) {
+    &__wrapper {
+      flex-direction: row;
+      position: relative;
+    }
+
+    &__accent {
+      position: absolute;
+      left: 128px;
+      height: 1px;
+      width: 32px;
+      background-color: $tan;
+    }
+
+    &__item {
+      text-align: left;
+      margin-left: 3.875rem;
+    }
+
+    &__text {
+      margin-inline: unset;
+      max-width: unset;
+    }
+
+    &__wrapper:first-of-type {
+      .menu__accent {
+        top: 18px;
+      }
+    }
+
+    &__wrapper:nth-of-type(2),
+    &__wrapper:nth-of-type(3) {
+      .menu__accent {
+        top: 42px;
+      }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    padding-top: 3.4375rem;
+    max-width: 540px;
+  }
+}
+
+// section events
 .events {
   overflow-x: hidden;
 
@@ -636,20 +634,20 @@ $error-light-red: #f7e9e9;
   @media (min-width: 1440px) {
     background-image: url(./images/booking/hero-bg-desktop@2x.jpg);
     padding: 4.0625rem 0 7.875rem;
-  
+
     &__heading {
       font-size: 5rem;
       line-height: 4.5rem;
       letter-spacing: 0;
       margin-bottom: 1.5rem;
     }
-  
+
     &__text {
       max-width: 36ch;
       margin-inline: unset;
       margin-bottom: 2.625rem;
     }
-  
+
     .logo {
       margin-bottom: 9.5625rem;
     }
